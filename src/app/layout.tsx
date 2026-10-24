@@ -106,6 +106,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png'
+  },
+  verification: {
+    google: 'CNaoHaof9uzdpLKvP9s0e07jyGmzGh-_VS6K2s-h3x0'
   }
 };
 
@@ -171,6 +174,10 @@ export default function RootLayout({
       className={`${jakarta.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <head>
+        <meta
+          name="google-site-verification"
+          content="CNaoHaof9uzdpLKvP9s0e07jyGmzGh-_VS6K2s-h3x0"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

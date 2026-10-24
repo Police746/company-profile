@@ -1079,7 +1079,7 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
                             API, RBAC
                           </div>
                           <div>
-                            <span className="text-cyan-400">Database:</span> MySQL `company_db` +
+                            <span className="text-cyan-400">Database:</span> MySQL `syauqidev_db` +
                             Admin Dashboard
                           </div>
                         </div>
@@ -1104,7 +1104,7 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
                       <div className="space-y-2.5 sm:space-y-3">
                         <div className="flex items-center justify-between">
                           <span className="text-[11px] sm:text-xs font-bold text-purple-300">
-                            Skema Aktif: `company_db` (5 Tabel Utama)
+                            Skema Aktif: `syauqidev_db` (5 Tabel Utama)
                           </span>
                           <span className="text-[10px] sm:text-[11px] font-mono text-emerald-400">CONNECTED</span>
                         </div>
@@ -1160,7 +1160,7 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
                 },
                 {
                   val: '5 Tabel RBAC',
-                  label: 'Database company_db',
+                  label: 'Database syauqidev_db',
                   sub: 'Live CRUD Terintegrasi'
                 }
               ].map((stat, idx) => (

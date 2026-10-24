@@ -4,7 +4,7 @@ const STRIVE_IMG = 'https://bootstrapmade.com/content/demo/Strive/assets/img';
 const DASH_IMG = 'https://bootstrapmade.com/content/demo/AppDashboard/assets/img';
 
 export const initialDatabase: DatabaseSchema = {
-  databaseName: 'company_db',
+  databaseName: 'syauqidev_db',
   user: [
     {
       id: 1,

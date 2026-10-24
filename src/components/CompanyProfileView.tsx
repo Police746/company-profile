@@ -183,42 +183,21 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
   const [serviceStartIndex, setServiceStartIndex] = useState(0);
 
   // Initial Fullscreen Preloader & Smooth Entrance/Exit State
-  const [siteLoading, setSiteLoading] = useState<boolean>(true);
+  const [siteLoading, setSiteLoading] = useState<boolean>(false);
   const [preloaderExiting, setPreloaderExiting] = useState<boolean>(false);
-  const [loadingProgress, setLoadingProgress] = useState<number>(20);
+  const [loadingProgress, setLoadingProgress] = useState<number>(100);
   const [loadingStatusText, setLoadingStatusText] = useState<string>(
-    'Menginisialisasi Nexvora App Engine...'
+    'SyauqiDev Web Engine Siap!'
   );
 
   useEffect(() => {
-    const t1 = setTimeout(() => {
-      setLoadingProgress(55);
-      setLoadingStatusText('Sinkronisasi Database company_db & Layanan...');
-    }, 180);
-    const t2 = setTimeout(() => {
-      setLoadingProgress(88);
-      setLoadingStatusText('Menyiapkan Desain UI/UX & Animasi...');
-    }, 420);
-    const t3 = setTimeout(() => {
-      setLoadingProgress(100);
-      setLoadingStatusText('Sistem Siap Digunakan!');
-      setPreloaderExiting(true);
-    }, 780);
-    const t4 = setTimeout(() => {
-      setSiteLoading(false);
-    }, 1280);
-
-    return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
-      clearTimeout(t3);
-      clearTimeout(t4);
-    };
+    // Instant ready without blocking user
+    setSiteLoading(false);
   }, []);
 
   const handleSkipPreloader = () => {
     setPreloaderExiting(true);
-    setTimeout(() => setSiteLoading(false), 220);
+    setSiteLoading(false);
   };
 
   // Portfolio Filter & Lightbox State (with Smooth Entrance/Exit Animation)
@@ -593,7 +572,7 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
 
             <div className="space-y-2">
               <span className="inline-block px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest bg-gradient-to-r from-[#ea7c00]/20 to-[#8b5cf6]/20 text-amber-300 border border-amber-400/30">
-                ✨ Nexvora Digital Suite • v2025
+                ✨ SyauqiDev Digital Studio • v2026
               </span>
               <h2 className="text-xl font-extrabold text-white tracking-tight">
                 Memuat Pengalaman Web Pro
@@ -641,30 +620,30 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
         id="header"
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-[#0d0b1c]/90 backdrop-blur-xl py-3 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)] border-b border-white/10'
-            : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-5 border-b border-white/10'
+            ? 'bg-[#0d0b1c]/95 backdrop-blur-xl py-2.5 sm:py-3 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)] border-b border-white/10'
+            : 'bg-gradient-to-b from-black/85 via-black/50 to-transparent py-3 sm:py-5 border-b border-white/10'
         }`}
       >
-        <div className="max-w-[1536px] w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 lg:gap-4">
+        <div className="max-w-[1536px] w-full mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2 sm:gap-4">
           {/* Brand Logo */}
-          <a href="#hero" className="flex items-center gap-2.5 group shrink-0">
+          <a href="#hero" className="flex items-center gap-2 sm:gap-2.5 group shrink-0">
             {data.company.logoUrl ? (
               <img
                 src={data.company.logoUrl}
                 alt={data.company.sitename}
-                className="w-10 h-10 rounded-xl object-cover border border-[#ea7c00]/50 shadow-lg shadow-[#ea7c00]/30 group-hover:scale-105 transition-transform shrink-0"
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl object-cover border border-[#ea7c00]/50 shadow-lg shadow-[#ea7c00]/30 group-hover:scale-105 transition-transform shrink-0"
               />
             ) : (
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#ea7c00] to-amber-600 flex items-center justify-center text-white font-extrabold text-lg shadow-lg shadow-[#ea7c00]/30 group-hover:scale-105 transition-transform shrink-0">
-                <Code2 className="w-5 h-5" />
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#ea7c00] to-amber-600 flex items-center justify-center text-white font-extrabold text-base sm:text-lg shadow-lg shadow-[#ea7c00]/30 group-hover:scale-105 transition-transform shrink-0">
+                <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
             )}
             <div className="flex flex-col">
               <div className="flex items-center leading-none">
-                <span className="text-xl sm:text-2xl font-extrabold text-white tracking-tight font-display whitespace-nowrap">
+                <span className="text-lg sm:text-2xl font-extrabold text-white tracking-tight font-display whitespace-nowrap">
                   {data.company.sitename}
                 </span>
-                <span className="text-2xl font-black text-[#ea7c00] ml-0.5">.</span>
+                <span className="text-xl sm:text-2xl font-black text-[#ea7c00] ml-0.5">.</span>
                 <span className="ml-2 px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wider rounded-full bg-[#ea7c00]/20 text-amber-300 border border-[#ea7c00]/40 hidden 2xl:inline-block whitespace-nowrap">
                   Jasa Web &amp; Backend
                 </span>
@@ -763,16 +742,16 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
           </nav>
 
           {/* Right CTA Button + Mobile Toggle */}
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
             <a
               href="#pricing"
-              className="group relative inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-gradient-to-r from-[#ea7c00] via-amber-500 to-[#ea7c00] bg-[length:200%_auto] hover:bg-right text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-xl shadow-[#ea7c00]/35 hover:shadow-2xl hover:shadow-[#ea7c00]/55 border border-amber-300/40 hover:-translate-y-0.5 active:scale-95 transition-all duration-300 whitespace-nowrap overflow-hidden shrink-0 cursor-pointer"
+              className="group relative inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-[#ea7c00] via-amber-500 to-[#ea7c00] bg-[length:200%_auto] hover:bg-right text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-lg shadow-[#ea7c00]/30 hover:shadow-xl hover:shadow-[#ea7c00]/50 border border-amber-300/40 hover:-translate-y-0.5 active:scale-95 transition-all duration-300 whitespace-nowrap overflow-hidden shrink-0 cursor-pointer"
             >
               {/* Shimmer sweep light effect on hover */}
               <span className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-1000 ease-out pointer-events-none" />
 
               {/* Icon with smooth hover animation */}
-              <Rocket className="w-4 h-4 text-white group-hover:rotate-12 transition-transform duration-300 shrink-0" />
+              <Rocket className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white group-hover:rotate-12 transition-transform duration-300 shrink-0" />
 
               <span className="whitespace-nowrap">Pesan Website</span>
 
@@ -786,18 +765,18 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
             <button
               type="button"
               onClick={() => setMobileNavOpen(!mobileNavOpen)}
-              className="xl:hidden text-white p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition-colors border border-white/10"
+              className="xl:hidden text-white p-2 sm:p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition-colors border border-white/10 shrink-0 cursor-pointer"
               aria-label="Toggle Menu"
             >
-              {mobileNavOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileNavOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation Overlay */}
         {mobileNavOpen && (
-          <div className="xl:hidden fixed inset-0 top-[68px] bg-black/80 backdrop-blur-md z-50 p-4">
-            <div className="bg-[#110f24] border border-white/15 rounded-2xl p-5 text-white space-y-2 shadow-2xl max-h-[82vh] overflow-y-auto">
+          <div className="xl:hidden fixed inset-0 top-[56px] sm:top-[68px] bg-black/85 backdrop-blur-md z-50 p-4">
+            <div className="bg-[#110f24] border border-white/15 rounded-2xl p-4 sm:p-5 text-white space-y-1.5 sm:space-y-2 shadow-2xl max-h-[82vh] overflow-y-auto">
               {[
                 { label: 'Home', href: '#hero' },
                 { label: 'Profil & Spesialisasi IT', href: '#about' },
@@ -827,7 +806,7 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
         {/* ==================== 1. HERO SECTION (PRO SPLIT + INTERACTIVE SHOWCASE) ==================== */}
         <section
           id="hero"
-          className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden bg-[#080711] text-white pt-28 pb-12"
+          className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden bg-[#080711] text-white pt-24 pb-8 sm:pt-28 sm:pb-12"
         >
           {/* Background Slides with Pro Gradient Overlay */}
           <div className="absolute inset-0">
@@ -852,18 +831,18 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
           </div>
 
           {/* Main Hero Grid: Left Executive Pitch + Right Live Interactive Engineering Card */}
-          <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-auto py-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div className="relative z-20 max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 my-auto py-6 sm:py-8 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               {/* Left Column (7 cols) */}
-              <div className="lg:col-span-7 space-y-6 text-left">
+              <div className="lg:col-span-7 space-y-4 sm:space-y-6 text-left">
                 {/* Top Status & Identity Badge with Uploaded Avatar Photo */}
-                <div className="inline-flex flex-wrap items-center gap-2.5 bg-white/[0.07] backdrop-blur-md border border-white/15 pl-2 pr-4 py-1.5 rounded-full">
+                <div className="inline-flex flex-wrap items-center gap-2 bg-white/[0.07] backdrop-blur-md border border-white/15 p-1.5 sm:pl-2 sm:pr-4 sm:py-1.5 rounded-2xl sm:rounded-full max-w-full">
                   <a
                     href={data.company.avatarImage || `${STRIVE_IMG}/person/person-m-8.webp`}
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Lihat Foto Profil Developer (_blank)"
-                    className="w-8 h-8 rounded-full overflow-hidden border-2 border-[#ea7c00] shrink-0 block"
+                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full overflow-hidden border-2 border-[#ea7c00] shrink-0 block"
                   >
                     <img
                       src={data.company.avatarImage || `${STRIVE_IMG}/person/person-m-8.webp`}
@@ -871,19 +850,19 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
                       className="w-full h-full object-cover"
                     />
                   </a>
-                  <span className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-400">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                  <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold text-emerald-400">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping shrink-0" />
                     Open Order Jasa Website
                   </span>
-                  <span className="text-white/30">•</span>
-                  <span className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-amber-400">
-                    <Code2 className="w-4 h-4 text-[#ea7c00]" />
-                    {data.company.fullName} • Owner &amp; Lead Full-Stack Developer
+                  <span className="text-white/30 hidden xs:inline">•</span>
+                  <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-amber-400 truncate max-w-[210px] sm:max-w-none">
+                    <Code2 className="w-3.5 h-3.5 text-[#ea7c00] shrink-0" />
+                    <span className="truncate">{data.company.fullName} • Owner &amp; Developer</span>
                   </span>
                 </div>
 
                 {/* High-Impact Pro Headline */}
-                <h1 className="text-3xl sm:text-5xl xl:text-[52px] font-extrabold text-white leading-[1.12] tracking-tight font-display">
+                <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-[52px] font-extrabold text-white leading-tight sm:leading-[1.12] tracking-tight font-display break-words">
                   {data.company.heroTitle || (
                     <>
                       Jasa Pembuatan Website Pro{' '}
@@ -896,53 +875,53 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
                 </h1>
 
                 {/* Subtitle Description */}
-                <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed font-normal">
+                <p className="text-sm sm:text-base lg:text-lg text-slate-300 max-w-2xl leading-relaxed font-normal">
                   {data.company.heroDescription}
                 </p>
 
                 {/* Key Highlights Pills */}
-                <div className="flex flex-wrap gap-2.5 pt-1">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1">
                   {[
-                    { icon: <Globe className="w-3.5 h-3.5 text-[#ea7c00]" />, text: 'Jasa Website Full-Stack (Frontend + Backend)' },
-                    { icon: <Layers className="w-3.5 h-3.5 text-amber-400" />, text: 'Company Profile, Toko Online (E-Commerce) & SIAKAD' },
-                    { icon: <Database className="w-3.5 h-3.5 text-purple-400" />, text: 'Backend Admin CMS, REST API & Database SQL' }
+                    { icon: <Globe className="w-3.5 h-3.5 text-[#ea7c00] shrink-0" />, text: 'Jasa Website Full-Stack (Frontend + Backend)' },
+                    { icon: <Layers className="w-3.5 h-3.5 text-amber-400 shrink-0" />, text: 'Company Profile, Toko Online & Sistem' },
+                    { icon: <Database className="w-3.5 h-3.5 text-purple-400 shrink-0" />, text: 'Backend Admin CMS, REST API & MySQL' }
                   ].map((pill, i) => (
                     <span
                       key={i}
-                      className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/[0.06] border border-white/10 text-xs font-semibold text-slate-200"
+                      className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 rounded-xl bg-white/[0.06] border border-white/10 text-[11px] sm:text-xs font-semibold text-slate-200"
                     >
                       {pill.icon}
-                      {pill.text}
+                      <span>{pill.text}</span>
                     </span>
                   ))}
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex flex-wrap items-center gap-3.5 pt-2">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 w-full sm:w-auto">
                   <a
                     href="#pricing"
-                    className="inline-flex items-center gap-2.5 bg-gradient-to-r from-[#ea7c00] to-amber-500 hover:from-[#d46f00] hover:to-[#ea7c00] text-white font-bold text-sm sm:text-[15px] px-7 py-4 rounded-2xl shadow-xl shadow-[#ea7c00]/30 hover:-translate-y-0.5 transition-all duration-300"
+                    className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#ea7c00] to-amber-500 hover:from-[#d46f00] hover:to-[#ea7c00] text-white font-bold text-sm sm:text-[15px] px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl shadow-xl shadow-[#ea7c00]/30 hover:-translate-y-0.5 active:scale-98 transition-all duration-300 w-full sm:w-auto text-center"
                   >
-                    <Rocket className="w-4 h-4" />
+                    <Rocket className="w-4 h-4 shrink-0" />
                     <span>Pesan Jasa Pembuatan Website</span>
                   </a>
                   <a
                     href="#services"
-                    className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-sm sm:text-[15px] px-6 py-4 rounded-2xl backdrop-blur-md hover:-translate-y-0.5 transition-all duration-300"
+                    className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-sm sm:text-[15px] px-5 sm:px-6 py-3.5 sm:py-4 rounded-2xl backdrop-blur-md hover:-translate-y-0.5 active:scale-98 transition-all duration-300 w-full sm:w-auto text-center"
                   >
-                    <Layers className="w-4 h-4 text-amber-400" />
+                    <Layers className="w-4 h-4 text-amber-400 shrink-0" />
                     <span>Layanan Frontend &amp; Backend</span>
                   </a>
                 </div>
 
                 {/* Carousel Slide Indicators & Manual Controls */}
-                <div className="flex items-center gap-4 pt-4">
+                <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2 sm:pt-4">
                   <div className="flex items-center gap-2">
                     <button
                       type="button"
                       onClick={prevSlide}
                       aria-label="Previous Slide"
-                      className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#ea7c00] text-white flex items-center justify-center transition-colors cursor-pointer"
+                      className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 hover:bg-[#ea7c00] text-white flex items-center justify-center transition-colors cursor-pointer"
                     >
                       <ChevronLeft className="w-4 h-4" />
                     </button>
@@ -950,12 +929,12 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
                       type="button"
                       onClick={nextSlide}
                       aria-label="Next Slide"
-                      className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#ea7c00] text-white flex items-center justify-center transition-colors cursor-pointer"
+                      className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 hover:bg-[#ea7c00] text-white flex items-center justify-center transition-colors cursor-pointer"
                     >
                       <ChevronRight className="w-4 h-4" />
                     </button>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1.5 sm:gap-2">
                     {data.heroSlides.map((s, idx) => (
                       <button
                         key={s.id}
@@ -963,91 +942,91 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
                         onClick={() => setCurrentSlide(idx)}
                         className={`h-2 rounded-full transition-all cursor-pointer ${
                           idx === currentSlide
-                            ? 'w-8 bg-[#ea7c00]'
-                            : 'w-2.5 bg-white/30 hover:bg-white/60'
+                            ? 'w-6 sm:w-8 bg-[#ea7c00]'
+                            : 'w-2 sm:w-2.5 bg-white/30 hover:bg-white/60'
                         }`}
                         aria-label={`Slide ${idx + 1}`}
                       />
                     ))}
                   </div>
-                  <span className="text-xs text-slate-400 font-mono">
-                    0{currentSlide + 1} / 0{data.heroSlides.length} • Full-Stack Web Studio
+                  <span className="text-[11px] sm:text-xs text-slate-400 font-mono">
+                    0{currentSlide + 1} / 0{data.heroSlides.length} • Web Studio
                   </span>
                 </div>
               </div>
 
               {/* Right Column (5 cols): Interactive Engineering & System Preview Card */}
-              <div className="lg:col-span-5">
-                <div className="rounded-3xl bg-[#110f24]/90 backdrop-blur-2xl border border-white/15 shadow-[0_25px_70px_-15px_rgba(0,0,0,0.85)] overflow-hidden">
+              <div className="lg:col-span-5 w-full mt-6 lg:mt-0">
+                <div className="rounded-2xl sm:rounded-3xl bg-[#110f24]/90 backdrop-blur-2xl border border-white/15 shadow-[0_25px_70px_-15px_rgba(0,0,0,0.85)] overflow-hidden">
                   {/* Window Top Bar */}
-                  <div className="px-5 py-3.5 bg-[#181432] border-b border-white/10 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="w-3 h-3 rounded-full bg-rose-500" />
-                      <span className="w-3 h-3 rounded-full bg-amber-400" />
-                      <span className="w-3 h-3 rounded-full bg-emerald-400" />
-                      <span className="ml-2 text-xs font-mono text-slate-300 font-semibold">
-                        syauqi-dev://jasa-website-fullstack
+                  <div className="px-3.5 sm:px-5 py-3 bg-[#181432] border-b border-white/10 flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-1.5 sm:gap-2 truncate">
+                      <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-rose-500 shrink-0" />
+                      <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-400 shrink-0" />
+                      <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-400 shrink-0" />
+                      <span className="ml-1 sm:ml-2 text-[11px] sm:text-xs font-mono text-slate-300 font-semibold truncate">
+                        syauqi-dev://jasa-website
                       </span>
                     </div>
-                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                      FRONTEND + BACKEND
+                    <span className="px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 shrink-0">
+                      FULL-STACK
                     </span>
                   </div>
 
                   {/* Interactive Switcher Tabs inside Card */}
-                  <div className="grid grid-cols-3 gap-1 p-2 bg-[#0d0b1c]/60 border-b border-white/10 text-xs font-bold">
+                  <div className="grid grid-cols-3 gap-1 p-1.5 sm:p-2 bg-[#0d0b1c]/60 border-b border-white/10 text-[11px] sm:text-xs font-bold">
                     <button
                       type="button"
                       onClick={() => setHeroShowcaseTab('simpus')}
-                      className={`py-2 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
+                      className={`py-2 px-1.5 sm:px-3 rounded-xl flex items-center justify-center gap-1 sm:gap-1.5 transition-all cursor-pointer ${
                         heroShowcaseTab === 'simpus'
                           ? 'bg-[#ea7c00] text-white shadow'
                           : 'text-slate-400 hover:text-white'
                       }`}
                     >
-                      <Globe className="w-3.5 h-3.5" />
-                      <span>Jasa Website</span>
+                      <Globe className="w-3.5 h-3.5 shrink-0" />
+                      <span className="truncate">Jasa Web</span>
                     </button>
                     <button
                       type="button"
                       onClick={() => setHeroShowcaseTab('stack')}
-                      className={`py-2 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
+                      className={`py-2 px-1.5 sm:px-3 rounded-xl flex items-center justify-center gap-1 sm:gap-1.5 transition-all cursor-pointer ${
                         heroShowcaseTab === 'stack'
                           ? 'bg-[#ea7c00] text-white shadow'
                           : 'text-slate-400 hover:text-white'
                       }`}
                     >
-                      <Terminal className="w-3.5 h-3.5" />
-                      <span>Backend &amp; API</span>
+                      <Terminal className="w-3.5 h-3.5 shrink-0" />
+                      <span className="truncate">Backend</span>
                     </button>
                     <button
                       type="button"
                       onClick={() => setHeroShowcaseTab('database')}
-                      className={`py-2 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
+                      className={`py-2 px-1.5 sm:px-3 rounded-xl flex items-center justify-center gap-1 sm:gap-1.5 transition-all cursor-pointer ${
                         heroShowcaseTab === 'database'
                           ? 'bg-[#ea7c00] text-white shadow'
                           : 'text-slate-400 hover:text-white'
                       }`}
                     >
-                      <Database className="w-3.5 h-3.5" />
-                      <span>company_db</span>
+                      <Database className="w-3.5 h-3.5 shrink-0" />
+                      <span className="truncate">DB SQL</span>
                     </button>
                   </div>
 
                   {/* Card Body Content */}
-                  <div className="p-6 space-y-4">
+                  <div className="p-3.5 sm:p-6 space-y-3 sm:space-y-4">
                     {heroShowcaseTab === 'simpus' && (
-                      <div className="space-y-4">
-                        <div className="flex items-start justify-between gap-3">
+                      <div className="space-y-3 sm:space-y-4">
+                        <div className="flex items-start justify-between gap-2">
                           <div>
-                            <span className="text-[11px] font-bold uppercase tracking-wider text-amber-400">
+                            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-amber-400">
                               Layanan Unggulan • Terima Beres
                             </span>
-                            <h3 className="text-lg font-extrabold text-white mt-0.5">
+                            <h3 className="text-base sm:text-lg font-extrabold text-white mt-0.5">
                               Jasa Pembuatan Website &amp; Backend
                             </h3>
                           </div>
-                          <span className="px-3 py-1 rounded-xl bg-[#ea7c00]/20 text-amber-300 text-xs font-bold border border-[#ea7c00]/30">
+                          <span className="px-2.5 py-1 rounded-xl bg-[#ea7c00]/20 text-amber-300 text-[11px] sm:text-xs font-bold border border-[#ea7c00]/30 shrink-0">
                             Full-Stack
                           </span>
                         </div>
@@ -1057,7 +1036,7 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
                           Backend Dashboard Admin, API, &amp; Database SQL:
                         </p>
 
-                        <div className="grid grid-cols-2 gap-2.5 text-xs">
+                        <div className="grid grid-cols-2 gap-2 sm:gap-2.5 text-xs">
                           {[
                             { title: 'Web Company Profile', sub: 'Frontend + Admin CMS' },
                             { title: 'Toko Online / E-Commerce', sub: 'Katalog, Cart & Order' },
@@ -1066,10 +1045,10 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
                           ].map((item) => (
                             <div
                               key={item.title}
-                              className="p-3 rounded-2xl bg-white/[0.04] border border-white/10"
+                              className="p-2.5 sm:p-3 rounded-2xl bg-white/[0.04] border border-white/10"
                             >
-                              <div className="font-bold text-white">{item.title}</div>
-                              <div className="text-[11px] text-amber-400 mt-0.5">{item.sub}</div>
+                              <div className="font-bold text-white text-[11px] sm:text-xs leading-snug">{item.title}</div>
+                              <div className="text-[10px] sm:text-[11px] text-amber-400 mt-0.5">{item.sub}</div>
                             </div>
                           ))}
                         </div>
@@ -1086,18 +1065,18 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
                     )}
 
                     {heroShowcaseTab === 'stack' && (
-                      <div className="space-y-3.5">
-                        <div className="p-3.5 rounded-2xl bg-[#090814] border border-white/10 font-mono text-xs text-slate-200 space-y-1.5">
+                      <div className="space-y-3 sm:space-y-3.5">
+                        <div className="p-3 sm:p-3.5 rounded-2xl bg-[#090814] border border-white/10 font-mono text-[11px] sm:text-xs text-slate-200 space-y-1 sm:space-y-1.5 overflow-x-auto">
                           <div className="text-emerald-400">
-                            $ syauqi-web-service --frontend --backend
+                            $ syauqi-web-service --fullstack
                           </div>
                           <div>
                             <span className="text-purple-400">Frontend:</span> Next.js 14, React 18,
                             TypeScript, Tailwind
                           </div>
                           <div>
-                            <span className="text-amber-400">Backend:</span> Laravel / Node.js, REST
-                            API, RBAC Auth
+                            <span className="text-amber-400">Backend:</span> Node.js / Laravel, REST
+                            API, RBAC
                           </div>
                           <div>
                             <span className="text-cyan-400">Database:</span> MySQL `company_db` +
@@ -1105,16 +1084,16 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
                           </div>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-2.5 text-xs">
+                        <div className="grid grid-cols-2 gap-2 sm:gap-2.5 text-xs">
                           {(data.skills || []).slice(0, 4).map((sk) => (
                             <div
                               key={sk.id}
-                              className="p-3 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-between"
+                              className="p-2.5 sm:p-3 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-between"
                             >
-                              <span className="font-semibold text-white truncate pr-2">
+                              <span className="font-semibold text-white truncate pr-2 text-[11px] sm:text-xs">
                                 {sk.name.split('(')[0]}
                               </span>
-                              <span className="text-amber-400 font-extrabold">{sk.level}%</span>
+                              <span className="text-amber-400 font-extrabold text-[11px] sm:text-xs">{sk.level}%</span>
                             </div>
                           ))}
                         </div>
@@ -1122,12 +1101,12 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
                     )}
 
                     {heroShowcaseTab === 'database' && (
-                      <div className="space-y-3">
+                      <div className="space-y-2.5 sm:space-y-3">
                         <div className="flex items-center justify-between">
-                          <span className="text-xs font-bold text-purple-300">
+                          <span className="text-[11px] sm:text-xs font-bold text-purple-300">
                             Skema Aktif: `company_db` (5 Tabel Utama)
                           </span>
-                          <span className="text-[11px] font-mono text-emerald-400">CONNECTED</span>
+                          <span className="text-[10px] sm:text-[11px] font-mono text-emerald-400">CONNECTED</span>
                         </div>
                         <div className="space-y-1.5 text-xs font-mono">
                           {[
@@ -1139,10 +1118,10 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
                           ].map((row) => (
                             <div
                               key={row.t}
-                              className="px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-between gap-2"
+                              className="px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-between gap-2"
                             >
-                              <strong className="text-amber-400">{row.t}</strong>
-                              <span className="text-slate-400 truncate text-[11px]">{row.d}</span>
+                              <strong className="text-amber-400 text-[11px] sm:text-xs">{row.t}</strong>
+                              <span className="text-slate-400 truncate text-[10px] sm:text-[11px]">{row.d}</span>
                             </div>
                           ))}
                         </div>
@@ -1161,41 +1140,41 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
           </div>
 
           {/* Bottom Hero Glass Bento KPI Bar */}
-          <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 p-4 sm:p-6 rounded-3xl bg-white/[0.05] backdrop-blur-xl border border-white/10 shadow-2xl">
+          <div className="relative z-20 max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 w-full pt-4 sm:pt-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-5 p-3.5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white/[0.05] backdrop-blur-xl border border-white/10 shadow-2xl">
               {[
                 {
-                  val: `${data.company.yearsExperience}+ Tahun`,
-                  label: 'Pengalaman Jasa Pembuatan Web',
+                  val: `${data.company.yearsExperience}+ Thn`,
+                  label: 'Pengalaman Web Pro',
                   sub: 'Full-Stack Frontend & Backend'
                 },
                 {
                   val: data.company.projectsCount || '28+ Proyek',
-                  label: 'Portofolio Website & Sistem',
-                  sub: 'Company Profile, E-Commerce & Web App'
+                  label: 'Portofolio Website',
+                  sub: 'Company Profile, Toko & Sistem'
                 },
                 {
-                  val: `${data.skills?.length || 12} Keahlian`,
-                  label: 'Kompetensi Teknik Informatika',
-                  sub: 'Frontend, Backend API & Database SQL'
+                  val: `${data.skills?.length || 12}+ Skill`,
+                  label: 'Teknik Informatika',
+                  sub: 'Frontend, Backend & SQL'
                 },
                 {
                   val: '5 Tabel RBAC',
-                  label: 'Database company_db Terintegrasi',
-                  sub: 'Live CRUD di AppDashboard (/admin)'
+                  label: 'Database company_db',
+                  sub: 'Live CRUD Terintegrasi'
                 }
               ].map((stat, idx) => (
                 <div
                   key={idx}
-                  className="p-3 sm:p-4 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#ea7c00]/40 transition-colors"
+                  className="p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#ea7c00]/40 transition-colors"
                 >
-                  <div className="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-amber-300 font-display">
+                  <div className="text-xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-amber-300 font-display">
                     {stat.val}
                   </div>
-                  <div className="text-xs sm:text-sm font-bold text-amber-400 mt-1">
+                  <div className="text-[11px] sm:text-sm font-bold text-amber-400 mt-0.5 sm:mt-1 leading-snug">
                     {stat.label}
                   </div>
-                  <div className="text-[11px] text-slate-400 mt-0.5 hidden sm:block">
+                  <div className="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 hidden sm:block">
                     {stat.sub}
                   </div>
                 </div>

@@ -37,11 +37,11 @@ const siteUrl =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'SyauqiDev — Jasa Pembuatan Website Profesional & Backend Developer',
+    default: 'SyauqiDev — Jasa Pembuatan Website Profesional (Owner: Syauqi Abduraffi)',
     template: '%s | SyauqiDev'
   },
   description:
-    'Jasa pembuatan website profesional, company profile bisnis, toko online e-commerce, landing page UMKM, dan arsitektur backend modern oleh Syauqi Abduraffi (Teknik Informatika). Cepat, responsif, dan siap pakai.',
+    'SyauqiDev adalah penyedia jasa pembuatan website profesional & backend modern milik Syauqi Abduraffi (Owner & Full-Stack Developer, S1 Teknik Informatika). Melayani Company Profile, E-Commerce, Landing Page UMKM, dan Web App kustom.',
   keywords: [
     'Jasa Pembuatan Website',
     'Jasa Pembuatan Website Murah',
@@ -128,7 +128,7 @@ const jsonLd = {
   founder: {
     '@type': 'Person',
     name: 'Syauqi Abduraffi',
-    jobTitle: 'Full-Stack Web Developer',
+    jobTitle: 'Owner & Lead Full-Stack Web Developer',
     knowsAbout: ['Next.js', 'React', 'Node.js', 'TypeScript', 'TailwindCSS', 'MySQL', 'PostgreSQL']
   },
   address: {

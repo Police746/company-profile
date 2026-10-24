@@ -670,7 +670,7 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
                 </span>
               </div>
               <span className="text-[11px] text-slate-400 font-medium hidden 2xl:block mt-0.5 whitespace-nowrap">
-                Jasa Pembuatan Website • Frontend &amp; Backend
+                Jasa Pembuatan Website • Owner: {data.company.fullName}
               </span>
             </div>
           </a>
@@ -878,7 +878,7 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
                   <span className="text-white/30">•</span>
                   <span className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-amber-400">
                     <Code2 className="w-4 h-4 text-[#ea7c00]" />
-                    {data.company.fullName} • Frontend &amp; Backend Developer
+                    {data.company.fullName} • Owner &amp; Lead Full-Stack Developer
                   </span>
                 </div>
 

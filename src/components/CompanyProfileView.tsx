@@ -648,9 +648,17 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
         <div className="max-w-[1536px] w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 lg:gap-4">
           {/* Brand Logo */}
           <a href="#hero" className="flex items-center gap-2.5 group shrink-0">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#ea7c00] to-amber-600 flex items-center justify-center text-white font-extrabold text-lg shadow-lg shadow-[#ea7c00]/30 group-hover:scale-105 transition-transform shrink-0">
-              <Code2 className="w-5 h-5" />
-            </div>
+            {data.company.logoUrl ? (
+              <img
+                src={data.company.logoUrl}
+                alt={data.company.sitename}
+                className="w-10 h-10 rounded-xl object-cover border border-[#ea7c00]/50 shadow-lg shadow-[#ea7c00]/30 group-hover:scale-105 transition-transform shrink-0"
+              />
+            ) : (
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#ea7c00] to-amber-600 flex items-center justify-center text-white font-extrabold text-lg shadow-lg shadow-[#ea7c00]/30 group-hover:scale-105 transition-transform shrink-0">
+                <Code2 className="w-5 h-5" />
+              </div>
+            )}
             <div className="flex flex-col">
               <div className="flex items-center leading-none">
                 <span className="text-xl sm:text-2xl font-extrabold text-white tracking-tight font-display whitespace-nowrap">
@@ -2605,7 +2613,14 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12">
             <div className="lg:col-span-4 space-y-4">
-              <a href="#hero" className="inline-flex items-center gap-2 text-2xl font-extrabold text-white font-display">
+              <a href="#hero" className="inline-flex items-center gap-2.5 text-2xl font-extrabold text-white font-display group">
+                {data.company.logoUrl && (
+                  <img
+                    src={data.company.logoUrl}
+                    alt={data.company.sitename}
+                    className="w-8 h-8 rounded-lg object-cover border border-[#ea7c00]/50 shadow-md shadow-[#ea7c00]/20 group-hover:scale-105 transition-transform shrink-0"
+                  />
+                )}
                 <span>{data.company.sitename}</span>
                 <span className="text-[#ea7c00]">.</span>
               </a>

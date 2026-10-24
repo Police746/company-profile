@@ -1213,7 +1213,7 @@ export default function AppDashboardPage() {
 
   // Helper: Upload foto profil developer / foto about & langsung simpan ke company_db
   const handleUploadCompanyPhoto = async (
-    field: 'avatarImage' | 'aboutImage',
+    field: 'avatarImage' | 'aboutImage' | 'logoUrl' | 'faviconUrl',
     file: File | undefined
   ) => {
     if (!file) return;
@@ -1236,7 +1236,11 @@ export default function AppDashboardPage() {
         notify(
           field === 'avatarImage'
             ? 'Foto Profil Developer berhasil di-upload & ditampilkan!'
-            : 'Foto Profil IT (#about) berhasil di-upload & ditampilkan!'
+            : field === 'aboutImage'
+            ? 'Foto Profil IT (#about) berhasil di-upload & ditampilkan!'
+            : field === 'logoUrl'
+            ? 'Logo Brand Website (Navbar & Footer) berhasil di-upload & diperbarui!'
+            : 'Favicon Tab Browser berhasil di-upload & diperbarui!'
         );
       }
     });
@@ -5453,6 +5457,168 @@ export default function AppDashboardPage() {
                             value={companyForm.aboutImage || ''}
                             onChange={(e) =>
                               setCompanyForm({ ...companyForm, aboutImage: e.target.value })
+                            }
+                            className="w-full px-2.5 py-1.5 rounded-lg border border-[#322b5e] bg-[#1a1636] text-white text-[11px] font-mono"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Card 3: Logo Brand Website (Navbar & Footer) */}
+                      <div className="p-3.5 rounded-xl border border-[#ea7c00]/30 bg-[#120f26] space-y-3">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-bold text-amber-300 flex items-center gap-1.5">
+                            <Code2 className="w-3.5 h-3.5 text-[#ea7c00]" />
+                            <span>3. Logo Brand Website (Navbar &amp; Footer)</span>
+                          </span>
+                          <a
+                            href={companyForm.logoUrl || '/uploads/syauqidev-logo.jpg'}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => {
+                              const imgUrl = companyForm.logoUrl || '/uploads/syauqidev-logo.jpg';
+                              if (imgUrl.startsWith('data:image/')) {
+                                e.preventDefault();
+                                openImageNewTab(imgUrl, 'Logo Brand Website');
+                              }
+                            }}
+                            className="text-[10px] text-amber-400 hover:underline inline-flex items-center gap-1"
+                          >
+                            <ExternalLink className="w-3 h-3" />
+                            <span>Buka (_blank)</span>
+                          </a>
+                        </div>
+
+                        <div className="relative group rounded-xl overflow-hidden border border-[#ea7c00]/40 bg-[#0c0a1a] h-44 flex items-center justify-center p-2">
+                          <img
+                            src={companyForm.logoUrl || '/uploads/syauqidev-logo.jpg'}
+                            alt="Logo Brand Website"
+                            className="max-h-full max-w-full object-contain drop-shadow-[0_4px_12px_rgba(234,124,0,0.3)]"
+                          />
+                          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <label className="px-3.5 py-2 rounded-xl bg-gradient-to-r from-[#ea7c00] to-amber-600 text-white text-xs font-bold shadow-lg cursor-pointer">
+                              📁 Ganti Logo Brand
+                              <input
+                                type="file"
+                                accept="image/*"
+                                className="hidden"
+                                onChange={(e) => {
+                                  const file = e.target.files?.[0];
+                                  handleUploadCompanyPhoto('logoUrl', file);
+                                  e.target.value = '';
+                                }}
+                              />
+                            </label>
+                          </div>
+                        </div>
+
+                        <div className="space-y-2">
+                          <label className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-[#ea7c00] to-amber-600 hover:from-[#d46f00] hover:to-[#ea7c00] text-white text-xs font-bold shadow-md cursor-pointer transition-all">
+                            <span>📤 Upload Logo Brand (Pilih File)</span>
+                            <input
+                              type="file"
+                              accept="image/*"
+                              className="hidden"
+                              onChange={(e) => {
+                                const file = e.target.files?.[0];
+                                handleUploadCompanyPhoto('logoUrl', file);
+                                e.target.value = '';
+                              }}
+                            />
+                          </label>
+                          <input
+                            type="text"
+                            placeholder="Atau URL Logo /uploads/..."
+                            value={companyForm.logoUrl || ''}
+                            onChange={(e) =>
+                              setCompanyForm({ ...companyForm, logoUrl: e.target.value })
+                            }
+                            className="w-full px-2.5 py-1.5 rounded-lg border border-[#322b5e] bg-[#1a1636] text-white text-[11px] font-mono"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Card 4: Favicon Browser Tab (Tab Icon Website) */}
+                      <div className="p-3.5 rounded-xl border border-emerald-500/30 bg-[#120f26] space-y-3">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-bold text-emerald-300 flex items-center gap-1.5">
+                            <Globe className="w-3.5 h-3.5 text-emerald-400" />
+                            <span>4. Favicon Browser Tab (Icon Web Tab)</span>
+                          </span>
+                          <a
+                            href={companyForm.faviconUrl || '/uploads/syauqidev-logo.jpg'}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => {
+                              const imgUrl = companyForm.faviconUrl || '/uploads/syauqidev-logo.jpg';
+                              if (imgUrl.startsWith('data:image/')) {
+                                e.preventDefault();
+                                openImageNewTab(imgUrl, 'Favicon Tab');
+                              }
+                            }}
+                            className="text-[10px] text-emerald-400 hover:underline inline-flex items-center gap-1"
+                          >
+                            <ExternalLink className="w-3 h-3" />
+                            <span>Buka (_blank)</span>
+                          </a>
+                        </div>
+
+                        {/* Simulated Chrome Browser Tab Preview */}
+                        <div className="relative group rounded-xl overflow-hidden border border-emerald-500/30 bg-[#090814] h-44 flex flex-col items-center justify-center p-3">
+                          <div className="w-full max-w-[220px] rounded-t-xl bg-[#1f1d38] border border-b-0 border-white/10 px-3 py-1.5 flex items-center gap-2 shadow">
+                            <img
+                              src={companyForm.faviconUrl || '/uploads/syauqidev-logo.jpg'}
+                              alt="Favicon Tab"
+                              className="w-4 h-4 rounded-full object-cover shrink-0"
+                            />
+                            <span className="text-[11px] text-slate-200 truncate font-medium">
+                              {companyForm.sitename || 'SyauqiDev'} — Personal...
+                            </span>
+                          </div>
+                          <div className="w-full max-w-[220px] h-0.5 bg-[#ea7c00]" />
+                          <div className="mt-3 flex items-center justify-center">
+                            <img
+                              src={companyForm.faviconUrl || '/uploads/syauqidev-logo.jpg'}
+                              alt="Favicon Preview"
+                              className="w-14 h-14 rounded-2xl object-cover border-2 border-emerald-500/50 shadow-lg shadow-emerald-500/20"
+                            />
+                          </div>
+                          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <label className="px-3.5 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-xs font-bold shadow-lg cursor-pointer">
+                              📁 Ganti Favicon
+                              <input
+                                type="file"
+                                accept="image/*"
+                                className="hidden"
+                                onChange={(e) => {
+                                  const file = e.target.files?.[0];
+                                  handleUploadCompanyPhoto('faviconUrl', file);
+                                  e.target.value = '';
+                                }}
+                              />
+                            </label>
+                          </div>
+                        </div>
+
+                        <div className="space-y-2">
+                          <label className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold shadow-md cursor-pointer transition-all">
+                            <span>📤 Upload Favicon (Pilih File)</span>
+                            <input
+                              type="file"
+                              accept="image/*"
+                              className="hidden"
+                              onChange={(e) => {
+                                const file = e.target.files?.[0];
+                                handleUploadCompanyPhoto('faviconUrl', file);
+                                e.target.value = '';
+                              }}
+                            />
+                          </label>
+                          <input
+                            type="text"
+                            placeholder="Atau URL Favicon /uploads/..."
+                            value={companyForm.faviconUrl || ''}
+                            onChange={(e) =>
+                              setCompanyForm({ ...companyForm, faviconUrl: e.target.value })
                             }
                             className="w-full px-2.5 py-1.5 rounded-lg border border-[#322b5e] bg-[#1a1636] text-white text-[11px] font-mono"
                           />

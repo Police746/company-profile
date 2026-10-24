@@ -104,8 +104,12 @@ export const metadata: Metadata = {
     creator: '@syauqidev'
   },
   icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png'
+    icon: [
+      { url: '/uploads/syauqidev-logo.jpg', type: 'image/jpeg' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    shortcut: '/uploads/syauqidev-logo.jpg',
+    apple: '/uploads/syauqidev-logo.jpg'
   },
   verification: {
     google: 'CNaoHaof9uzdpLKvP9s0e07jyGmzGh-_VS6K2s-h3x0'
@@ -117,8 +121,8 @@ const jsonLd = {
   '@type': 'ProfessionalService',
   name: 'SyauqiDev — Jasa Pembuatan Website & Backend Developer',
   url: siteUrl,
-  logo: `${siteUrl}/uploads/ecommerce-store-lavensa.jpg`,
-  image: `${siteUrl}/uploads/ecommerce-store-lavensa.jpg`,
+  logo: `${siteUrl}/uploads/syauqidev-logo.jpg`,
+  image: `${siteUrl}/uploads/syauqidev-logo.jpg`,
   description:
     'Layanan jasa pembuatan website profesional, sistem e-commerce, company profile perusahaan, dan arsitektur backend database modern oleh Syauqi Abduraffi.',
   founder: {
@@ -174,6 +178,8 @@ export default function RootLayout({
       className={`${jakarta.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <head>
+        <link rel="icon" type="image/jpeg" href="/uploads/syauqidev-logo.jpg" />
+        <link rel="apple-touch-icon" href="/uploads/syauqidev-logo.jpg" />
         <meta
           name="google-site-verification"
           content="CNaoHaof9uzdpLKvP9s0e07jyGmzGh-_VS6K2s-h3x0"

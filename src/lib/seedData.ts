@@ -116,6 +116,8 @@ export const initialDatabase: DatabaseSchema = {
     major: 'Teknik Informatika • Spesialis Jasa Pembuatan Website (Frontend & Backend)',
     avatarImage: `${STRIVE_IMG}/person/person-m-8.webp`,
     aboutImage: `${STRIVE_IMG}/about/about-portrait-2.webp`,
+    logoUrl: '/uploads/syauqidev-logo.jpg',
+    faviconUrl: '/uploads/syauqidev-logo.jpg',
     aboutSectionBadge: 'Jasa Pembuatan Website • Full-Stack Frontend & Backend',
     aboutSectionTitle: 'Jasa Pembuatan Website Profesional (Frontend, Backend & Database)',
     aboutSectionSubtitle:

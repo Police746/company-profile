@@ -191,6 +191,8 @@ export interface CompanyInfo {
   major: string;
   avatarImage?: string;
   aboutImage?: string;
+  logoUrl?: string;
+  faviconUrl?: string;
   aboutSectionBadge?: string;
   aboutSectionTitle?: string;
   aboutSectionSubtitle?: string;

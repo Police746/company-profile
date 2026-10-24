@@ -1,0 +1,603 @@
+{
+  "company": {
+    "sitename": "Strive",
+    "heroTitle": "Building Trust, Driving Growth",
+    "heroDescription": "Present your business with confidence using a clean, flexible, and fully responsive template that helps you connect with clients, attract opportunities, and strengthen your brand identity.",
+    "aboutHeading": "Elevating Corporate Excellence Through Strategic Innovation",
+    "aboutLead": "We partner with forward-thinking organizations to unlock sustainable growth, modernize operations, and build resilient digital ecosystems that stand the test of time.",
+    "aboutImage": "https://bootstrapmade.com/content/demo/Strive/assets/img/about/about-portrait-2.webp",
+    "experienceYears": 12,
+    "projectsCount": "345+",
+    "location": "8721 Broadway Avenue, New York, NY 10023",
+    "email": "contact@strive-agency.com",
+    "phone": "+1 (212) 555-7890",
+    "openHours": "Monday-Friday: 9AM - 6PM",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus",
+    "footerDescription": "Empowering enterprises worldwide with strategic consulting, financial advisory, cloud transformation, and human-centric digital solutions."
+  },
+  "sliders": [
+    {
+      "id": "sl-1",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/slider/slider-14.webp",
+      "title": "Building Trust, Driving Growth",
+      "subtitle": "Present your business with confidence using a clean, flexible, and fully responsive platform that helps you connect with clients and strengthen your brand identity."
+    },
+    {
+      "id": "sl-2",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/slider/slider-16.webp",
+      "title": "Strategic Consulting for Modern Enterprises",
+      "subtitle": "Accelerate your corporate performance with data-driven insights, financial strategy, and seamless digital transformation."
+    },
+    {
+      "id": "sl-3",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/slider/slider-13.webp",
+      "title": "Scaling Operations Across Global Markets",
+      "subtitle": "Partner with our experienced executive advisors and technology architects to unlock new revenue streams."
+    },
+    {
+      "id": "sl-4",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/slider/slider-3.webp",
+      "title": "Innovative Technology & Risk Management",
+      "subtitle": "Protect your assets and modernize your enterprise workflow with bank-grade security and cloud infrastructure."
+    }
+  ],
+  "services": [
+    {
+      "id": "srv-1",
+      "number": "01",
+      "title": "Financial Strategy Development",
+      "description": "Comprehensive financial planning, capital allocation, and corporate restructuring designed to maximize long-term shareholder value.",
+      "icon": "BarChart3"
+    },
+    {
+      "id": "srv-2",
+      "number": "02",
+      "title": "Market Expansion Advisory",
+      "description": "Data-backed go-to-market frameworks and competitive intelligence to help your organization capture new regional and global markets.",
+      "icon": "TrendingUp"
+    },
+    {
+      "id": "srv-3",
+      "number": "03",
+      "title": "Risk Management Solutions",
+      "description": "Proactive enterprise risk assessment, regulatory compliance auditing, and operational continuity strategies for modern businesses.",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "srv-4",
+      "number": "04",
+      "title": "Innovation & Digital Transformation",
+      "description": "End-to-end modernization of legacy workflows through cloud architecture, AI automation, and custom enterprise software.",
+      "icon": "Lightbulb"
+    },
+    {
+      "id": "srv-5",
+      "number": "05",
+      "title": "Talent Management Strategy",
+      "description": "Organizational design, leadership alignment, and high-performance culture transformation to attract and retain top industry talent.",
+      "icon": "Users"
+    }
+  ],
+  "features": [
+    {
+      "id": "feat-1",
+      "title": "Enterprise Security",
+      "description": "Bank-level encryption and advanced security protocols to protect your sensitive business data.",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "feat-2",
+      "title": "Real-time Analytics",
+      "description": "Get instant insights with comprehensive dashboards and detailed reporting capabilities.",
+      "icon": "TrendingUp"
+    },
+    {
+      "id": "feat-3",
+      "title": "Team Collaboration",
+      "description": "Foster seamless teamwork with integrated communication and project management tools.",
+      "icon": "Users"
+    },
+    {
+      "id": "feat-4",
+      "title": "Cloud Integration",
+      "description": "Seamlessly sync your data across all devices with our robust cloud infrastructure.",
+      "icon": "CloudUpload"
+    },
+    {
+      "id": "feat-5",
+      "title": "Easy Customization",
+      "description": "Tailor the platform to your unique business needs with flexible configuration options.",
+      "icon": "Settings"
+    },
+    {
+      "id": "feat-6",
+      "title": "24/7 Support",
+      "description": "Get expert assistance whenever you need it with our dedicated customer support team.",
+      "icon": "Headphones"
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "port-1",
+      "title": "Business Growth Strategy",
+      "subtitle": "Strategic Planning",
+      "category": "Strategy",
+      "tags": [
+        "Strategy",
+        "Consulting"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-1.webp",
+      "client": "Apex Global Corp",
+      "description": "Comprehensive multi-year corporate growth roadmap resulting in a 42% increase in regional market share across North America and Europe."
+    },
+    {
+      "id": "port-2",
+      "title": "Financial Restructuring",
+      "subtitle": "Financial Advisory",
+      "category": "Finance",
+      "tags": [
+        "Finance",
+        "Investment"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-2.webp",
+      "client": "Meridian Capital Group",
+      "description": "Optimized capital structure and treasury operations, reducing annual debt servicing costs by $14.5M while improving liquidity ratios."
+    },
+    {
+      "id": "port-3",
+      "title": "Supply Chain Optimization",
+      "subtitle": "Operations Management",
+      "category": "Operations",
+      "tags": [
+        "Operations",
+        "Logistics"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-3.webp",
+      "client": "Vanguard Logistics",
+      "description": "Redesigned end-to-end warehouse and distribution workflows with predictive inventory analytics, cutting fulfillment lead times by 35%."
+    },
+    {
+      "id": "port-4",
+      "title": "Digital Transformation",
+      "subtitle": "Technology Consulting",
+      "category": "Technology",
+      "tags": [
+        "Technology",
+        "Innovation"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-4.webp",
+      "client": "Horizon Retail Enterprise",
+      "description": "Migrated legacy on-premise ERP systems to a cloud-native architecture with unified real-time executive analytics dashboards."
+    },
+    {
+      "id": "port-5",
+      "title": "Market Expansion",
+      "subtitle": "Strategic Planning",
+      "category": "Strategy",
+      "tags": [
+        "Strategy",
+        "Growth"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-5.webp",
+      "client": "NovaTech Solutions",
+      "description": "Guided successful market entry into 6 new APAC territories with localized pricing, partner channels, and regulatory compliance."
+    },
+    {
+      "id": "port-6",
+      "title": "Investment Strategy",
+      "subtitle": "Financial Advisory",
+      "category": "Finance",
+      "tags": [
+        "Finance",
+        "Investment"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-6.webp",
+      "client": "Sterling Wealth Partners",
+      "description": "Developed algorithmic portfolio risk models and ESG investment frameworks managing over $850M in institutional assets."
+    }
+  ],
+  "pricing": [
+    {
+      "id": "price-1",
+      "name": "Standard",
+      "price": 9,
+      "period": "/month",
+      "description": "Essential corporate tools and foundational analytics for growing teams and startups.",
+      "featured": false,
+      "icon": "star",
+      "features": [
+        "Core Analytics & Reporting Suite",
+        "Up to 10 Team Workspace Members",
+        "Standard Cloud Storage & Backup",
+        "Email & Community Support"
+      ]
+    },
+    {
+      "id": "price-2",
+      "name": "Professional",
+      "price": 29,
+      "period": "/month",
+      "description": "Complete strategic suite with advanced automation and priority advisory support.",
+      "featured": true,
+      "badge": "Recommended",
+      "icon": "stars",
+      "features": [
+        "Advanced Real-Time BI Dashboard",
+        "Unlimited Team Workspace Members",
+        "Custom API & CRM Integrations",
+        "24/7 Priority Enterprise Support"
+      ]
+    },
+    {
+      "id": "price-3",
+      "name": "Ultimate",
+      "price": 49,
+      "period": "/month",
+      "description": "Full-scale enterprise deployment with dedicated architecture and custom SLA guarantees.",
+      "featured": false,
+      "icon": "star-fill",
+      "features": [
+        "Dedicated Executive Account Advisor",
+        "Custom White-Label & SSO Security",
+        "Multi-Region High-Availability Cloud",
+        "99.99% Guaranteed Uptime SLA"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-g1",
+      "num": 1,
+      "category": "General",
+      "question": "How does Strive tailor consulting solutions to our specific industry?",
+      "answer": "We begin every engagement with a comprehensive diagnostic audit of your operational workflows, competitive landscape, and financial objectives. Our multidisciplinary specialists then craft a custom roadmap aligned with your exact KPIs."
+    },
+    {
+      "id": "faq-g2",
+      "num": 2,
+      "category": "General",
+      "question": "What is the typical timeline for an enterprise transformation project?",
+      "answer": "Initial strategic assessments typically conclude within 2 to 4 weeks, while full-scale digital and operational implementations range from 8 to 16 weeks with measurable milestone deliverables every sprint."
+    },
+    {
+      "id": "faq-g3",
+      "num": 3,
+      "category": "General",
+      "question": "Can we integrate the Strive platform with our existing ERP and CRM tools?",
+      "answer": "Yes. Our platform features pre-built connectors and REST/GraphQL APIs compatible with SAP, Salesforce, HubSpot, Oracle, and custom internal databases."
+    },
+    {
+      "id": "faq-p1",
+      "num": 1,
+      "category": "Pricing",
+      "question": "Can we upgrade or switch our subscription plan at any time?",
+      "answer": "Absolutely. You can scale your plan up or down directly from your administrator dashboard at any time, with prorated billing applied automatically."
+    },
+    {
+      "id": "faq-p2",
+      "num": 2,
+      "category": "Pricing",
+      "question": "Do you offer custom enterprise invoicing and annual discounts?",
+      "answer": "Yes, organizations opting for annual billing receive a 20% discount, and we support custom PO invoicing and wire transfers for Enterprise clients."
+    },
+    {
+      "id": "faq-s1",
+      "num": 1,
+      "category": "Support",
+      "question": "What level of technical support is included with our plan?",
+      "answer": "All plans include access to our documentation portal and support desk. Professional and Ultimate plans include 24/7 live chat, phone support, and a dedicated customer success manager."
+    },
+    {
+      "id": "faq-s2",
+      "num": 2,
+      "category": "Support",
+      "question": "Do you provide onboarding training for our internal staff?",
+      "answer": "Yes, our team conducts live virtual or on-site workshops and provides recorded training modules to ensure smooth adoption across your organization."
+    }
+  ],
+  "team": [
+    {
+      "id": "tm-1",
+      "name": "Marcus Rodriguez",
+      "position": "Chief Technology Officer",
+      "bio": "Passionate about building scalable solutions and leading innovative development teams to create exceptional user experiences.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-8.webp"
+    },
+    {
+      "id": "tm-2",
+      "name": "Sarah Chen",
+      "position": "Head of Product Design",
+      "bio": "Creative visionary who transforms complex problems into intuitive design solutions that users love and businesses thrive with.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-12.webp"
+    },
+    {
+      "id": "tm-3",
+      "name": "David Kumar",
+      "position": "VP of Marketing",
+      "bio": "Growth strategist with expertise in digital marketing campaigns that drive user acquisition and brand recognition worldwide.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-3.webp"
+    },
+    {
+      "id": "tm-4",
+      "name": "Emma Thompson",
+      "position": "Customer Success Lead",
+      "bio": "Dedicated to ensuring every customer achieves their goals through personalized support and strategic guidance.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-7.webp"
+    },
+    {
+      "id": "tm-5",
+      "name": "Alex Johnson",
+      "position": "Senior Full-Stack Developer",
+      "bio": "Code architect who builds robust applications using cutting-edge technologies to deliver seamless digital experiences.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-11.webp"
+    },
+    {
+      "id": "tm-6",
+      "name": "Lisa Park",
+      "position": "UX Research Manager",
+      "bio": "User advocate who conducts deep research to understand customer needs and drive data-informed design decisions.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-4.webp"
+    },
+    {
+      "id": "tm-7",
+      "name": "Ryan Mitchell",
+      "position": "DevOps Engineer",
+      "bio": "Infrastructure specialist focused on automation, scalability, and maintaining high-performance systems that never sleep.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-14.webp"
+    },
+    {
+      "id": "tm-8",
+      "name": "Jessica Williams",
+      "position": "Data Analytics Lead",
+      "bio": "Numbers storyteller who transforms complex data into actionable insights that drive strategic business decisions.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-9.webp"
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": "blog-1",
+      "title": "How Enterprise Cloud Architecture Drives Sustainable Business Growth in 2026",
+      "category": "Technology",
+      "date": "Dec 18, 2025",
+      "excerpt": "Discover how modern organizations leverage distributed cloud infrastructure and real-time analytics to reduce operational overhead and accelerate time-to-market.",
+      "author": "Marcus Johnson",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-8.webp",
+      "readTime": "5 min read",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-7.webp",
+      "featured": true
+    },
+    {
+      "id": "blog-2",
+      "title": "Navigating Financial Restructuring and Capital Efficiency in Global Markets",
+      "category": "Innovation",
+      "date": "Dec 16, 2025",
+      "excerpt": "Strategic frameworks for CFOs and executive leaders looking to strengthen balance sheet resilience while funding high-impact innovation initiatives.",
+      "author": "Emma Rodriguez",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-7.webp",
+      "readTime": "7 min read",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-3.webp",
+      "featured": true
+    },
+    {
+      "id": "blog-3",
+      "title": "Building High-Trust Client Relationships Through Transparent KPI Reporting",
+      "category": "Business",
+      "date": "Dec 15, 2025",
+      "excerpt": "Why real-time executive dashboards are replacing static monthly reports.",
+      "author": "Jessica Kim",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-9.webp",
+      "readTime": "4 min read",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-5.webp",
+      "featured": false
+    },
+    {
+      "id": "blog-4",
+      "title": "Data-Driven Go-To-Market Strategies for B2B SaaS Expansion",
+      "category": "Marketing",
+      "date": "Dec 12, 2025",
+      "excerpt": "Aligning sales, marketing, and product teams around unified conversion funnels.",
+      "author": "David Park",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-3.webp",
+      "readTime": "6 min read",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-9.webp",
+      "featured": false
+    },
+    {
+      "id": "blog-5",
+      "title": "Human-Centric Design Systems That Boost Enterprise Productivity",
+      "category": "Design",
+      "date": "Dec 10, 2025",
+      "excerpt": "Reducing cognitive load in complex enterprise software interfaces.",
+      "author": "Sarah Miller",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-12.webp",
+      "readTime": "5 min read",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-6.webp",
+      "featured": false
+    },
+    {
+      "id": "blog-6",
+      "title": "Zero-Trust Cybersecurity Protocols for Distributed Corporate Teams",
+      "category": "Tech",
+      "date": "Dec 8, 2025",
+      "excerpt": "Protecting intellectual property and client data across hybrid work environments.",
+      "author": "Alex Chen",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-11.webp",
+      "readTime": "5 min read",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-8.webp",
+      "featured": false
+    }
+  ],
+  "inquiries": [
+    {
+      "id": "inq-1",
+      "name": "Michael Vance",
+      "email": "m.vance@apexglobal.com",
+      "subject": "Enterprise Strategy & Cloud Transformation Inquiry",
+      "message": "We are looking to modernize our regional supply chain and financial reporting portal across 12 offices in Q4.",
+      "status": "Pending",
+      "createdAt": "2026-10-10T10:15:00.000Z"
+    },
+    {
+      "id": "inq-2",
+      "name": "Elena Rostova",
+      "email": "elena@meridiancapital.io",
+      "subject": "Request for Financial Advisory Consultation",
+      "message": "Would love to schedule an executive briefing regarding your Risk Management & Analytics suite.",
+      "status": "In Progress",
+      "createdAt": "2026-10-11T08:40:00.000Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord-1",
+      "orderCode": "#ORD-001",
+      "customerName": "John Doe",
+      "customerEmail": "john.doe@enterprise.com",
+      "customerAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-8.webp",
+      "product": "Professional Plan",
+      "amount": "$299.00",
+      "status": "Completed",
+      "date": "5 mins ago"
+    },
+    {
+      "id": "ord-2",
+      "orderCode": "#ORD-002",
+      "customerName": "Jane Smith",
+      "customerEmail": "jane.smith@auroratech.io",
+      "customerAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-12.webp",
+      "product": "Standard Plan",
+      "amount": "$99.00",
+      "status": "Pending",
+      "date": "25 mins ago"
+    },
+    {
+      "id": "ord-3",
+      "orderCode": "#ORD-003",
+      "customerName": "Mike Johnson",
+      "customerEmail": "mike.j@vanguardlogistics.com",
+      "customerAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-3.webp",
+      "product": "Ultimate Enterprise Plan",
+      "amount": "$999.00",
+      "status": "Completed",
+      "date": "2 hours ago"
+    },
+    {
+      "id": "ord-4",
+      "orderCode": "#ORD-004",
+      "customerName": "Sarah Wilson",
+      "customerEmail": "sarah.w@sterlingwealth.com",
+      "customerAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-7.webp",
+      "product": "Standard Plan",
+      "amount": "$99.00",
+      "status": "Cancelled",
+      "date": "4 hours ago"
+    }
+  ],
+  "subscribers": [
+    {
+      "id": "sub-1",
+      "email": "executive@globalcorp.com",
+      "subscribedAt": "2026-10-05T12:00:00.000Z"
+    }
+  ],
+  "dashboard": {
+    "earningsMonthly": 40000,
+    "earningsAnnual": 215000,
+    "tasksProgress": 50,
+    "pendingRequests": 18,
+    "monthlyChartData": [
+      {
+        "month": "Jan",
+        "earnings": 0,
+        "expenses": 2000
+      },
+      {
+        "month": "Feb",
+        "earnings": 10000,
+        "expenses": 4500
+      },
+      {
+        "month": "Mar",
+        "earnings": 5000,
+        "expenses": 3200
+      },
+      {
+        "month": "Apr",
+        "earnings": 15000,
+        "expenses": 6000
+      },
+      {
+        "month": "May",
+        "earnings": 10000,
+        "expenses": 5100
+      },
+      {
+        "month": "Jun",
+        "earnings": 20000,
+        "expenses": 8200
+      },
+      {
+        "month": "Jul",
+        "earnings": 15000,
+        "expenses": 7400
+      },
+      {
+        "month": "Aug",
+        "earnings": 25000,
+        "expenses": 9800
+      },
+      {
+        "month": "Sep",
+        "earnings": 20000,
+        "expenses": 8600
+      },
+      {
+        "month": "Oct",
+        "earnings": 30000,
+        "expenses": 11200
+      },
+      {
+        "month": "Nov",
+        "earnings": 25000,
+        "expenses": 10500
+      },
+      {
+        "month": "Dec",
+        "earnings": 40000,
+        "expenses": 14000
+      }
+    ],
+    "revenueSources": {
+      "direct": 55,
+      "social": 30,
+      "referral": 15
+    },
+    "projectProgress": [
+      {
+        "name": "Server Migration",
+        "percent": 20,
+        "color": "#e74a3b"
+      },
+      {
+        "name": "Sales Tracking",
+        "percent": 40,
+        "color": "#f6c23e"
+      },
+      {
+        "name": "Customer Database",
+        "percent": 60,
+        "color": "#4e73df"
+      },
+      {
+        "name": "Payout Details",
+        "percent": 80,
+        "color": "#36b9cc"
+      },
+      {
+        "name": "Account Setup",
+        "percent": 100,
+        "color": "#1cc88a"
+      }
+    ]
+  }
+}

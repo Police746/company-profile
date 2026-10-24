@@ -1,0 +1,678 @@
+{
+  "company": {
+    "sitename": "SyauqiDev",
+    "fullName": "Syauqi Abduraffi",
+    "major": "Teknik Informatika (Informatics Engineering)",
+    "heroTitle": "Inovasi Web Era Modern & Rekayasa Sistem Informasi Pro",
+    "heroDescription": "Halo! Saya Syauqi Abduraffi — Mahasiswa & Full-Stack Web Developer jurusan Teknik Informatika. Berpengalaman membangun Sistem Informasi Perpustakaan Digital (E-Library), aplikasi Web Era Modern berbasis Next.js & React, serta arsitektur Database & Backend Dashboard yang responsif di semua perangkat.",
+    "aboutHeading": "Full-Stack Developer & Kreator Solusi Digital Teknik Informatika",
+    "aboutLead": "Sebagai praktisi dari jurusan Teknik Informatika, saya memadukan logika pemrograman algoritma, perancangan database relasional yang terstruktur, serta desain UI/UX era web modern. Saya telah membangun berbagai proyek mulai dari Website Sistem Informasi Perpustakaan Digital hingga platform web full-stack berkinerja tinggi.",
+    "yearsExperience": "4+",
+    "projectsCount": "28+",
+    "servicesSubtitle": "Layanan & Spesialisasi IT",
+    "servicesHeading": "Transformasi Sistem Konvensional Menuju Era Web Modern yang Cepat & Pro",
+    "servicesDescription": "Menghadirkan solusi pengembangan website end-to-end mulai dari analisis kebutuhan sistem, perancangan database (ERD), koding Frontend & Backend, hingga deployment ke cloud (Vercel/Server).",
+    "ctaBadge": "Siap Berkolaborasi",
+    "ctaHeading": "Ingin Membangun Website Perpustakaan, Sistem Informasi, atau Web Era Baru?",
+    "ctaDescription": "Mari wujudkan ide proyek web, aplikasi kampus/instansi, maupun company profile profesional Anda dengan teknologi terbaru yang cepat, aman, dan memiliki dashboard admin lengkap.",
+    "location": "Jakarta & sekitarnya, Indonesia (Tersedia Remote / On-Site)",
+    "email": "syauqi.informatika@devmail.id",
+    "phone": "+62 812-8899-7766",
+    "openHours": "Senin - Sabtu: 08:00 - 21:00 WIB",
+    "footerAddress": "Fakultas Ilmu Komputer / Teknik Informatika — Jakarta, Indonesia",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.24097834406!2d106.759478!3d-6.2297465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+  },
+  "heroSlides": [
+    {
+      "id": "s-1",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/slider/slider-14.webp"
+    },
+    {
+      "id": "s-2",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/slider/slider-16.webp"
+    },
+    {
+      "id": "s-3",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/slider/slider-13.webp"
+    },
+    {
+      "id": "s-4",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/slider/slider-3.webp"
+    },
+    {
+      "id": "s-5",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/slider/slider-5.webp"
+    }
+  ],
+  "skills": [
+    {
+      "id": "sk-1",
+      "name": "Next.js 14 & React.js (Modern Web Era)",
+      "category": "Frontend & Web Modern",
+      "level": 95,
+      "badge": "Expert"
+    },
+    {
+      "id": "sk-2",
+      "name": "TypeScript & JavaScript (ES6+)",
+      "category": "Frontend & Web Modern",
+      "level": 92,
+      "badge": "Advanced"
+    },
+    {
+      "id": "sk-3",
+      "name": "Tailwind CSS, Bootstrap 5 & Responsive UI/UX",
+      "category": "Frontend & Web Modern",
+      "level": 96,
+      "badge": "Expert"
+    },
+    {
+      "id": "sk-4",
+      "name": "HTML5, CSS3 & Interactive Web Animation",
+      "category": "Frontend & Web Modern",
+      "level": 98,
+      "badge": "Master"
+    },
+    {
+      "id": "sk-5",
+      "name": "PHP & Laravel Framework (Sistem Informasi)",
+      "category": "Backend & Programming",
+      "level": 94,
+      "badge": "Expert"
+    },
+    {
+      "id": "sk-6",
+      "name": "Node.js & Next.js Serverless API Routes",
+      "category": "Backend & Programming",
+      "level": 90,
+      "badge": "Advanced"
+    },
+    {
+      "id": "sk-7",
+      "name": "Python, C++ & Struktur Data Algoritma",
+      "category": "Backend & Programming",
+      "level": 88,
+      "badge": "Advanced"
+    },
+    {
+      "id": "sk-8",
+      "name": "RESTful API, Auth JWT & Role Management",
+      "category": "Backend & Programming",
+      "level": 92,
+      "badge": "Expert"
+    },
+    {
+      "id": "sk-9",
+      "name": "MySQL, MariaDB & PostgreSQL Database",
+      "category": "Database & Tools",
+      "level": 95,
+      "badge": "Expert"
+    },
+    {
+      "id": "sk-10",
+      "name": "Perancangan ERD, UML & Sistem Perpustakaan",
+      "category": "Database & Tools",
+      "level": 96,
+      "badge": "Expert"
+    },
+    {
+      "id": "sk-11",
+      "name": "Git, GitHub & Cloud Vercel Deployment",
+      "category": "Database & Tools",
+      "level": 93,
+      "badge": "Expert"
+    },
+    {
+      "id": "sk-12",
+      "name": "Figma UI Prototyping & AppDashboard CMS",
+      "category": "Database & Tools",
+      "level": 90,
+      "badge": "Advanced"
+    }
+  ],
+  "services": [
+    {
+      "id": "srv-1",
+      "number": "01",
+      "title": "Website Sistem Informasi Perpustakaan (E-Library)",
+      "description": "Pembuatan web perpustakaan digital modern lengkap dengan katalog buku OPAC, peminjaman & pengembalian online, cetak kartu anggota QR/Barcode, kalkulasi denda otomatis, dan laporan pustakawan.",
+      "icon": "BarChart3"
+    },
+    {
+      "id": "srv-2",
+      "number": "02",
+      "title": "Pengembangan Web Era Modern (Next.js & React)",
+      "description": "Transformasi website konvensional menjadi web generasi baru yang super cepat, SEO-friendly, interaktif, dan langsung siap di-deploy ke cloud seperti Vercel.",
+      "icon": "TrendingUp"
+    },
+    {
+      "id": "srv-3",
+      "number": "03",
+      "title": "Perancangan Database & Sistem Informasi Akademik",
+      "description": "Desain arsitektur database MySQL/PostgreSQL yang ternormalisasi dengan baik untuk SIAKAD, E-Learning, inventaris laboratorium, dan sistem manajemen instansi.",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "srv-4",
+      "number": "04",
+      "title": "Pembuatan Backend Admin & Command Center",
+      "description": "Pengembangan dashboard admin berkelas profesional (seperti AppDashboard) dengan grafik analitik real-time, tabel data interaktif, manajemen user, dan laporan PDF/Excel.",
+      "icon": "Lightbulb"
+    },
+    {
+      "id": "srv-5",
+      "number": "05",
+      "title": "Desain UI/UX Responsif Semua Device (HP, Tablet, PC)",
+      "description": "Perancangan antarmuka website yang adaptif, estetis, dan nyaman digunakan baik di layar smartphone, tablet, laptop, maupun monitor resolusi tinggi.",
+      "icon": "Users"
+    }
+  ],
+  "features": [
+    {
+      "id": "feat-1",
+      "title": "Arsitektur Database Terstruktur",
+      "description": "Skema tabel relasional (SQL & NoSQL/JSON) yang bersih, cepat diakses, dan mudah dikembangkan untuk skala besar.",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "feat-2",
+      "title": "Dashboard Analitik Real-Time",
+      "description": "Visualisasi data peminjaman buku, trafik pengunjung, hingga transaksi dalam bentuk grafik kurva yang informatif.",
+      "icon": "TrendingUp"
+    },
+    {
+      "id": "feat-3",
+      "title": "100% Responsif Multi-Device",
+      "description": "Tampilan otomatis menyesuaikan layar HP Android/iPhone, Tablet/iPad, hingga Desktop dengan navigasi yang mulus.",
+      "icon": "Users"
+    },
+    {
+      "id": "feat-4",
+      "title": "Siap Deploy ke Cloud & Vercel",
+      "description": "Kode teroptimasi dengan standar Next.js App Router sehingga mudah di-online-kan ke Vercel kapan saja.",
+      "icon": "CloudUpload"
+    },
+    {
+      "id": "feat-5",
+      "title": "CMS Mudah Dikelola Sendiri",
+      "description": "Dilengkapi panel admin untuk mengubah konten profil, menambah portofolio, skill, dan layanan tanpa perlu edit kode.",
+      "icon": "Settings"
+    },
+    {
+      "id": "feat-6",
+      "title": "Clean Code & Dokumentasi Lengkap",
+      "description": "Ditulis menggunakan standar rekayasa perangkat lunak Teknik Informatika (TypeScript, Modular Component, & SQL Schema).",
+      "icon": "Headset"
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "port-1",
+      "title": "SIMPUS Pro — Website Sistem Informasi Perpustakaan Digital",
+      "subtitle": "Unggulan • E-Library & OPAC System",
+      "category": "Sistem Informasi",
+      "tags": [
+        "Web Perpustakaan",
+        "Database SQL",
+        "QR Code"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-1.webp",
+      "description": "Proyek unggulan Sistem Informasi Perpustakaan berbasis web modern. Mendukung pencarian katalog buku cepat (OPAC), transaksi peminjaman & pengembalian buku real-time, perhitungan denda keterlambatan otomatis, manajemen rak & kategori buku, pembaca E-Book PDF, serta dashboard laporan pustakawan.",
+      "demoFeatures": [
+        "Katalog Buku Online (OPAC) & Filter Kategori/Penulis",
+        "Transaksi Peminjaman, Perpanjangan & Pengembalian Otomatis",
+        "Kalkulasi Denda Keterlambatan & Cetak Kartu Anggota QR Code",
+        "Dashboard Admin Pustakawan & Export Laporan Bulanan"
+      ]
+    },
+    {
+      "id": "port-2",
+      "title": "NextEra Portal — Transformasi Web Era Modern & SaaS",
+      "subtitle": "Web Era Baru • Next.js 14 Full-Stack",
+      "category": "Web Era Modern",
+      "tags": [
+        "Next.js",
+        "Tailwind CSS",
+        "Vercel Ready"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-4.webp",
+      "description": "Pengembangan website generasi baru yang menampilkan standar desain Web Era Modern: kecepatan muat instan (SSR/Edge), transisi interaktif halus, integrasi API serverless, dan antarmuka responsif di seluruh gadget.",
+      "demoFeatures": [
+        "Arsitektur Next.js App Router + TypeScript",
+        "Desain UI/UX Pro dengan Hero Slider & Micro-Interactions",
+        "Integrasi Full-Stack Backend API tanpa reload halaman",
+        "Skor Performa Lighthouse & Core Web Vitals 99/100"
+      ]
+    },
+    {
+      "id": "port-3",
+      "title": "AppDashboard Command Center — Admin CMS & Database Suite",
+      "subtitle": "Backend Dashboard & Analytics",
+      "category": "Database & CMS",
+      "tags": [
+        "AppDashboard",
+        "Database CRUD",
+        "Analytics"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-2.webp",
+      "description": "Sistem Backend Command Center modern untuk memantau trafik, mengelola database portofolio, keahlian (skills), pesan klien, hingga export skema database SQL secara langsung.",
+      "demoFeatures": [
+        "Visualisasi Grafik Area Multi-Series & KPI Cards",
+        "Manajemen CRUD Portofolio, Skill, Layanan & Pesan Masuk",
+        "Mode Tampilan Terang (Light) & Gelap (Dark Mode)",
+        "Fitur Database Explorer & Download Skema SQL"
+      ]
+    },
+    {
+      "id": "port-4",
+      "title": "SIAKAD Informatika — Portal Akademik & KRS Mahasiswa",
+      "subtitle": "Sistem Informasi Kampus",
+      "category": "Sistem Informasi",
+      "tags": [
+        "SIAKAD",
+        "Teknik Informatika",
+        "MySQL"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-3.webp",
+      "description": "Aplikasi web akademik terpadu untuk pengelolaan Kartu Rencana Studi (KRS), jadwal perkuliahan laboratorium, rekap nilai KHS/IPK otomatis, dan presensi digital.",
+      "demoFeatures": [
+        "Pengisian KRS Online & Validasi Dosen Wali",
+        "Kalkulasi Indeks Prestasi (IPS/IPK) Otomatis",
+        "Jadwal Ruang Kelas & Laboratorium Komputer"
+      ]
+    },
+    {
+      "id": "port-5",
+      "title": "SmartLab Inventory — Sistem Peminjaman Alat Lab Komputer",
+      "subtitle": "Manajemen Aset & Laboratorium",
+      "category": "Full-Stack App",
+      "tags": [
+        "Inventaris Lab",
+        "Full-Stack",
+        "REST API"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-5.webp",
+      "description": "Sistem informasi pelacakan peminjaman perangkat keras laboratorium Teknik Informatika (proyektor, router jaringan, kit IoT, dan server praktikum).",
+      "demoFeatures": [
+        "Cek Ketersediaan Alat Lab Secara Real-Time",
+        "Riwayat Peminjaman Mahasiswa & Asisten Lab",
+        "Notifikasi Pengembalian & Status Kondisi Alat"
+      ]
+    },
+    {
+      "id": "port-6",
+      "title": "DigiBook Reader — Platform Baca E-Jurnal & Skripsi Kampus",
+      "subtitle": "Repository Digital & E-Journal",
+      "category": "Web Era Modern",
+      "tags": [
+        "Repository",
+        "E-Library",
+        "Modern UI"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-6.webp",
+      "description": "Pengembangan lanjutan dari ekosistem Website Perpustakaan untuk publikasi jurnal ilmiah, repositori tugas akhir/skripsi mahasiswa Teknik Informatika, dan pencarian sitasi cepat.",
+      "demoFeatures": [
+        "Pencarian Abstrak, Kata Kunci & Tahun Terbit",
+        "Preview Dokumen PDF Terproteksi di Browser",
+        "Manajemen Unggah Karya Ilmiah Mahasiswa"
+      ]
+    }
+  ],
+  "pricing": [
+    {
+      "id": "plan-1",
+      "name": "Landing Page / Personal Web",
+      "price": "1.5 Jt",
+      "period": "/proyek",
+      "description": "Cocok untuk Personal Branding, Portofolio Mahasiswa/Profesional, atau Landing Page UMKM.",
+      "features": [
+        "Desain Modern & Responsif (HP, Tablet, Laptop)",
+        "Halaman Profil, Skill, Portofolio & Form Kontak",
+        "Gratis Setup Deploy ke Vercel / Hosting",
+        "Revisi Fleksibel & Source Code Lengkap"
+      ],
+      "featured": false,
+      "icon": "star"
+    },
+    {
+      "id": "plan-2",
+      "name": "Sistem Informasi / Web Perpustakaan",
+      "price": "3.5 Jt",
+      "period": "/proyek",
+      "description": "Solusi lengkap Website Perpustakaan Digital (E-Library), SIAKAD Mini, atau Company Profile Full-Stack + Admin.",
+      "features": [
+        "Frontend Strive Pro + Backend AppDashboard CMS",
+        "Database Lengkap (MySQL / PostgreSQL / Hybrid JSON)",
+        "Fitur CRUD Data Buku / Portofolio / Laporan Admin",
+        "Dokumentasi ERD, Struktur Tabel & Panduan Pakai"
+      ],
+      "featured": true,
+      "badge": "Paling Populer",
+      "icon": "stars"
+    },
+    {
+      "id": "plan-3",
+      "name": "Custom Web Era Enterprise",
+      "price": "6.5 Jt",
+      "period": "/proyek",
+      "description": "Pengembangan aplikasi web skala besar dengan fitur kustom, integrasi API, dan arsitektur tingkat lanjut.",
+      "features": [
+        "Full-Stack Next.js / Laravel + Custom Database",
+        "Multi-Role Login (Admin, Petugas, Anggota/User)",
+        "Integrasi QR Code, Export PDF/Excel & Grafik Analitik",
+        "Garansi Maintenance & Pendampingan Teknis"
+      ],
+      "featured": false,
+      "icon": "star-fill"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-g1",
+      "category": "general",
+      "number": 1,
+      "question": "Apa saja keahlian utama (Skills) yang dikuasai di bidang Teknik Informatika?",
+      "answer": "Saya menguasai pengembangan web Full-Stack mulai dari Frontend modern (Next.js, React, TypeScript, Tailwind CSS, Bootstrap 5) hingga Backend & Database (PHP, Laravel, Node.js, REST API, serta perancangan database MySQL/PostgreSQL).",
+      "answer2": "Selain itu, saya berpengalaman merancang sistem informasi terstruktur seperti Website Perpustakaan Digital (OPAC, sirkulasi peminjaman buku, dan laporan pustakawan)."
+    },
+    {
+      "id": "faq-g2",
+      "category": "general",
+      "number": 2,
+      "question": "Bagaimana fitur dari proyek Website Perpustakaan yang pernah dibuat?",
+      "answer": "Website Perpustakaan (SIMPUS Digital) yang saya kembangkan memiliki fitur pencarian katalog buku cepat, manajemen data buku & kategori, transaksi peminjaman dan pengembalian buku, perhitungan denda keterlambatan otomatis, cetak kartu anggota ber-QR Code, serta dashboard statistik untuk admin perpustakaan."
+    },
+    {
+      "id": "faq-g3",
+      "category": "general",
+      "number": 3,
+      "question": "Apakah website ini sudah memiliki Database dan bisa di-deploy ke Vercel?",
+      "answer": "Ya! Website ini sudah dilengkapi arsitektur Database Hybrid (tersedia file SQL lengkap di folder database/company_profile_db.sql untuk MySQL/PostgreSQL sekaligus penyimpanan JSON/Serverless aktif yang langsung berjalan di Vercel tanpa error)."
+    },
+    {
+      "id": "faq-p1",
+      "category": "pricing",
+      "number": 1,
+      "question": "Berapa lama estimasi pengerjaan proyek website atau sistem informasi?",
+      "answer": "Untuk Company Profile atau Personal Portfolio berkisar 3–7 hari kerja, sedangkan untuk Sistem Informasi Perpustakaan atau aplikasi web custom berkisar 2–4 minggu tergantung kompleksitas modul."
+    },
+    {
+      "id": "faq-p2",
+      "category": "pricing",
+      "number": 2,
+      "question": "Apakah mendapatkan source code lengkap beserta file databasenya?",
+      "answer": "Tentu! Setiap proyek disertakan source code Frontend & Backend secara penuh beserta file skema Database (.sql & .json) dan panduan instalasinya."
+    },
+    {
+      "id": "faq-p3",
+      "category": "pricing",
+      "number": 3,
+      "question": "Apakah tampilan web dijamin responsif di HP, Tablet, dan Laptop?",
+      "answer": "Ya, seluruh halaman dirancang dengan pendekatan Mobile-First Responsive sehingga tampil rapi dan proporsional di semua ukuran layar."
+    },
+    {
+      "id": "faq-s1",
+      "category": "support",
+      "number": 1,
+      "question": "Bagaimana cara mengubah isi konten, menambah skill, atau portofolio baru?",
+      "answer": "Anda cukup membuka halaman /admin (AppDashboard Command Center), lalu pilih menu Strive Website CMS di sidebar kiri untuk menambah/menghapus Skill, Portofolio, Layanan, maupun mengedit profil secara langsung."
+    },
+    {
+      "id": "faq-s2",
+      "category": "support",
+      "number": 2,
+      "question": "Apakah tersedia bantuan jika ingin presentasi atau demo aplikasi?",
+      "answer": "Sangat bisa! Saya siap membantu menjelaskan alur kode program, struktur tabel database (ERD), hingga demo penggunaan fitur Frontend & Backend."
+    },
+    {
+      "id": "faq-s3",
+      "category": "support",
+      "number": 3,
+      "question": "Bagaimana cara menghubungi untuk diskusi proyek atau kolaborasi IT?",
+      "answer": "Anda dapat mengisi formulir Get in Touch di bagian bawah halaman ini (pesan akan langsung masuk ke Inbox AppDashboard) atau menghubungi kontak email/WhatsApp yang tertera."
+    }
+  ],
+  "team": [
+    {
+      "id": "tm-1",
+      "name": "Syauqi Abduraffi",
+      "position": "Lead Full-Stack Developer • Teknik Informatika",
+      "bio": "Fokus pada rekayasa perangkat lunak, pembuatan Website Perpustakaan Digital, arsitektur database SQL, dan pengembangan Web Era Modern dengan Next.js.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-8.webp",
+      "socials": {
+        "twitter": "#",
+        "linkedin": "#",
+        "github": "#"
+      }
+    },
+    {
+      "id": "tm-2",
+      "name": "Divisi UI/UX & Web Design",
+      "position": "Interactive Frontend Specialist",
+      "bio": "Merancang antarmuka modern yang responsif, ramah pengguna (user-friendly), dan estetis di perangkat mobile, tablet, hingga desktop.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-12.webp",
+      "socials": {
+        "twitter": "#",
+        "linkedin": "#",
+        "dribbble": "#"
+      }
+    },
+    {
+      "id": "tm-3",
+      "name": "Divisi Database & Backend",
+      "position": "System & Database Architect",
+      "bio": "Menangani normalisasi tabel database MySQL/PostgreSQL, optimasi query pencarian katalog perpustakaan, serta keamanan REST API.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-3.webp",
+      "socials": {
+        "twitter": "#",
+        "linkedin": "#",
+        "instagram": "#"
+      }
+    },
+    {
+      "id": "tm-4",
+      "name": "Divisi Cloud & QA Testing",
+      "position": "DevOps & Quality Assurance",
+      "bio": "Memastikan aplikasi bebas bug di semua browser dan siap di-deploy secara cepat ke cloud server maupun Vercel.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-7.webp",
+      "socials": {
+        "twitter": "#",
+        "linkedin": "#"
+      }
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": "bp-1",
+      "title": "Studi Kasus: Merancang Website Sistem Informasi Perpustakaan Digital Modern",
+      "excerpt": "Bagaimana membangun sistem e-library yang tidak hanya mencatat peminjaman buku, tetapi juga memiliki pencarian OPAC instan, QR Code anggota, dan perhitungan denda otomatis berbasis database relasional.",
+      "category": "Sistem Informasi",
+      "date": "10 Okt 2026",
+      "author": "Syauqi Abduraffi",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-8.webp",
+      "readTime": "5 Menit Baca",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-7.webp",
+      "featured": true
+    },
+    {
+      "id": "bp-2",
+      "title": "Evolusi Web Era Baru: Mengapa Next.js & AppDashboard Menjadi Standar Developer Pro",
+      "excerpt": "Perbandingan arsitektur web masa lalu dengan Web Era Modern yang menggabungkan kecepatan Server-Side Rendering, komponen interaktif React, dan efisiensi deployment di Vercel.",
+      "category": "Web Era Modern",
+      "date": "05 Okt 2026",
+      "author": "Syauqi Abduraffi",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-8.webp",
+      "readTime": "6 Menit Baca",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-3.webp",
+      "featured": true
+    },
+    {
+      "id": "bp-3",
+      "title": "Tips Merancang ERD & Skema Database MySQL untuk Proyek Kuliah Teknik Informatika",
+      "excerpt": "Panduan normalisasi tabel agar sistem informasi bebas duplikasi data.",
+      "category": "Database SQL",
+      "date": "01 Okt 2026",
+      "author": "Syauqi Abduraffi",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-8.webp",
+      "readTime": "4 Menit Baca",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-5.webp",
+      "featured": false
+    },
+    {
+      "id": "bp-4",
+      "title": "Teknik Membuat Desain Web 100% Responsif di HP, Tablet, dan Monitor Lebar",
+      "excerpt": "Memanfaatkan grid system dan flexbox modern untuk pengalaman pengguna terbaik.",
+      "category": "UI/UX Design",
+      "date": "28 Sep 2026",
+      "author": "Syauqi Abduraffi",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-8.webp",
+      "readTime": "5 Menit Baca",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-9.webp",
+      "featured": false
+    },
+    {
+      "id": "bp-5",
+      "title": "Integrasi RESTful API antara Frontend Public dan Dashboard Admin CMS",
+      "excerpt": "Cara menghubungkan form kontak dan manajemen portofolio secara real-time.",
+      "category": "Full-Stack",
+      "date": "20 Sep 2026",
+      "author": "Syauqi Abduraffi",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-8.webp",
+      "readTime": "5 Menit Baca",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-6.webp",
+      "featured": false
+    },
+    {
+      "id": "bp-6",
+      "title": "Panduan Lengkap Deploy Aplikasi Full-Stack Next.js ke Vercel secara Gratis",
+      "excerpt": "Langkah praktis menghubungkan repositori GitHub ke cloud Vercel.",
+      "category": "Cloud & DevOps",
+      "date": "15 Sep 2026",
+      "author": "Syauqi Abduraffi",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-8.webp",
+      "readTime": "4 Menit Baca",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-8.webp",
+      "featured": false
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-1",
+      "name": "Drs. Hendra Gunawan, M.Pd",
+      "email": "kepala.perpus@smanusantara.sch.id",
+      "subject": "Pembuatan Website Perpustakaan Digital Sekolah (E-Library)",
+      "message": "Halo Mas Syauqi, kami tertarik dengan portofolio Website Perpustakaan yang pernah dibuat. Bisa diskusi untuk implementasi di perpustakaan sekolah kami?",
+      "status": "unread",
+      "createdAt": "2026-10-11T08:30:00.000Z"
+    },
+    {
+      "id": "msg-2",
+      "name": "Rizky Pratama, S.Kom",
+      "email": "rizky@digitalsolusi.co.id",
+      "subject": "Kolaborasi Proyek Web Era Modern (Next.js)",
+      "message": "Kami melihat desain frontend Strive dan backend AppDashboard Anda sangat rapi dan responsif. Ingin mengajak kolaborasi pembuatan sistem informasi.",
+      "status": "read",
+      "createdAt": "2026-10-10T14:15:00.000Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord-1",
+      "orderNumber": "#PRJ-001",
+      "customerName": "Perpustakaan Terpadu Harapan",
+      "customerEmail": "admin@perpusharapan.ac.id",
+      "customerAvatar": "https://bootstrapmade.com/content/demo/AppDashboard/assets/img/avatars/avatar-1.webp",
+      "product": "Sistem Informasi Perpustakaan (SIMPUS)",
+      "amount": "Rp 3.500.000",
+      "status": "Completed",
+      "createdAt": "2026-10-11T09:00:00.000Z"
+    },
+    {
+      "id": "ord-2",
+      "orderNumber": "#PRJ-002",
+      "customerName": "PT Era Digital Nusantara",
+      "customerEmail": "ceo@eradigital.id",
+      "customerAvatar": "https://bootstrapmade.com/content/demo/AppDashboard/assets/img/avatars/avatar-2.webp",
+      "product": "Company Profile Web Era Modern",
+      "amount": "Rp 2.500.000",
+      "status": "Completed",
+      "createdAt": "2026-10-11T07:30:00.000Z"
+    },
+    {
+      "id": "ord-3",
+      "orderNumber": "#PRJ-003",
+      "customerName": "Lab Komputer Teknik Informatika",
+      "customerEmail": "kalab.ti@kampus.ac.id",
+      "customerAvatar": "https://bootstrapmade.com/content/demo/AppDashboard/assets/img/avatars/avatar-3.webp",
+      "product": "Sistem Inventaris & Peminjaman Alat Lab",
+      "amount": "Rp 3.000.000",
+      "status": "Pending",
+      "createdAt": "2026-10-10T18:20:00.000Z"
+    },
+    {
+      "id": "ord-4",
+      "orderNumber": "#PRJ-004",
+      "customerName": "Klinik Medika Sehat",
+      "customerEmail": "info@klinikmedika.id",
+      "customerAvatar": "https://bootstrapmade.com/content/demo/AppDashboard/assets/img/avatars/avatar-4.webp",
+      "product": "Web Pendaftaran & Rekam Medis",
+      "amount": "Rp 4.000.000",
+      "status": "Completed",
+      "createdAt": "2026-10-10T12:10:00.000Z"
+    }
+  ],
+  "activities": [
+    {
+      "id": "act-1",
+      "type": "success",
+      "text": "Proyek selesai & rilis:",
+      "highlight": "Website Perpustakaan SIMPUS #PRJ-001",
+      "time": "Baru saja"
+    },
+    {
+      "id": "act-2",
+      "type": "primary",
+      "text": "Skill baru ditambahkan:",
+      "highlight": "Next.js 14 & Database SQL",
+      "time": "15 menit lalu"
+    },
+    {
+      "id": "act-3",
+      "type": "info",
+      "text": "Pesan masuk dari",
+      "highlight": "Kepala Perpustakaan SMA Nusantara",
+      "time": "1 jam lalu"
+    },
+    {
+      "id": "act-4",
+      "type": "warning",
+      "text": "Backup Database otomatis berhasil",
+      "highlight": "company_profile_db.sql",
+      "time": "2 jam lalu"
+    },
+    {
+      "id": "act-5",
+      "type": "success",
+      "text": "Optimasi performa Web Era Modern",
+      "highlight": "99.98% Uptime",
+      "time": "3 jam lalu"
+    }
+  ],
+  "subscribers": [
+    {
+      "id": "sub-1",
+      "email": "rekan.informatika@kampus.ac.id",
+      "createdAt": "2026-10-09T10:00:00.000Z"
+    }
+  ],
+  "dashboardStats": {
+    "totalSales": "28+ Proyek",
+    "salesGrowth": "100% Tepat Waktu",
+    "revenue": "12+ Skills IT",
+    "revenueGrowth": "Full-Stack & Database",
+    "ordersCount": "6 Unggulan",
+    "ordersGrowth": "Termasuk Web Perpustakaan",
+    "customersCount": "3.85 / 4.00",
+    "customersGrowth": "Kompetensi Teknik Informatika"
+  }
+}

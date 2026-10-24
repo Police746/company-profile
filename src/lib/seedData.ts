@@ -1,0 +1,995 @@
+import { DatabaseSchema } from '@/types/company';
+
+const STRIVE_IMG = 'https://bootstrapmade.com/content/demo/Strive/assets/img';
+const DASH_IMG = 'https://bootstrapmade.com/content/demo/AppDashboard/assets/img';
+
+export const initialDatabase: DatabaseSchema = {
+  databaseName: 'company_db',
+  user: [
+    {
+      id: 1,
+      username: 'syauqi_admin',
+      email: 'syauqi.informatika@devmail.id',
+      phone: '+62 812-8899-7766',
+      image: `${DASH_IMG}/profile-img.webp`,
+      password: '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+      role_id: 1,
+      is_active: 1,
+      date_create: '2026-01-15 08:30:00'
+    },
+    {
+      id: 2,
+      username: 'client_website',
+      email: 'client@perusahaan.co.id',
+      phone: '+62 813-7744-5522',
+      image: `${DASH_IMG}/avatar-1.webp`,
+      password: '$2y$10$e0MYzXyjpJS7Pd0RVvHwHeFUP/8r5bA1nO9qB2fG4tV7wX9zK1mC2',
+      role_id: 2,
+      is_active: 1,
+      date_create: '2026-02-10 10:15:00'
+    }
+  ],
+  user_role: [
+    { id: 1, role: 'Admin' },
+    { id: 2, role: 'User' }
+  ],
+  user_menu: [
+    { id: 1, menu: 'Admin' },
+    { id: 2, menu: 'User' },
+    { id: 3, menu: 'Menu' }
+  ],
+  user_access_menu: [
+    { id: 1, role_id: 1, menu_id: 1 },
+    { id: 2, role_id: 1, menu_id: 2 },
+    { id: 3, role_id: 1, menu_id: 3 },
+    { id: 4, role_id: 2, menu_id: 2 }
+  ],
+  user_sub_menu: [
+    {
+      id: 1,
+      menu_id: 1,
+      title: 'Dashboard',
+      url: 'command-center',
+      icon: 'fas fa-fw fa-tachometer-alt',
+      is_active: 1
+    },
+    {
+      id: 2,
+      menu_id: 1,
+      title: 'Role Management',
+      url: 'db-user-role',
+      icon: 'fas fa-fw fa-user-tie',
+      is_active: 1
+    },
+    {
+      id: 3,
+      menu_id: 1,
+      title: 'Manajemen Akun',
+      url: 'db-user',
+      icon: 'fas fa-fw fa-users',
+      is_active: 1
+    },
+    {
+      id: 4,
+      menu_id: 2,
+      title: 'My Profile',
+      url: 'cms-settings',
+      icon: 'fas fa-fw fa-user',
+      is_active: 1
+    },
+    {
+      id: 5,
+      menu_id: 2,
+      title: 'Skills Frontend & Backend',
+      url: 'cms-skills',
+      icon: 'fas fa-fw fa-laptop-code',
+      is_active: 1
+    },
+    {
+      id: 6,
+      menu_id: 2,
+      title: 'Jasa Pembuatan Website & Backend',
+      url: 'cms-services',
+      icon: 'fas fa-fw fa-globe',
+      is_active: 1
+    },
+    {
+      id: 7,
+      menu_id: 3,
+      title: 'Menu Management',
+      url: 'db-user-menu',
+      icon: 'fas fa-fw fa-folder',
+      is_active: 1
+    },
+    {
+      id: 8,
+      menu_id: 3,
+      title: 'Submenu Management',
+      url: 'db-user-submenu',
+      icon: 'fas fa-fw fa-folder-open',
+      is_active: 1
+    }
+  ],
+  company: {
+    sitename: 'SyauqiDev',
+    fullName: 'Syauqi Abduraffi',
+    major: 'Teknik Informatika • Spesialis Jasa Pembuatan Website (Frontend & Backend)',
+    avatarImage: `${STRIVE_IMG}/person/person-m-8.webp`,
+    aboutImage: `${STRIVE_IMG}/about/about-portrait-2.webp`,
+    aboutSectionBadge: 'Jasa Pembuatan Website • Full-Stack Frontend & Backend',
+    aboutSectionTitle: 'Jasa Pembuatan Website Profesional (Frontend, Backend & Database)',
+    aboutSectionSubtitle:
+      'Melayani pembuatan berbagai jenis website modern untuk perusahaan, bisnis UMKM, instansi, hingga aplikasi web custom lengkap dengan Dashboard Admin CMS & Database SQL.',
+    heroTitle: 'Jasa Pembuatan Website Pro (Frontend & Backend) & Sistem Aplikasi Web',
+    heroDescription:
+      'Halo! Saya Syauqi Abduraffi — Full-Stack Web Developer jurusan Teknik Informatika. Melayani Jasa Pembuatan Website terima beres mulai dari tampilan Frontend yang modern & responsif, sistem Backend Dashboard Admin & REST API yang kuat, hingga Database SQL (Company Profile, Toko Online / E-Commerce, Landing Page, Portal Instansi, & Custom Web App).',
+    aboutHeading: 'Jasa Pembuatan Website End-to-End: Desain Frontend Modern & Arsitektur Backend Kuat',
+    aboutLead:
+      'Saya melayani jasa pembuatan website secara menyeluruh (Full-Stack): tidak hanya merancang tampilan depan (Frontend UI/UX) yang elegan dan responsif di semua perangkat, tetapi juga membangun mesin belakang (Backend Admin Dashboard, autentikasi Role Access, API, dan Database MySQL) yang cepat, aman, dan mudah Anda kelola sendiri.',
+    yearsExperience: '4+',
+    projectsCount: '28+',
+    servicesSubtitle: 'Jasa Pembuatan Website • Frontend & Backend',
+    servicesHeading: 'Layanan Jasa Pembuatan Website Profesional Lengkap dengan Backend & Database',
+    servicesDescription:
+      'Solusi terima beres pembuatan berbagai jenis website untuk perusahaan, bisnis UMKM, instansi, maupun startup—lengkap dari desain UI/UX Frontend hingga sistem Backend Admin & deployment ke server/Vercel.',
+    ctaBadge: 'Open Order Jasa Pembuatan Website (Frontend & Backend)',
+    ctaHeading: 'Ingin Buat Website Company Profile, Toko Online, atau Sistem Backend Custom?',
+    ctaDescription:
+      'Konsultasikan kebutuhan website bisnis atau instansi Anda sekarang! Mulai dari Landing Page, Company Profile, E-Commerce, hingga Sistem Informasi Custom lengkap dengan Backend Admin & Database.',
+    location: 'Jakarta & sekitarnya, Indonesia (Tersedia Remote Seluruh Indonesia / On-Site)',
+    email: 'syauqi.informatika@devmail.id',
+    phone: '+62 812-8899-7766',
+    openHours: 'Senin - Sabtu: 08:00 - 21:00 WIB',
+    footerAddress: 'Layanan Jasa Pembuatan Website (Frontend & Backend) • Teknik Informatika — Jakarta',
+    mapEmbedUrl:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.24097834406!2d106.759478!3d-6.2297465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid',
+    simpusFinePerDay: 250000
+  },
+  heroSlides: [
+    { id: 's-1', image: `${STRIVE_IMG}/slider/slider-14.webp` },
+    { id: 's-2', image: `${STRIVE_IMG}/slider/slider-16.webp` },
+    { id: 's-3', image: `${STRIVE_IMG}/slider/slider-13.webp` },
+    { id: 's-4', image: `${STRIVE_IMG}/slider/slider-3.webp` },
+    { id: 's-5', image: `${STRIVE_IMG}/slider/slider-5.webp` }
+  ],
+  skills: [
+    {
+      id: 'sk-1',
+      name: 'Next.js 14 & React.js (Jasa Frontend Modern)',
+      category: 'Frontend & Web Modern',
+      level: 95,
+      badge: 'Expert'
+    },
+    {
+      id: 'sk-2',
+      name: 'TypeScript & JavaScript (ES6+ Full-Stack)',
+      category: 'Frontend & Web Modern',
+      level: 92,
+      badge: 'Advanced'
+    },
+    {
+      id: 'sk-3',
+      name: 'Tailwind CSS, Bootstrap 5 & Responsive UI/UX',
+      category: 'Frontend & Web Modern',
+      level: 96,
+      badge: 'Expert'
+    },
+    {
+      id: 'sk-4',
+      name: 'HTML5, CSS3 & Animasi Web Interaktif',
+      category: 'Frontend & Web Modern',
+      level: 98,
+      badge: 'Master'
+    },
+    {
+      id: 'sk-5',
+      name: 'PHP & Laravel Framework (Jasa Backend & SI)',
+      category: 'Backend & Programming',
+      level: 94,
+      badge: 'Expert'
+    },
+    {
+      id: 'sk-6',
+      name: 'Node.js, Express & Next.js Backend API',
+      category: 'Backend & Programming',
+      level: 92,
+      badge: 'Expert'
+    },
+    {
+      id: 'sk-7',
+      name: 'Python, C++ & Algoritma Struktur Data',
+      category: 'Backend & Programming',
+      level: 88,
+      badge: 'Advanced'
+    },
+    {
+      id: 'sk-8',
+      name: 'RESTful API, Auth JWT & Role Access (RBAC)',
+      category: 'Backend & Programming',
+      level: 94,
+      badge: 'Expert'
+    },
+    {
+      id: 'sk-9',
+      name: 'MySQL, MariaDB & PostgreSQL (Database Backend)',
+      category: 'Database & Tools',
+      level: 95,
+      badge: 'Expert'
+    },
+    {
+      id: 'sk-10',
+      name: 'Perancangan ERD, UML & Arsitektur Sistem Web',
+      category: 'Database & Tools',
+      level: 96,
+      badge: 'Expert'
+    },
+    {
+      id: 'sk-11',
+      name: 'Git, GitHub, cPanel & Cloud Vercel Deployment',
+      category: 'Database & Tools',
+      level: 93,
+      badge: 'Expert'
+    },
+    {
+      id: 'sk-12',
+      name: 'Pembuatan Custom CMS & AppDashboard Admin',
+      category: 'Database & Tools',
+      level: 95,
+      badge: 'Expert'
+    }
+  ],
+  services: [
+    {
+      id: 'srv-1',
+      number: '01',
+      title: 'Jasa Pembuatan Website Full-Stack (Frontend + Backend)',
+      description:
+        'Layanan pembuatan website terima beres dari nol: desain antarmuka Frontend yang modern & responsif dipadukan dengan sistem Backend Admin CMS, autentikasi user, dan database yang aman.',
+      icon: 'TrendingUp'
+    },
+    {
+      id: 'srv-2',
+      number: '02',
+      title: 'Jasa Pembuatan Sistem Backend, REST API & Database SQL',
+      description:
+        'Pembuatan khusus mesin Backend: perancangan tabel database MySQL/PostgreSQL (seperti company_db), manajemen Role & Menu (RBAC), integrasi API, serta dashboard analitik real-time.',
+      icon: 'ShieldCheck'
+    },
+    {
+      id: 'srv-3',
+      number: '03',
+      title: 'Jasa Pembuatan Website Company Profile & Landing Page Pro',
+      description:
+        'Website profil perusahaan, instansi, atau personal branding berkelas eksekutif yang cepat, SEO-friendly, konversi tinggi, dan dilengkapi panel admin untuk mengubah konten sendiri kapan saja.',
+      icon: 'Lightbulb'
+    },
+    {
+      id: 'srv-4',
+      number: '04',
+      title: 'Jasa Pembuatan Website Toko Online (E-Commerce) & Katalog',
+      description:
+        'Pengembangan website toko online modern lengkap dengan katalog produk, keranjang belanja, perhitungan ongkir/invoice otomatis, serta dashboard manajemen order untuk pemilik bisnis.',
+      icon: 'BarChart3'
+    },
+    {
+      id: 'srv-5',
+      number: '05',
+      title: 'Jasa Pembuatan Custom Web App, Portal & Sistem Informasi',
+      description:
+        'Pengembangan aplikasi web sesuai kebutuhan khusus instansi/perusahaan: portal akademik, sistem booking, manajemen inventaris, hingga dashboard ERP yang responsif di HP, Tablet, & PC.',
+      icon: 'Users'
+    }
+  ],
+  features: [
+    {
+      id: 'feat-1',
+      title: 'Arsitektur Database Terstruktur',
+      description:
+        'Skema tabel relasional (SQL & NoSQL/JSON) yang bersih, cepat diakses, dan mudah dikembangkan untuk skala besar.',
+      icon: 'ShieldCheck'
+    },
+    {
+      id: 'feat-2',
+      title: 'Dashboard Analitik Real-Time',
+      description:
+        'Visualisasi data order website, trafik pengunjung, hingga transaksi klien dalam bentuk grafik kurva yang informatif.',
+      icon: 'TrendingUp'
+    },
+    {
+      id: 'feat-3',
+      title: '100% Responsif Multi-Device',
+      description:
+        'Tampilan otomatis menyesuaikan layar HP Android/iPhone, Tablet/iPad, hingga Desktop dengan navigasi yang mulus.',
+      icon: 'Users'
+    },
+    {
+      id: 'feat-4',
+      title: 'Siap Deploy ke Cloud & Vercel',
+      description:
+        'Kode teroptimasi dengan standar Next.js App Router sehingga mudah di-online-kan ke Vercel atau hosting kapan saja.',
+      icon: 'CloudUpload'
+    },
+    {
+      id: 'feat-5',
+      title: 'CMS Mudah Dikelola Sendiri',
+      description:
+        'Dilengkapi panel admin untuk mengubah konten profil, menambah portofolio, skill, dan layanan tanpa perlu edit kode.',
+      icon: 'Settings'
+    },
+    {
+      id: 'feat-6',
+      title: 'Clean Code & Dokumentasi Lengkap',
+      description:
+        'Ditulis menggunakan standar rekayasa perangkat lunak Teknik Informatika (TypeScript, Modular Component, & SQL Schema).',
+      icon: 'Headset'
+    }
+  ],
+  aboutTabs: [
+    {
+      id: 'abt-1',
+      tabLabel: 'Jasa Website Full-Stack',
+      title: 'Spesialis Jasa Pembuatan Website Modern (Frontend + Backend)',
+      description:
+        'Membangun website profesional dari nol: mulai dari Landing Page bisnis, Company Profile perusahaan, Toko Online (E-Commerce), hingga aplikasi web custom yang dilengkapi panel kontrol Admin CMS.',
+      badge: 'Layanan Unggulan: Terima Beres + Gratis Setup Cloud / Vercel'
+    },
+    {
+      id: 'abt-2',
+      tabLabel: 'Desain UI/UX & Frontend',
+      title: 'Standar Web Era Baru (Next.js, React, TypeScript & Tailwind)',
+      description:
+        'Merancang website generasi terbaru dengan performa tinggi, animasi mikro yang halus, struktur SEO ramah Google, serta tampilan yang 100% responsif di smartphone, tablet, maupun desktop.',
+      badge: '100% Responsif di Smartphone, Tablet/iPad, & Desktop'
+    },
+    {
+      id: 'abt-3',
+      tabLabel: 'Sistem Backend & Database',
+      title: 'Integrasi Database Relasional & Backend Dashboard CMS',
+      description:
+        'Setiap sistem dilengkapi skema database yang ternormalisasi (MySQL / PostgreSQL / Hybrid JSON) dan panel kontrol AppDashboard sehingga pemilik website dapat mengubah data secara real-time.',
+      badge: 'Clean Architecture, RESTful API, & Keamanan Data Terjamin'
+    }
+  ],
+  simpusBooks: [
+    {
+      id: 'bk-1',
+      code: 'WEB-PRO-01',
+      title: 'KOPINARY CAFE – Artisan Coffee & Eatery | Company Profile + Admin CMS',
+      author: 'Next.js 14 + React Js + MySQL (2026)',
+      category: 'Company Profile & Bisnis',
+      year: 2026,
+      stock: 5,
+      shelf: 'Full-Stack (Frontend + Backend)',
+      rating: '5.0',
+      image: '/uploads/1792821008636-Screenshot-2026-10-24-080518.png',
+      link: '/#pricing'
+    },
+    {
+      id: 'bk-2',
+      code: 'WEB-PRO-02',
+      title: 'LAVENSA STORE – Modern E-Commerce Fashion & Toko Online + Midtrans',
+      author: 'Next.js App Router + Node.js API + MySQL (2026)',
+      category: 'E-Commerce & Toko Online',
+      year: 2026,
+      stock: 4,
+      shelf: 'Katalog Produk, Cart & Invoice Otomatis',
+      rating: '5.0',
+      image: '/uploads/ecommerce-store-lavensa.jpg',
+      link: '/#pricing'
+    },
+    {
+      id: 'bk-3',
+      code: 'WEB-PRO-03',
+      title: 'CAREWELL CLINIC – Website Profil Klinik Medis & Booking Dokter Online',
+      author: 'Next.js + Tailwind + WhatsApp Booking API (2026)',
+      category: 'Landing Page & UMKM',
+      year: 2026,
+      stock: 6,
+      shelf: 'High-Converting Appointment & Fast Load',
+      rating: '4.9',
+      image: '/uploads/carewell-clinic-landing.jpg',
+      link: '/#pricing'
+    },
+    {
+      id: 'bk-4',
+      code: 'WEB-PRO-04',
+      title: 'SYNERGY OS – Enterprise SaaS Admin Dashboard & Role-Based Access',
+      author: 'Next.js 14 + PostgreSQL / MySQL RBAC (2026)',
+      category: 'Custom Web App & API',
+      year: 2026,
+      stock: 3,
+      shelf: 'Multi-Role, Analitik & Audit Log',
+      rating: '5.0',
+      image: '/uploads/synergy-admin-dashboard.jpg',
+      link: '/#pricing'
+    },
+    {
+      id: 'bk-5',
+      code: 'WEB-PRO-05',
+      title: 'AXIS ARCHITECT – Corporate Construction & Interior Architecture',
+      author: 'Next.js 14 + Tailwind + MySQL (2026)',
+      category: 'Company Profile & Bisnis',
+      year: 2026,
+      stock: 4,
+      shelf: 'Corporate Profile & Project Showcase',
+      rating: '4.9',
+      image: '/uploads/axis-architect-corporate.jpg',
+      link: '/#pricing'
+    },
+    {
+      id: 'bk-6',
+      code: 'WEB-PRO-06',
+      title: 'PERPUSERAJAYA – Sistem Perpustakaan Sekolah Digital & Portal E-Katalog',
+      author: 'Next.js + TypeScript + Database Relasional (2026)',
+      category: 'Custom Web App & API',
+      year: 2026,
+      stock: 5,
+      shelf: 'Digital Library & PPDB Portal',
+      rating: '5.0',
+      image: '/uploads/1792806664315-Screenshot-2026-10-24-085051.png',
+      link: '/#pricing'
+    }
+  ],
+  portfolio: [
+    {
+      id: 'port-1',
+      title: 'KOPINARY CAFE Profile Artisan Coffee & Eatery • Era Pembangunan III',
+      subtitle: 'Unggulan • Corporate Website + Online Cafe Experience',
+      category: 'Company Profile & Bisnis',
+      tags: [
+        'KOPINARY CAFE',
+        'Company Profile',
+        'Cafe Website',
+        'UI/UX Design',
+        'Web Development',
+        'Responsive Website',
+        'Digital Branding',
+        'Era Pembangunan III'
+      ],
+      image: '/uploads/1792803939628-Screenshot-2026-10-24-080518.png',
+      link: 'https://erapembangunanjaya.sch.id/kopinary',
+      description:
+        'KOPINARY CAFE merupakan proyek pengembangan website profil bisnis Artisan Coffee & Eatery yang menghadirkan pengalaman digital modern, elegan, dan informatif. Website ini dirancang untuk memperkuat identitas brand, memperkenalkan konsep kafe, serta menampilkan informasi produk dan layanan secara menarik dan profesional.\n\nDengan desain antarmuka yang responsif, visual yang estetik, serta navigasi yang intuitif, website ini menjadi media digital untuk membangun citra brand, memperluas jangkauan promosi, dan memberikan pengalaman yang nyaman bagi pengunjung.\n\nProyek ini dikembangkan sebagai bagian dari inovasi digital dan pengembangan kreativitas teknologi di lingkungan Era Pembangunan III.',
+      demoFeatures: [
+        'Desain Eksekutif Modern & 100% Mobile Responsive',
+        'Panel Backend Admin CMS untuk Edit Konten & Gambar',
+        'Integrasi Formulir Kontak, WhatsApp & Google Maps',
+        'Optimasi Kecepatan SSR & SEO Google PageSpeed 99/100'
+      ]
+    },
+    {
+      id: 'port-2',
+      title: 'PERPUSERAJAYA – Website Perpustakaan Digital SMKS-SMP Era Pembangunan III',
+      subtitle: 'Featured Project • Education Website + Digital Library',
+      category: 'Full-Stack App',
+      tags: [
+        'Perpuserajaya',
+        'Website Perpustakaan',
+        'Digital Library',
+        'Education Website',
+        'UI/UX Design',
+        'Web Development',
+        'Responsive Website',
+        'Admin CMS',
+        'Sistem Informasi Perpustakaan'
+      ],
+      image: '/uploads/1792806664315-Screenshot-2026-10-24-085051.png',
+      link: 'http://perpus.erapembangunanjaya.sch.id/',
+      description:
+        'Perpuserajaya merupakan website resmi Perpustakaan SMKS-SMP Era Pembangunan III yang dirancang sebagai pusat informasi, literasi, dan layanan perpustakaan sekolah berbasis digital.\n\nWebsite ini menghadirkan tampilan antarmuka yang modern, responsif, dan user-friendly dengan navigasi yang terstruktur untuk memudahkan pengunjung dalam mengakses profil perpustakaan, layanan, kegiatan, berita, serta informasi Penerimaan Peserta Didik Baru (PPDB).\n\nMengusung konsep digitalisasi layanan pendidikan, Perpuserajaya menjadi media informasi dan publikasi perpustakaan sekaligus mendukung budaya literasi, peningkatan kualitas layanan, dan transformasi digital di lingkungan sekolah.',
+      demoFeatures: [
+        'Katalog Buku Digital, Filter Kategori & Pencarian Cepat',
+        'Sistem Peminjaman Online & Notifikasi Pengembalian',
+        'Manajemen Berita & Artikel Literasi Sekolah',
+        'Dashboard Pengelola Perpustakaan & Laporan Sirkulasi'
+      ]
+    },
+    {
+      id: 'port-3',
+      title: 'LAVENSA STORE – Modern E-Commerce Fashion & Lifestyle Platform',
+      subtitle: 'Toko Online • E-Commerce Checkout, Cart & Invoicing Otomatis',
+      category: 'E-Commerce & Bisnis',
+      tags: [
+        'Lavensa Store',
+        'Toko Online',
+        'E-Commerce',
+        'Next.js 14',
+        'Payment Gateway',
+        'Shopping Cart',
+        'Automated Invoice',
+        'Order Dashboard'
+      ],
+      image: '/uploads/ecommerce-store-lavensa.jpg',
+      link: '/#simpus-live',
+      description:
+        'LAVENSA STORE merupakan platform toko online modern dengan tampilan katalog produk estetik, sistem keranjang belanja interaktif, kalkulator ongkos kirim otomatis, serta integrasi payment gateway untuk kemudahan transaksi online.\n\nDilengkapi dengan Dashboard Admin penjual untuk mengelola inventori stok barang, status pesanan pelanggan, rekapitulasi penjualan harian, serta cetak invoice otomatis.',
+      demoFeatures: [
+        'Katalog Produk Interaktif, Filter Ukuran/Warna & Wishlist',
+        'Keranjang Belanja Realtime & Checkout Multi-Metode Pembayaran',
+        'Dashboard Manajemen Pesanan, Pelanggan & Laporan Penjualan',
+        'Notifikasi WhatsApp Otomatis ke Pembeli & Penjual'
+      ]
+    },
+    {
+      id: 'port-4',
+      title: 'AXIS ARCHITECT – Corporate Construction & Interior Architecture',
+      subtitle: 'Company Profile • Corporate Showcase & Project Estimator',
+      category: 'Company Profile & Bisnis',
+      tags: [
+        'Axis Architect',
+        'Company Profile',
+        'Konstruksi',
+        'Arsitektur',
+        'Corporate Web',
+        'Project Gallery',
+        'Kalkulator Biaya',
+        'Responsive UI'
+      ],
+      image: '/uploads/axis-architect-corporate.jpg',
+      link: '/#simpus-live',
+      description:
+        'AXIS ARCHITECT adalah website profil perusahaan berskala korporat di bidang konstruksi, rekayasa sipil, dan desain interior arsitektur. Website ini menonjolkan portofolio proyek gedung bertingkat, sertifikasi profesional, milestone perusahaan, serta kalkulator estimasi biaya renovasi interaktif bagi calon klien korporat.',
+      demoFeatures: [
+        'Galeri Portofolio Proyek Interaktif dengan Filter Sektor',
+        'Kalkulator Estimasi Biaya Renovasi & Desain Interior',
+        'Halaman Profil Direksi, Sertifikasi ISO & Struktur Perusahaan',
+        'Form Pengajuan Penawaran (RFP) Terhubung ke Email & CRM'
+      ]
+    },
+    {
+      id: 'port-5',
+      title: 'SYNERGY OS – Enterprise SaaS Admin Dashboard & RBAC System',
+      subtitle: 'Sistem Informasi • Multi-Role Access Control & Live Analytics',
+      category: 'Sistem Informasi',
+      tags: [
+        'Synergy OS',
+        'SaaS Platform',
+        'Sistem Informasi',
+        'Admin Dashboard',
+        'RBAC Security',
+        'Analytics Charts',
+        'Audit Trail',
+        'PostgreSQL'
+      ],
+      image: '/uploads/synergy-admin-dashboard.jpg',
+      link: '/#simpus-live',
+      description:
+        'SYNERGY OS merupakan sistem informasi berbasis web untuk pengelolaan operasional internal organisasi dan perusahaan. Mengusung arsitektur Role-Based Access Control (RBAC) dengan 5 tingkatan hak akses, visualisasi analitik performa realtime, manajemen data karyawan, serta audit trail log aktivitas.',
+      demoFeatures: [
+        'Autentikasi Multi-User dengan Role Access Control (RBAC)',
+        'Grafik Visualisasi Data Statistik & Tren Pertumbuhan Bisnis',
+        'Pencatatan Audit Trail Log & History Aktivitas User Lengkap',
+        'Export Data ke Format Excel, PDF & Integrasi REST API'
+      ]
+    },
+    {
+      id: 'port-6',
+      title: 'CAREWELL CLINIC – Healthcare Appointment & Patient Portal CMS',
+      subtitle: 'Database & CMS • Profil Klinik Medis & Booking Jadwal Dokter',
+      category: 'Database & CMS',
+      tags: [
+        'Carewell Clinic',
+        'Healthcare Web',
+        'Database & CMS',
+        'Jadwal Dokter',
+        'Online Booking',
+        'Pasien Portal',
+        'WhatsApp API',
+        'MySQL'
+      ],
+      image: '/uploads/carewell-clinic-landing.jpg',
+      link: '/#simpus-live',
+      description:
+        'CAREWELL CLINIC adalah portal layanan kesehatan dan klinik medis modern yang menghubungkan pasien dengan jadwal praktik dokter spesialis secara online. Dilengkapi sistem manajemen antrean pasien, CMS konten edukasi kesehatan, serta notifikasi konfirmasi booking otomatis via WhatsApp.',
+      demoFeatures: [
+        'Sistem Pemilihan Jadwal & Booking Dokter Spesialis Online',
+        'Database Rekam Medis Ringkas & History Kunjungan Pasien',
+        'Panel CMS Admin untuk Pengaturan Jadwal Praktik & Hari Libur',
+        'Notifikasi Pengingat Jadwal Kunjungan via WhatsApp Gateway'
+      ]
+    }
+  ],
+  pricing: [
+    {
+      id: 'plan-1',
+      name: 'Jasa Website Frontend / Landing Page',
+      price: '1.9 Jt',
+      period: '/proyek',
+      description:
+        'Website modern dengan visual premium, loading super cepat, dan konversi tinggi untuk meningkatkan kredibilitas bisnis Anda.',
+      suitableFor:
+        'Company Profile Perusahaan, Personal Branding, Portofolio Kreatif, UMKM, & Landing Page Iklan / Event Bisnis.',
+      note:
+        'Estimasi pengerjaan 3–7 hari kerja. Sudah termasuk gratis setup deploy ke hosting/domain, revisi fleksibel, dan integrasi WhatsApp.',
+      features: [
+        'Desain UI/UX Modern & 100% Responsif (HP, Tablet, PC)',
+        'Halaman Beranda, Tentang, Layanan, Portofolio & Kontak',
+        'Tombol Call-to-Action (CTA) & Integrasi Chat WhatsApp',
+        'SEO On-Page Dasar & Optimasi Kecepatan Performa Web',
+        'Gratis Setup Domain & Cloud Hosting (Vercel/cPanel)',
+        'Source Code Lengkap & Garansi Pengerjaan Selesai'
+      ],
+      featured: false,
+      icon: 'star'
+    },
+    {
+      id: 'plan-2',
+      name: 'Jasa Website Full-Stack (Frontend + Backend)',
+      price: '3.5 Jt',
+      period: '/proyek',
+      description:
+        'Solusi all-in-one terlengkap! Website modern yang terhubung langsung dengan Dashboard Admin (CMS) & Database SQL untuk kelola konten mandiri.',
+      suitableFor:
+        'Perusahaan Berkembang, Toko Online / E-Commerce, Portal Berita, Yayasan, Sekolah, & Bisnis yang butuh update data rutin.',
+      note:
+        'Biaya domain, hosting/server mandiri, & API berbayar pihak ketiga disediakan terpisah. Fitur tambahan di luar scope awal dapat disesuaikan.',
+      features: [
+        'Semua fitur Paket Frontend + Sistem Backend Terpadu',
+        'Dashboard Admin Dark Mode Eksklusif (AppDashboard)',
+        'Database SQL Relasional (MySQL / PostgreSQL company_db)',
+        'Sistem Login Multi-Role & Manajemen Hak Akses (RBAC)',
+        'Kelola Data Dinamis: Konten Web, Paket, Pesanan & Banner',
+        'Keamanan Form, Sanitasi Input Data & REST API Siap Pakai',
+        'Bimbingan & Video/Panduan Pengoperasian Dashboard'
+      ],
+      featured: true,
+      badge: 'Paling Populer',
+      icon: 'stars'
+    },
+    {
+      id: 'plan-3',
+      name: 'Jasa Sistem Informasi & Custom Backend',
+      price: '6.5 Jt',
+      period: '/proyek',
+      description:
+        'Pengembangan aplikasi web sistemik dan arsitektur backend custom tingkat enterprise untuk digitalisasi operasional bisnis secara menyeluruh.',
+      suitableFor:
+        'Sistem Informasi Kampus/Sekolah (SIAKAD/SIMPUS), ERP/CRM Bisnis, Startup, Manajemen Gudang/Inventori, & Custom Web App.',
+      note:
+        'Sudah termasuk penyusunan arsitektur sistem, skema ERD Database, flow diagram, garansi perbaikan bug 30 hari, serta pendampingan teknis.',
+      features: [
+        'Arsitektur Full-Stack Modern (Next.js / Laravel / Node.js)',
+        'Desain Database Relasional Kompleks & Optimasi Query',
+        'Multi-Level User, Approval Workflow & Audit Log Aktivitas',
+        'Modul Validasi Data Ketat, Transaksi & Laporan Cetak PDF',
+        'Grafik Statistik & Visualisasi Analitik Interaktif',
+        'Integrasi REST API, Webhook & Payment Gateway (Sesuai Scope)',
+        'Dokumentasi Teknis ERD, API Docs & Garansi Bug 30 Hari'
+      ],
+      featured: false,
+      icon: 'star-fill'
+    }
+  ],
+  faqs: [
+    {
+      id: 'faq-g1',
+      category: 'general',
+      number: 1,
+      question: 'Apa saja layanan Jasa Pembuatan Website yang tersedia di sini?',
+      answer:
+        'Saya melayani pembuatan berbagai jenis website profesional secara Full-Stack (Frontend + Backend), mulai dari Website Company Profile perusahaan, Landing Page promosi UMKM, Toko Online (E-Commerce), hingga Custom Web Application & Sistem Informasi.',
+      answer2:
+        'Setiap website dirancang dengan tampilan UI/UX modern yang responsif di HP, Tablet, dan Desktop serta dilengkapi Dashboard Admin CMS agar mudah Anda kelola sendiri.'
+    },
+    {
+      id: 'faq-g2',
+      category: 'general',
+      number: 2,
+      question: 'Apakah bisa pesan pembuatan khusus Backend API & Database saja?',
+      answer:
+        'Sangat bisa! Selain paket Full-Stack, saya juga melayani pembuatan sistem Backend Dashboard Admin, perancangan skema Database MySQL/PostgreSQL (lengkap dengan ERD & 5 tabel RBAC seperti company_db), serta pembuatan RESTful API untuk diintegrasikan ke aplikasi Anda.'
+    },
+    {
+      id: 'faq-g3',
+      category: 'general',
+      number: 3,
+      question: 'Apakah website sudah memiliki Database dan siap di-online-kan (Deploy)?',
+      answer:
+        'Ya! Setiap proyek website sudah dilengkapi arsitektur Database (MySQL/PostgreSQL maupun Hybrid JSON Serverless) dan siap di-deploy ke Cloud Vercel, cPanel, atau VPS lengkap dengan domain pilihan Anda.'
+    },
+    {
+      id: 'faq-p1',
+      category: 'pricing',
+      number: 1,
+      question: 'Berapa lama estimasi pengerjaan proyek pembuatan website?',
+      answer:
+        'Untuk Landing Page atau Company Profile berkisar 3–7 hari kerja, sedangkan untuk Website Full-Stack (E-Commerce / Sistem Informasi Custom + Backend Admin) berkisar 1–3 minggu tergantung jumlah modul fitur.'
+    },
+    {
+      id: 'faq-p2',
+      category: 'pricing',
+      number: 2,
+      question: 'Apakah klien mendapatkan source code lengkap beserta file databasenya?',
+      answer:
+        'Tentu! Setiap pemesanan jasa pembuatan website akan mendapatkan seluruh source code Frontend & Backend secara penuh beserta file skema Database (.sql & .json) dan panduan penggunaannya.'
+    },
+    {
+      id: 'faq-p3',
+      category: 'pricing',
+      number: 3,
+      question: 'Apakah tampilan website dijamin responsif di HP, Tablet, dan Laptop?',
+      answer:
+        'Ya, seluruh halaman dirancang dengan pendekatan Mobile-First Responsive sehingga tampil rapi, cepat, dan proporsional di semua ukuran layar.'
+    },
+    {
+      id: 'faq-s1',
+      category: 'support',
+      number: 1,
+      question: 'Bagaimana cara mengubah isi konten, harga, atau menambah portofolio di website?',
+      answer:
+        'Anda cukup membuka halaman /admin (Backend AppDashboard), lalu pilih menu Jasa Website & CMS di sidebar kiri untuk menambah, mengedit, upload gambar, atau menghapus Layanan, Paket Harga, Portofolio, Artikel, hingga Biodata secara langsung.'
+    },
+    {
+      id: 'faq-s2',
+      category: 'support',
+      number: 2,
+      question: 'Apakah ada garansi maintenance dan revisi setelah website selesai?',
+      answer:
+        'Ya! Tersedia garansi revisi sesuai paket yang dipilih serta dukungan teknis (maintenance) dan panduan pengelolaan halaman Backend Admin.'
+    },
+    {
+      id: 'faq-s3',
+      category: 'support',
+      number: 3,
+      question: 'Bagaimana cara memesan atau konsultasi pembuatan website?',
+      answer:
+        'Anda dapat langsung klik tombol "Pesan Paket Ini Sekarang" pada bagian Paket Harga, mencoba Simulasi Katalog & Estimasi Website, atau mengisi formulir Kontak di bagian bawah halaman ini.'
+    }
+  ],
+  team: [
+    {
+      id: 'tm-1',
+      name: 'Syauqi Abduraffi',
+      position: 'Lead Full-Stack Web Developer • Teknik Informatika',
+      bio: 'Spesialis Jasa Pembuatan Website Full-Stack (Frontend & Backend), arsitektur database SQL, serta pengembangan aplikasi web modern dengan Next.js & Laravel.',
+      image: `${STRIVE_IMG}/person/person-m-8.webp`,
+      socials: { twitter: '#', linkedin: '#', github: '#' }
+    },
+    {
+      id: 'tm-2',
+      name: 'Divisi UI/UX & Frontend Web',
+      position: 'Interactive Frontend Specialist',
+      bio: 'Merancang tampilan website bisnis & company profile yang elegan, konversi tinggi, ramah pengguna, dan responsif di perangkat mobile hingga desktop.',
+      image: `${STRIVE_IMG}/person/person-f-12.webp`,
+      socials: { twitter: '#', linkedin: '#', dribbble: '#' }
+    },
+    {
+      id: 'tm-3',
+      name: 'Divisi Backend & Database SQL',
+      position: 'System & Database Architect',
+      bio: 'Menangani pembuatan Dashboard Admin CMS, manajemen Role Access (RBAC), normalisasi tabel database MySQL/PostgreSQL, serta keamanan REST API.',
+      image: `${STRIVE_IMG}/person/person-m-3.webp`,
+      socials: { twitter: '#', linkedin: '#', instagram: '#' }
+    },
+    {
+      id: 'tm-4',
+      name: 'Divisi Cloud, SEO & Deployment',
+      position: 'DevOps & Quality Assurance',
+      bio: 'Memastikan website memiliki kecepatan muat optimal, SEO-friendly di mesin pencari Google, bebas bug, dan siap online di server Cloud/Vercel.',
+      image: `${STRIVE_IMG}/person/person-f-7.webp`,
+      socials: { twitter: '#', linkedin: '#' }
+    }
+  ],
+  blogPosts: [
+    {
+      id: 'bp-1',
+      title: 'Panduan Memilih Jasa Pembuatan Website Full-Stack (Frontend + Backend) untuk Bisnis & Instansi',
+      excerpt:
+        'Mengapa bisnis modern membutuhkan website yang tidak hanya unggul di tampilan depan (Frontend UI/UX), tetapi juga dilengkapi sistem Backend Dashboard Admin & Database yang mudah dikelola sendiri.',
+      category: 'Jasa Website',
+      date: '10 Okt 2026',
+      author: 'Syauqi Abduraffi',
+      authorAvatar: `${STRIVE_IMG}/person/person-m-8.webp`,
+      readTime: '5 Menit Baca',
+      image: `${STRIVE_IMG}/blog/blog-post-7.webp`,
+      link: '/#pricing',
+      featured: true
+    },
+    {
+      id: 'bp-2',
+      title: 'Keunggulan Next.js 14 & AppDashboard CMS untuk Website Company Profile & E-Commerce Modern',
+      excerpt:
+        'Perbandingan arsitektur web masa lalu dengan Web Era Modern yang menggabungkan kecepatan Server-Side Rendering, komponen interaktif React, dan efisiensi deployment di Cloud Vercel.',
+      category: 'Web Era Modern',
+      date: '05 Okt 2026',
+      author: 'Syauqi Abduraffi',
+      authorAvatar: `${STRIVE_IMG}/person/person-m-8.webp`,
+      readTime: '6 Menit Baca',
+      image: `${STRIVE_IMG}/blog/blog-post-3.webp`,
+      link: '/#services',
+      featured: true
+    },
+    {
+      id: 'bp-3',
+      title: 'Arsitektur 5 Tabel RBAC (Role-Based Access Control) pada Sistem Backend Database MySQL',
+      excerpt: 'Cara kerja manajemen user, role, menu, dan hak akses dinamis di AppDashboard Admin.',
+      category: 'Database SQL',
+      date: '01 Okt 2026',
+      author: 'Syauqi Abduraffi',
+      authorAvatar: `${STRIVE_IMG}/person/person-m-8.webp`,
+      readTime: '4 Menit Baca',
+      image: `${STRIVE_IMG}/blog/blog-post-5.webp`,
+      link: '/admin',
+      featured: false
+    },
+    {
+      id: 'bp-4',
+      title: 'Teknik Membuat Desain Website 100% Responsif di HP, Tablet, dan Monitor Lebar',
+      excerpt: 'Memanfaatkan grid system dan Tailwind CSS modern untuk pengalaman pengunjung terbaik.',
+      category: 'UI/UX Design',
+      date: '28 Sep 2026',
+      author: 'Syauqi Abduraffi',
+      authorAvatar: `${STRIVE_IMG}/person/person-m-8.webp`,
+      readTime: '5 Menit Baca',
+      image: `${STRIVE_IMG}/blog/blog-post-9.webp`,
+      link: '/#portfolio',
+      featured: false
+    },
+    {
+      id: 'bp-5',
+      title: 'Integrasi RESTful API antara Halaman Depan Website dan Dashboard Admin CMS',
+      excerpt: 'Cara menghubungkan form order klien, upload gambar, dan manajemen konten secara real-time.',
+      category: 'Full-Stack',
+      date: '20 Sep 2026',
+      author: 'Syauqi Abduraffi',
+      authorAvatar: `${STRIVE_IMG}/person/person-m-8.webp`,
+      readTime: '5 Menit Baca',
+      image: `${STRIVE_IMG}/blog/blog-post-6.webp`,
+      link: '/#simpus-live',
+      featured: false
+    },
+    {
+      id: 'bp-6',
+      title: 'Strategi Optimasi Kecepatan Website & SEO Agar Mudah Ditemukan Klien di Google',
+      excerpt: 'Langkah praktis meningkatkan skor Core Web Vitals dan struktur heading website bisnis.',
+      category: 'Cloud & DevOps',
+      date: '15 Sep 2026',
+      author: 'Syauqi Abduraffi',
+      authorAvatar: `${STRIVE_IMG}/person/person-m-8.webp`,
+      readTime: '4 Menit Baca',
+      image: `${STRIVE_IMG}/blog/blog-post-8.webp`,
+      link: '/#contact',
+      featured: false
+    }
+  ],
+  messages: [
+    {
+      id: 'msg-1',
+      name: 'Bpk. Hendra Gunawan, S.E.',
+      email: 'hendra@nusantaracorp.co.id',
+      subject: 'Pemesanan Jasa Website Company Profile + Backend Admin CMS',
+      message:
+        'Halo Mas Syauqi, kami tertarik memesan pembuatan Website Company Profile lengkap dengan halaman Admin CMS untuk perusahaan kami. Bisa diskusi paket Full-Stack?',
+      status: 'unread',
+      createdAt: '2026-10-11T08:30:00.000Z'
+    },
+    {
+      id: 'msg-2',
+      name: 'Rizky Pratama, S.Kom',
+      email: 'rizky@digitalsolusi.co.id',
+      subject: 'Pembuatan Website Toko Online & Integrasi Backend API',
+      message:
+        'Kami melihat desain frontend dan backend AppDashboard Anda sangat rapi dan responsif. Ingin memesan pembuatan web e-commerce beserta sistem database ordernya.',
+      status: 'read',
+      createdAt: '2026-10-10T14:15:00.000Z'
+    }
+  ],
+  orders: [
+    {
+      id: 'ord-1791750498131',
+      orderNumber: '#ORD-005',
+      customerName: 'SYAUQI ABDURAFFI',
+      customerEmail: 'raffirawgat@gmail.com',
+      customerAvatar: `${DASH_IMG}/avatars/avatar-1.webp`,
+      product: 'Jasa Sistem Informasi & Custom Backend',
+      amount: 'Rp 6.5 Jt',
+      status: 'Pending',
+      createdAt: '2026-10-11T20:28:18.131Z'
+    },
+    {
+      id: 'ord-1',
+      orderNumber: '#WEB-001',
+      customerName: 'PT Nusantara Karya Mandiri',
+      customerEmail: 'admin@nusantarakarya.co.id',
+      customerAvatar: `${DASH_IMG}/avatars/avatar-1.webp`,
+      product: 'Jasa Website Full-Stack (Frontend + Backend)',
+      amount: 'Rp 3.500.000',
+      status: 'Completed',
+      createdAt: '2026-10-11T09:00:00.000Z'
+    },
+    {
+      id: 'ord-2',
+      orderNumber: '#WEB-002',
+      customerName: 'PT Era Digital Nusantara',
+      customerEmail: 'ceo@eradigital.id',
+      customerAvatar: `${DASH_IMG}/avatars/avatar-2.webp`,
+      product: 'Jasa Website Company Profile (Frontend + Backend CMS)',
+      amount: 'Rp 3.500.000',
+      status: 'Completed',
+      createdAt: '2026-10-11T07:30:00.000Z'
+    },
+    {
+      id: 'ord-3',
+      orderNumber: '#WEB-003',
+      customerName: 'CV Niaga Mandiri Indonesia',
+      customerEmail: 'owner@niagamandiri.co.id',
+      customerAvatar: `${DASH_IMG}/avatars/avatar-3.webp`,
+      product: 'Jasa Pembuatan Web E-Commerce & Backend Order',
+      amount: 'Rp 5.500.000',
+      status: 'Pending',
+      createdAt: '2026-10-10T18:20:00.000Z'
+    },
+    {
+      id: 'ord-4',
+      orderNumber: '#WEB-004',
+      customerName: 'Klinik Medika Sehat',
+      customerEmail: 'info@klinikmedika.id',
+      customerAvatar: `${DASH_IMG}/avatars/avatar-4.webp`,
+      product: 'Jasa Sistem Informasi & Backend Database SQL',
+      amount: 'Rp 4.500.000',
+      status: 'Completed',
+      createdAt: '2026-10-10T12:10:00.000Z'
+    }
+  ],
+  activities: [
+    {
+      id: 'act-1791750498131',
+      type: 'success',
+      text: 'Order Jasa Website diterima:',
+      highlight: '#ORD-005 (SYAUQI ABDURAFFI)',
+      time: 'Baru saja'
+    },
+    {
+      id: 'act-1',
+      type: 'success',
+      text: 'Order Jasa Website Selesai:',
+      highlight: 'Full-Stack Company Profile & CMS #WEB-001',
+      time: 'Baru saja'
+    },
+    {
+      id: 'act-2',
+      type: 'primary',
+      text: 'Layanan Jasa Web Diperbarui:',
+      highlight: 'Full-Stack Next.js 14 & Database SQL',
+      time: '15 menit lalu'
+    },
+    {
+      id: 'act-3',
+      type: 'info',
+      text: 'Konsultasi Jasa Pembuatan Web dari',
+      highlight: 'PT Era Digital & PT Nusantara Karya',
+      time: '1 jam lalu'
+    },
+    {
+      id: 'act-4',
+      type: 'warning',
+      text: 'Sinkronisasi Tabel Backend berhasil:',
+      highlight: 'company_db (5 Tabel RBAC Aktif)',
+      time: '2 jam lalu'
+    },
+    {
+      id: 'act-5',
+      type: 'success',
+      text: 'Deployment Proyek Klien (Frontend & API):',
+      highlight: '99.98% Uptime Cloud Vercel',
+      time: '3 jam lalu'
+    }
+  ],
+  subscribers: [
+    {
+      id: 'sub-1',
+      email: 'partner.bisnis@perusahaan.co.id',
+      createdAt: '2026-10-09T10:00:00.000Z'
+    }
+  ],
+  dashboardStats: {
+    totalSales: '28+ Website',
+    salesGrowth: 'Jasa Frontend & Backend',
+    revenue: 'Rp 48.5 Jt',
+    revenueGrowth: '+24% Order Jasa Web',
+    ordersCount: '5 Layanan Pro',
+    ordersGrowth: 'Full-Stack, API & Database',
+    customersCount: '99.8% Puas',
+    customersGrowth: 'Klien Perusahaan, Instansi & UMKM'
+  }
+};

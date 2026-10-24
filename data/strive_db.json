@@ -1,0 +1,595 @@
+{
+  "company": {
+    "sitename": "Strive",
+    "heroTitle": "Building Trust, Driving Growth",
+    "heroDescription": "Present your business with confidence using a clean, flexible, and fully responsive template that helps you connect with clients, attract opportunities, and strengthen your brand identity.",
+    "aboutHeading": "Vestibulum Sagittis Lacinia Augue",
+    "aboutLead": "Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales.",
+    "yearsExperience": 12,
+    "projectsCount": "345+",
+    "servicesSubtitle": "Professional Services",
+    "servicesHeading": "Elevating Business Performance Through Strategic Solutions",
+    "servicesDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent varius risus sed pellentesque auctor. Phasellus gravida magna at tortor cursus, sit amet suscipit tortor malesuada.",
+    "ctaBadge": "Transform Your Business",
+    "ctaHeading": "Ready to Scale Your Corporate Operations?",
+    "ctaDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+    "location": "8721 Broadway Avenue, New York, NY 10023",
+    "email": "info@strivebusiness.com",
+    "phone": "+1 (212) 555-7890",
+    "openHours": "Monday-Friday: 9AM - 6PM",
+    "footerAddress": "2847 Maple Avenue, Los Angeles, CA 90210, United States",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+  },
+  "heroSlides": [
+    {
+      "id": "s-1",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/slider/slider-14.webp"
+    },
+    {
+      "id": "s-2",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/slider/slider-16.webp"
+    },
+    {
+      "id": "s-3",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/slider/slider-13.webp"
+    },
+    {
+      "id": "s-4",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/slider/slider-3.webp"
+    },
+    {
+      "id": "s-5",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/slider/slider-5.webp"
+    }
+  ],
+  "services": [
+    {
+      "id": "srv-1",
+      "number": "01",
+      "title": "Financial Strategy Development",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras vehicula magna eget lectus varius, at finibus massa condimentum.",
+      "icon": "BarChart3"
+    },
+    {
+      "id": "srv-2",
+      "number": "02",
+      "title": "Market Expansion Advisory",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras vehicula magna eget lectus varius, at finibus massa condimentum.",
+      "icon": "TrendingUp"
+    },
+    {
+      "id": "srv-3",
+      "number": "03",
+      "title": "Risk Management Solutions",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras vehicula magna eget lectus varius, at finibus massa condimentum.",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "srv-4",
+      "number": "04",
+      "title": "Innovation & Digital Transformation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras vehicula magna eget lectus varius, at finibus massa condimentum.",
+      "icon": "Lightbulb"
+    },
+    {
+      "id": "srv-5",
+      "number": "05",
+      "title": "Talent Management Strategy",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras vehicula magna eget lectus varius, at finibus massa condimentum.",
+      "icon": "Users"
+    }
+  ],
+  "features": [
+    {
+      "id": "feat-1",
+      "title": "Enterprise Security",
+      "description": "Bank-level encryption and advanced security protocols to protect your sensitive business data.",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "feat-2",
+      "title": "Real-time Analytics",
+      "description": "Get instant insights with comprehensive dashboards and detailed reporting capabilities.",
+      "icon": "TrendingUp"
+    },
+    {
+      "id": "feat-3",
+      "title": "Team Collaboration",
+      "description": "Foster seamless teamwork with integrated communication and project management tools.",
+      "icon": "Users"
+    },
+    {
+      "id": "feat-4",
+      "title": "Cloud Integration",
+      "description": "Seamlessly sync your data across all devices with our robust cloud infrastructure.",
+      "icon": "CloudUpload"
+    },
+    {
+      "id": "feat-5",
+      "title": "Easy Customization",
+      "description": "Tailor the platform to your unique business needs with flexible configuration options.",
+      "icon": "Settings"
+    },
+    {
+      "id": "feat-6",
+      "title": "24/7 Support",
+      "description": "Get expert assistance whenever you need it with our dedicated customer support team.",
+      "icon": "Headset"
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "port-1",
+      "title": "Business Growth Strategy",
+      "subtitle": "Strategic Planning",
+      "category": "Strategy",
+      "tags": [
+        "Strategy",
+        "Consulting"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-1.webp",
+      "description": "Comprehensive market positioning and multi-year strategic roadmap for enterprise scalability."
+    },
+    {
+      "id": "port-2",
+      "title": "Financial Restructuring",
+      "subtitle": "Financial Advisory",
+      "category": "Finance",
+      "tags": [
+        "Finance",
+        "Investment"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-2.webp",
+      "description": "Capital optimization, cash-flow forecasting, and corporate restructuring for sustainable profitability."
+    },
+    {
+      "id": "port-3",
+      "title": "Supply Chain Optimization",
+      "subtitle": "Operations Management",
+      "category": "Operations",
+      "tags": [
+        "Operations",
+        "Logistics"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-3.webp",
+      "description": "End-to-end logistics automation and inventory control reducing operational bottlenecks by 35%."
+    },
+    {
+      "id": "port-4",
+      "title": "Digital Transformation",
+      "subtitle": "Technology Consulting",
+      "category": "Technology",
+      "tags": [
+        "Technology",
+        "Innovation"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-4.webp",
+      "description": "Cloud-native enterprise architecture modernization and AI-driven workflow automation."
+    },
+    {
+      "id": "port-5",
+      "title": "Market Expansion",
+      "subtitle": "Strategic Planning",
+      "category": "Strategy",
+      "tags": [
+        "Strategy",
+        "Growth"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-5.webp",
+      "description": "Cross-border market entry strategy and competitive intelligence for rapid regional growth."
+    },
+    {
+      "id": "port-6",
+      "title": "Investment Strategy",
+      "subtitle": "Financial Advisory",
+      "category": "Finance",
+      "tags": [
+        "Finance",
+        "Investment"
+      ],
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/portfolio/portfolio-6.webp",
+      "description": "Portfolio diversification and high-yield institutional investment advisory."
+    }
+  ],
+  "pricing": [
+    {
+      "id": "plan-1",
+      "name": "Standard",
+      "price": 9,
+      "period": "/month",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+      "features": [
+        "Vestibulum ante ipsum primis",
+        "Fusce vulputate eleifend",
+        "Nullam ac tortor vitae"
+      ],
+      "featured": false,
+      "icon": "star"
+    },
+    {
+      "id": "plan-2",
+      "name": "Professional",
+      "price": 29,
+      "period": "/month",
+      "description": "Maecenas tempus tellus eget condimentum rhoncus semper.",
+      "features": [
+        "Donec quam felis ultricies",
+        "Aenean massa imperdiet",
+        "Cras dapibus vivamus"
+      ],
+      "featured": true,
+      "badge": "Recommended",
+      "icon": "stars"
+    },
+    {
+      "id": "plan-3",
+      "name": "Ultimate",
+      "price": 49,
+      "period": "/month",
+      "description": "Etiam rhoncus maecenas tempus tellus eget condimentum.",
+      "features": [
+        "Phasellus viverra nulla",
+        "Quisque rutrum aenean",
+        "Etiam ultricies nisi vel"
+      ],
+      "featured": false,
+      "icon": "star-fill"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-g1",
+      "category": "general",
+      "number": 1,
+      "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+    },
+    {
+      "id": "faq-g2",
+      "category": "general",
+      "number": 2,
+      "question": "Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?",
+      "answer": "Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.",
+      "answer2": "Mauris ultrices eros in cursus turpis massa tincidunt dui. Pellentesque nec nam aliquam sem et tortor. Habitant morbi tristique senectus et netus et malesuada."
+    },
+    {
+      "id": "faq-g3",
+      "category": "general",
+      "number": 3,
+      "question": "Dolor sit amet consectetur adipiscing elit pellentesque?",
+      "answer": "Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus.",
+      "answer2": "Mauris ultrices eros in cursus turpis massa tincidunt dui. Pellentesque nec nam aliquam sem et tortor. Habitant morbi tristique senectus et netus et malesuada."
+    },
+    {
+      "id": "faq-p1",
+      "category": "pricing",
+      "number": 1,
+      "question": "Ac odio tempor orci dapibus ultrices in iaculis?",
+      "answer": "Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in."
+    },
+    {
+      "id": "faq-p2",
+      "category": "pricing",
+      "number": 2,
+      "question": "Tempus quam pellentesque nec nam aliquam sem et tortor consequat?",
+      "answer": "Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque."
+    },
+    {
+      "id": "faq-p3",
+      "category": "pricing",
+      "number": 3,
+      "question": "Varius vel pharetra vel turpis nunc eget lorem dolor?",
+      "answer": "Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed."
+    },
+    {
+      "id": "faq-s1",
+      "category": "support",
+      "number": 1,
+      "question": "Tortor vitae purus faucibus ornare suspendisse sed nisi lacus?",
+      "answer": "Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non."
+    },
+    {
+      "id": "faq-s2",
+      "category": "support",
+      "number": 2,
+      "question": "Tortor dignissim convallis aenean et tortor at risus viverra?",
+      "answer": "In hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Non diam phasellus vestibulum lorem sed."
+    },
+    {
+      "id": "faq-s3",
+      "category": "support",
+      "number": 3,
+      "question": "Venenatis urna cursus eget nunc scelerisque viverra mauris in?",
+      "answer": "Mauris ultrices eros in cursus turpis massa tincidunt dui. Pellentesque nec nam aliquam sem et tortor. Habitant morbi tristique senectus et netus et malesuada."
+    }
+  ],
+  "team": [
+    {
+      "id": "tm-1",
+      "name": "Marcus Rodriguez",
+      "position": "Chief Technology Officer",
+      "bio": "Passionate about building scalable solutions and leading innovative development teams to create exceptional user experiences.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-8.webp",
+      "socials": {
+        "twitter": "#",
+        "linkedin": "#",
+        "github": "#"
+      }
+    },
+    {
+      "id": "tm-2",
+      "name": "Sarah Chen",
+      "position": "Head of Product Design",
+      "bio": "Creative visionary who transforms complex problems into intuitive design solutions that users love and businesses thrive with.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-12.webp",
+      "socials": {
+        "twitter": "#",
+        "linkedin": "#",
+        "dribbble": "#"
+      }
+    },
+    {
+      "id": "tm-3",
+      "name": "David Kumar",
+      "position": "VP of Marketing",
+      "bio": "Growth strategist with expertise in digital marketing campaigns that drive user acquisition and brand recognition worldwide.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-3.webp",
+      "socials": {
+        "twitter": "#",
+        "linkedin": "#",
+        "instagram": "#"
+      }
+    },
+    {
+      "id": "tm-4",
+      "name": "Emma Thompson",
+      "position": "Customer Success Lead",
+      "bio": "Dedicated to ensuring every customer achieves their goals through personalized support and strategic guidance.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-7.webp",
+      "socials": {
+        "twitter": "#",
+        "linkedin": "#"
+      }
+    },
+    {
+      "id": "tm-5",
+      "name": "Alex Johnson",
+      "position": "Senior Full-Stack Developer",
+      "bio": "Code architect who builds robust applications using cutting-edge technologies to deliver seamless digital experiences.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-11.webp",
+      "socials": {
+        "twitter": "#",
+        "linkedin": "#",
+        "github": "#"
+      }
+    },
+    {
+      "id": "tm-6",
+      "name": "Lisa Park",
+      "position": "UX Research Manager",
+      "bio": "User advocate who conducts deep research to understand customer needs and drive data-informed design decisions.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-4.webp",
+      "socials": {
+        "twitter": "#",
+        "linkedin": "#",
+        "dribbble": "#"
+      }
+    },
+    {
+      "id": "tm-7",
+      "name": "Ryan Mitchell",
+      "position": "DevOps Engineer",
+      "bio": "Infrastructure specialist focused on automation, scalability, and maintaining high-performance systems that never sleep.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-14.webp",
+      "socials": {
+        "twitter": "#",
+        "linkedin": "#"
+      }
+    },
+    {
+      "id": "tm-8",
+      "name": "Jessica Williams",
+      "position": "Data Analytics Lead",
+      "bio": "Numbers storyteller who transforms complex data into actionable insights that drive strategic business decisions.",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-9.webp",
+      "socials": {
+        "twitter": "#",
+        "linkedin": "#",
+        "instagram": "#"
+      }
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": "bp-1",
+      "title": "Lorem ipsum dolor sit amet consectetur adipiscing elit mauris",
+      "excerpt": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+      "category": "Technology",
+      "date": "Dec 18, 2024",
+      "author": "Marcus Johnson",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-8.webp",
+      "readTime": "5 min read",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-7.webp",
+      "featured": true
+    },
+    {
+      "id": "bp-2",
+      "title": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse",
+      "excerpt": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
+      "category": "Innovation",
+      "date": "Dec 16, 2024",
+      "author": "Emma Rodriguez",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-7.webp",
+      "readTime": "7 min read",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-3.webp",
+      "featured": true
+    },
+    {
+      "id": "bp-3",
+      "title": "Excepteur sint occaecat cupidatat non proident sunt",
+      "excerpt": "Strategic insights into modern corporate operations and sustainable leadership.",
+      "category": "Business",
+      "date": "Dec 15, 2024",
+      "author": "Jessica Kim",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-9.webp",
+      "readTime": "4 min read",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-5.webp",
+      "featured": false
+    },
+    {
+      "id": "bp-4",
+      "title": "Voluptate velit esse cillum dolore eu fugiat nulla",
+      "excerpt": "How data-driven marketing campaigns accelerate enterprise brand positioning.",
+      "category": "Marketing",
+      "date": "Dec 12, 2024",
+      "author": "David Park",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-3.webp",
+      "readTime": "6 min read",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-9.webp",
+      "featured": false
+    },
+    {
+      "id": "bp-5",
+      "title": "Pariatur consectetur adipiscing elit sed do eiusmod",
+      "excerpt": "Building scalable design systems for enterprise web and mobile applications.",
+      "category": "Design",
+      "date": "Dec 10, 2024",
+      "author": "Sarah Miller",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-f-12.webp",
+      "readTime": "5 min read",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-6.webp",
+      "featured": false
+    },
+    {
+      "id": "bp-6",
+      "title": "Magna aliquam erat volutpat consectetur adipiscing",
+      "excerpt": "Next-generation cloud infrastructure and cybersecurity best practices.",
+      "category": "Tech",
+      "date": "Dec 8, 2024",
+      "author": "Alex Chen",
+      "authorAvatar": "https://bootstrapmade.com/content/demo/Strive/assets/img/person/person-m-11.webp",
+      "readTime": "5 min read",
+      "image": "https://bootstrapmade.com/content/demo/Strive/assets/img/blog/blog-post-8.webp",
+      "featured": false
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-1",
+      "name": "Michael Scott",
+      "email": "michael@dundermifflin.com",
+      "subject": "Enterprise Strategy & Cloud Transformation Inquiry",
+      "message": "We would love to schedule a consultation regarding our Q4 digital transformation roadmap.",
+      "status": "unread",
+      "createdAt": "2026-10-11T08:30:00.000Z"
+    },
+    {
+      "id": "msg-2",
+      "name": "Amanda Sterling",
+      "email": "a.sterling@globalventures.io",
+      "subject": "Financial Restructuring & Advisory",
+      "message": "Looking for a comprehensive review of our international expansion strategy.",
+      "status": "read",
+      "createdAt": "2026-10-10T14:15:00.000Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord-1",
+      "orderNumber": "#ORD-001",
+      "customerName": "John Doe",
+      "customerEmail": "john.doe@example.com",
+      "customerAvatar": "https://bootstrapmade.com/content/demo/AppDashboard/assets/img/avatars/avatar-1.webp",
+      "product": "Premium Plan",
+      "amount": "$299.00",
+      "status": "Completed",
+      "createdAt": "2026-10-11T09:00:00.000Z"
+    },
+    {
+      "id": "ord-2",
+      "orderNumber": "#ORD-002",
+      "customerName": "Jane Smith",
+      "customerEmail": "jane.smith@example.com",
+      "customerAvatar": "https://bootstrapmade.com/content/demo/AppDashboard/assets/img/avatars/avatar-2.webp",
+      "product": "Basic Plan",
+      "amount": "$99.00",
+      "status": "Pending",
+      "createdAt": "2026-10-11T07:30:00.000Z"
+    },
+    {
+      "id": "ord-3",
+      "orderNumber": "#ORD-003",
+      "customerName": "Mike Johnson",
+      "customerEmail": "mike.j@example.com",
+      "customerAvatar": "https://bootstrapmade.com/content/demo/AppDashboard/assets/img/avatars/avatar-3.webp",
+      "product": "Enterprise Plan",
+      "amount": "$999.00",
+      "status": "Completed",
+      "createdAt": "2026-10-10T18:20:00.000Z"
+    },
+    {
+      "id": "ord-4",
+      "orderNumber": "#ORD-004",
+      "customerName": "Sarah Wilson",
+      "customerEmail": "sarah.w@example.com",
+      "customerAvatar": "https://bootstrapmade.com/content/demo/AppDashboard/assets/img/avatars/avatar-4.webp",
+      "product": "Basic Plan",
+      "amount": "$99.00",
+      "status": "Cancelled",
+      "createdAt": "2026-10-10T12:10:00.000Z"
+    }
+  ],
+  "activities": [
+    {
+      "id": "act-1",
+      "type": "success",
+      "text": "New order received",
+      "highlight": "#ORD-001",
+      "time": "5 minutes ago"
+    },
+    {
+      "id": "act-2",
+      "type": "primary",
+      "text": "New user registered",
+      "highlight": "John Doe",
+      "time": "15 minutes ago"
+    },
+    {
+      "id": "act-3",
+      "type": "warning",
+      "text": "Server CPU usage at 85%",
+      "time": "1 hour ago"
+    },
+    {
+      "id": "act-4",
+      "type": "info",
+      "text": "New comment on",
+      "highlight": "blog post",
+      "time": "2 hours ago"
+    },
+    {
+      "id": "act-5",
+      "type": "danger",
+      "text": "Order cancelled",
+      "highlight": "#ORD-004",
+      "time": "3 hours ago"
+    }
+  ],
+  "subscribers": [
+    {
+      "id": "sub-1",
+      "email": "executive@striveclient.com",
+      "createdAt": "2026-10-09T10:00:00.000Z"
+    }
+  ],
+  "dashboardStats": {
+    "totalSales": "$12,426",
+    "salesGrowth": "12.5% vs last month",
+    "revenue": "$8,234",
+    "revenueGrowth": "8.2% vs last month",
+    "ordersCount": "1,248",
+    "ordersGrowth": "3.1% vs last month",
+    "customersCount": "5,432",
+    "customersGrowth": "5.8% vs last month"
+  }
+}

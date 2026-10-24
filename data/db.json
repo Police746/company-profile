@@ -1,0 +1,705 @@
+{
+  "company": {
+    "name": "NEXVORA",
+    "legalName": "PT Nexvora Digital Nusantara",
+    "tagline": "Enterprise Software Engineering, AI Automation & Cloud Transformation Partner",
+    "heroTitle": "Akselerasi Transformasi Digital Bisnis Anda dengan",
+    "heroHighlight": "Arsitektur Teknologi Kelas Enterprise",
+    "heroSubtitle": "Kami merancang, membangun, dan mengamankan ekosistem perangkat lunak skala tinggi—mulai dari Custom ERP, Web & Mobile Apps, hingga Integrasi Generative AI—dengan standar SLA 99.98% untuk perusahaan terkemuka di Asia Tenggara.",
+    "aboutSummary": "Didirikan oleh para arsitek sistem dan praktisi rekayasa perangkat lunak berpengalaman, PT Nexvora Digital Nusantara telah menjadi mitra strategis bagi lebih dari 150 korporasi, BUMN, institusi finansial, dan startup unicorn. Kami menggabungkan ketepatan rekayasa (engineering excellence), estetika desain berorientasi pengguna (human-centric UX), dan keamanan berstandar internasional.",
+    "vision": "Menjadi katalisator teknologi paling terpercaya di Asia Tenggara yang memberdayakan organisasi melalui solusi perangkat lunak cerdas, aman, dan berkelanjutan.",
+    "missions": [
+      "Menghadirkan arsitektur software cloud-native yang skalabel, aman, dan mudah dipelihara.",
+      "Mengintegrasikan kecerdasan buatan (AI) dan automasi data untuk meningkatkan efisiensi operasional klien hingga 300%.",
+      "Menerapkan standar UI/UX kelas dunia yang intuitif serta responsif di seluruh perangkat.",
+      "Memberikan transparansi penuh, kepastian waktu rilis (on-time delivery), dan dukungan teknis 24/7."
+    ],
+    "email": "hello@nexvora.co.id",
+    "phone": "+62 21 5098 7788",
+    "whatsapp": "6281299887766",
+    "address": "Menara Astra Lt. 38, Jl. Jend. Sudirman Kav. 5-6, Karet Tengsin",
+    "city": "Jakarta Pusat 10220, Indonesia",
+    "foundedYear": 2016,
+    "operatingHours": "Senin - Jumat, 08:30 - 18:00 WIB (Support Teknis 24/7)",
+    "certifications": [
+      "ISO/IEC 27001:2022 Certified",
+      "SOC 2 Type II Compliant",
+      "AWS Advanced Tier Partner",
+      "PSE Kominfo Terdaftar"
+    ],
+    "stats": [
+      {
+        "label": "Proyek Enterprise Sukses",
+        "value": "185",
+        "suffix": "+",
+        "description": "Sistem produksi aktif lintas industri finansial, logistik, & ritel"
+      },
+      {
+        "label": "Jaminan Uptime SLA",
+        "value": "99.98",
+        "suffix": "%",
+        "description": "Infrastruktur high-availability dengan monitoring real-time 24/7"
+      },
+      {
+        "label": "Senior Software & AI Engineers",
+        "value": "60",
+        "suffix": "+",
+        "description": "Talenta tersertifikasi di bidang Cloud, AI, Mobile, & Cybersecurity"
+      },
+      {
+        "label": "Tingkat Kepuasan & Retensi Klien",
+        "value": "98.5",
+        "suffix": "%",
+        "description": "Kemitraan jangka panjang dengan skor CSAT rata-rata 4.9/5.0"
+      }
+    ],
+    "team": [
+      {
+        "id": "tm-1",
+        "name": "Arkananta Pratama, M.Kom",
+        "role": "Chief Executive Officer & Co-Founder",
+        "bio": "14+ tahun memimpin transformasi digital di sektor perbankan dan telekomunikasi Asia Pasifik.",
+        "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80",
+        "specialties": [
+          "Enterprise Strategy",
+          "FinTech Regulation",
+          "Digital Transformation"
+        ]
+      },
+      {
+        "id": "tm-2",
+        "name": "Dr. Nadia Kusumawardhani",
+        "role": "Chief Technology Officer (CTO)",
+        "bio": "Pakar Distributed Systems & Generative AI. Mantan Principal Architect di perusahaan cloud global.",
+        "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
+        "specialties": [
+          "Cloud Architecture",
+          "LLM & AI Agents",
+          "High-Concurrency Systems"
+        ]
+      },
+      {
+        "id": "tm-3",
+        "name": "Rendy Wirawan, CISSP",
+        "role": "VP of Engineering & Cybersecurity",
+        "bio": "Spesialis DevSecOps, Zero-Trust Architecture, dan audit kepatuhan ISO 27001 untuk institusi keuangan.",
+        "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80",
+        "specialties": [
+          "DevSecOps",
+          "Kubernetes",
+          "Penetration Testing"
+        ]
+      },
+      {
+        "id": "tm-4",
+        "name": "Clarissa Halim",
+        "role": "Head of Product & UX Design",
+        "bio": "Berpengalaman merancang Design System untuk super-app dengan lebih dari 15 juta pengguna aktif bulanan.",
+        "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80",
+        "specialties": [
+          "Design Systems",
+          "Product Strategy",
+          "Conversion Rate Optimization"
+        ]
+      }
+    ]
+  },
+  "services": [
+    {
+      "id": "srv-1",
+      "slug": "custom-enterprise-software",
+      "title": "Custom Web, SaaS & Enterprise ERP",
+      "category": "Software Engineering",
+      "shortDesc": "Pengembangan aplikasi web modern, portal korporat, sistem ERP/CRM kustom, dan platform SaaS berkinerja tinggi.",
+      "fullDesc": "Kami membangun aplikasi web dan sistem informasi enterprise yang dirancang khusus mengikuti alur bisnis unik perusahaan Anda. Menggunakan arsitektur microservices maupun modular monolith dengan Next.js, TypeScript, Go, dan PostgreSQL.",
+      "iconName": "Code2",
+      "features": [
+        "Arsitektur Fullstack Next.js, React, Node.js & Go",
+        "Integrasi API pihak ketiga (Payment Gateway, SAP, Odoo, Core Banking)",
+        "Role-Based Access Control (RBAC) & Audit Trail Lengkap",
+        "Optimasi performa tinggi & SEO Core Web Vitals 99+"
+      ],
+      "deliverables": [
+        "Source Code Penuh",
+        "Dokumentasi API (Swagger/OpenAPI)",
+        "Automated Testing Suite",
+        "Panduan Deployment & Training"
+      ],
+      "startingPrice": "Rp 25.000.000",
+      "basePriceNumeric": 25000000,
+      "estimatedTimeline": "4 - 12 Minggu",
+      "popular": true
+    },
+    {
+      "id": "srv-2",
+      "slug": "ai-automation-data-analytics",
+      "title": "AI Engineering, LLM & Smart Automation",
+      "category": "AI & Data",
+      "shortDesc": "Integrasi Custom AI Chatbot (RAG), otomatisasi dokumen cerdas, predictive analytics, dan Business Intelligence.",
+      "fullDesc": "Tingkatkan produktivitas tim Anda dengan asisten AI yang dilatih khusus menggunakan dokumen internal perusahaan (Retrieval-Augmented Generation), deteksi anomali transaksi, serta dashboard prediksi penjualan real-time.",
+      "iconName": "BrainCircuit",
+      "features": [
+        "Enterprise RAG Knowledge Base (OpenAI, Claude, Gemini & Local LLM)",
+        "Omnichannel AI Customer Support (WhatsApp, Web, Telegram)",
+        "Intelligent OCR & Document Processing otomatis",
+        "Executive Data Warehouse & Real-Time BI Dashboard"
+      ],
+      "deliverables": [
+        "Custom AI Pipeline",
+        "Admin Knowledge Management",
+        "API Endpoint Terproteksi",
+        "Laporan Evaluasi Akurasi Model"
+      ],
+      "startingPrice": "Rp 35.000.000",
+      "basePriceNumeric": 35000000,
+      "estimatedTimeline": "4 - 8 Minggu",
+      "popular": true
+    },
+    {
+      "id": "srv-3",
+      "slug": "mobile-app-development",
+      "title": "Mobile App Development (iOS & Android)",
+      "category": "Software Engineering",
+      "shortDesc": "Aplikasi mobile native & cross-platform dengan performa mulus, fitur offline-first, dan keamanan biometrik.",
+      "fullDesc": "Hadirkan pengalaman mobile kelas satu bagi pelanggan dan tim lapangan Anda. Kami mengembangkan aplikasi iOS dan Android menggunakan React Native, Flutter, serta Swift/Kotlin dengan performa 60fps yang responsif.",
+      "iconName": "Smartphone",
+      "features": [
+        "Pengembangan iOS & Android dari satu basis kode efisien",
+        "Autentikasi Biometrik (FaceID / Fingerprint) & Enkripsi Lokal",
+        "Real-time Push Notification, Geolocation & Live Tracking",
+        "Publikasi penuh ke Apple App Store & Google Play Store"
+      ],
+      "deliverables": [
+        "Aplikasi iOS & Android",
+        "Backend API & CMS",
+        "Akun Store Deployment",
+        "Maintenance & Crash Monitoring"
+      ],
+      "startingPrice": "Rp 30.000.000",
+      "basePriceNumeric": 30000000,
+      "estimatedTimeline": "6 - 14 Minggu",
+      "popular": false
+    },
+    {
+      "id": "srv-4",
+      "slug": "cloud-devops-cybersecurity",
+      "title": "Cloud Infrastructure, DevOps & Security",
+      "category": "Cloud & Security",
+      "shortDesc": "Migrasi cloud (AWS/GCP/Vercel), CI/CD pipeline otomatis, Kubernetes auto-scaling, dan Penetration Testing.",
+      "fullDesc": "Pastikan sistem Anda tahan terhadap lonjakan trafik ekstrem dan serangan siber. Tim DevSecOps kami merancang infrastruktur cloud yang hemat biaya hingga 40% dengan perlindungan berlapis berstandar ISO 27001.",
+      "iconName": "ShieldCheck",
+      "features": [
+        "Zero-Downtime CI/CD Pipeline & Infrastructure as Code (Terraform)",
+        "Auto-Scaling Kubernetes (EKS/GKE) & Serverless Edge Deployment",
+        "Vulnerability Assessment & Penetration Testing (VAPT)",
+        "WAF, DDoS Mitigation & 24/7 Incident Response Monitoring"
+      ],
+      "deliverables": [
+        "Blueprint Arsitektur Cloud",
+        "Skrip IaC & CI/CD",
+        "Laporan Audit Keamanan VAPT",
+        "SLA Monitoring Dashboard"
+      ],
+      "startingPrice": "Rp 20.000.000",
+      "basePriceNumeric": 20000000,
+      "estimatedTimeline": "2 - 6 Minggu",
+      "popular": false
+    },
+    {
+      "id": "srv-5",
+      "slug": "ui-ux-product-design",
+      "title": "Executive UI/UX & Design System",
+      "category": "Product Design",
+      "shortDesc": "Riset pengguna, prototipe interaktif high-fidelity, audit UX konversi, dan pembuatan Design System korporat.",
+      "fullDesc": "Desain bukan sekadar tampilan indah, melainkan bagaimana produk bekerja secara intuitif di ponsel, tablet, hingga layar desktop. Kami menciptakan antarmuka premium yang meningkatkan rasio konversi dan kepuasan pengguna.",
+      "iconName": "Layers",
+      "features": [
+        "UX Audit, User Journey Mapping & Information Architecture",
+        "Interactive High-Fidelity Prototyping di Figma",
+        "Multi-Theme Design System (Dark Mode, Light Mode, Executive)",
+        "Responsive Design 100% (Mobile, Tablet, Foldables, Desktop 4K)"
+      ],
+      "deliverables": [
+        "Master Figma File",
+        "Component Library & Design Tokens",
+        "Interactive Prototype",
+        "Usability Testing Report"
+      ],
+      "startingPrice": "Rp 15.000.000",
+      "basePriceNumeric": 15000000,
+      "estimatedTimeline": "2 - 5 Minggu",
+      "popular": false
+    },
+    {
+      "id": "srv-6",
+      "slug": "dedicated-engineering-team",
+      "title": "Dedicated Tech Squad & IT Managed Service",
+      "category": "Software Engineering",
+      "shortDesc": "Perkuat tim internal Anda dengan squad developer, QA, dan Scrum Master berdedikasi penuh tanpa repot rekrutmen.",
+      "fullDesc": "Solusi fleksibel bagi perusahaan yang ingin mengakselerasi roadmap produk secara cepat. Anda mendapatkan akses langsung ke squad senior engineer kami yang bekerja eksklusif mengikuti budaya dan sprint perusahaan Anda.",
+      "iconName": "Users",
+      "features": [
+        "Squad siap kerja dalam 7 hari kerja (Fullstack, Mobile, QA, DevOps)",
+        "Sprint Mingguan Transparan via Jira, Slack/Teams & GitHub",
+        "Jaminan penggantian talenta gratis jika tidak sesuai",
+        "Code Review & supervisi langsung oleh Principal Architect Nexvora"
+      ],
+      "deliverables": [
+        "Dedicated Engineers",
+        "Laporan Sprint Mingguan",
+        "100% Hak Kekayaan Intelektual (IP)",
+        "SLA Support Prioritas"
+      ],
+      "startingPrice": "Rp 45.000.000 / bln",
+      "basePriceNumeric": 45000000,
+      "estimatedTimeline": "Kontrak Fleksibel 3-12 Bulan",
+      "popular": false
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "port-1",
+      "title": "AstraPayCore — Next-Gen Digital Banking & Treasury Platform",
+      "client": "PT Nusantara Finansial Terpadu",
+      "category": "FinTech",
+      "year": "2025",
+      "summary": "Modernisasi sistem core treasury dan dashboard transaksi real-time yang memproses lebih dari Rp 4,2 Triliun volume bulanan dengan latensi di bawah 50ms.",
+      "challenge": "Sistem legacy monolid milik klien mengalami kelambatan saat jam sibuk dan membutuhkan waktu 6 jam untuk rekonsiliasi laporan keuangan harian lintas 40 cabang.",
+      "solution": "Kami membangun ulang platform menggunakan arsitektur Event-Driven Microservices, frontend dashboard berbasis Next.js dengan real-time WebSocket streaming, serta sistem rekonsiliasi otomatis berbasis AI.",
+      "impactMetrics": [
+        {
+          "label": "Kecepatan Rekonsiliasi",
+          "value": "12x Lebih Cepat"
+        },
+        {
+          "label": "Volume Transaksi Bulanan",
+          "value": "Rp 4,2 Triliun"
+        },
+        {
+          "label": "Uptime Sistem",
+          "value": "99.99%"
+        }
+      ],
+      "techStack": [
+        "Next.js",
+        "TypeScript",
+        "Go",
+        "Apache Kafka",
+        "PostgreSQL",
+        "AWS EKS"
+      ],
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
+      "liveUrl": "https://nexvora.co.id/case-study/astrapaycore",
+      "featured": true
+    },
+    {
+      "id": "port-2",
+      "title": "OmniLogix AI — Smart Fleet & Supply Chain Control Tower",
+      "client": "KargoNusa Logistics Group",
+      "category": "AI & Data",
+      "year": "2025",
+      "summary": "Platform kendali logistik berbasis AI yang mengoptimalkan rute 3.500+ armada truk secara dinamis dan memangkas biaya bahan bakar sebesar 24%.",
+      "challenge": "Tingginya biaya operasional akibat rute pengiriman yang tidak optimal, keterlambatan pengiriman, dan kurangnya visibilitas posisi armada secara real-time di daerah terpencil.",
+      "solution": "Mengembangkan Control Tower Web Dashboard dan aplikasi mobile driver dengan fitur offline-sync, dipadukan algoritma Machine Learning untuk prediksi rute dan konsumsi bahan bakar.",
+      "impactMetrics": [
+        {
+          "label": "Penghematan BBM",
+          "value": "-24% Biaya"
+        },
+        {
+          "label": "Armada Terhubung",
+          "value": "3.500+ Unit"
+        },
+        {
+          "label": "Ketepatan Waktu Kirim",
+          "value": "97.8%"
+        }
+      ],
+      "techStack": [
+        "React",
+        "Next.js",
+        "Python FastAPI",
+        "TensorFlow",
+        "React Native",
+        "Redis"
+      ],
+      "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=80",
+      "liveUrl": "https://nexvora.co.id/case-study/omnilogix",
+      "featured": true
+    },
+    {
+      "id": "port-3",
+      "title": "MedikaOne — Integrated Hospital ERP & Telemedicine SuperApp",
+      "client": "Jaringan Rumah Sakit Medika Utama",
+      "category": "Mobile App",
+      "year": "2024",
+      "summary": "Ekosistem Rekam Medis Elektronik (RME) terintegrasi SATUSEHAT Kemenkes dan aplikasi mobile pasien dengan 850.000+ unduhan aktif.",
+      "challenge": "Antrean pendaftaran fisik di 18 cabang rumah sakit mencapai 2 jam dan data rekam medis pasien belum tersinkronisasi antar cabang.",
+      "solution": "Merancang aplikasi mobile pasien (booking dokter, telekonsultasi video, tebus obat instan) yang terhubung langsung ke sistem Hospital Information System (HIS) berbasis cloud.",
+      "impactMetrics": [
+        {
+          "label": "Waktu Antrean Pasien",
+          "value": "-78% Durasi"
+        },
+        {
+          "label": "Pengguna Aktif",
+          "value": "850K+ Pasien"
+        },
+        {
+          "label": "Rating App Store",
+          "value": "4.9 / 5.0"
+        }
+      ],
+      "techStack": [
+        "Flutter",
+        "Next.js",
+        "Node.js",
+        "WebRTC",
+        "HL7 FHIR",
+        "Google Cloud"
+      ],
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80",
+      "liveUrl": "https://nexvora.co.id/case-study/medikaone",
+      "featured": true
+    },
+    {
+      "id": "port-4",
+      "title": "VoraERP Manufacturing — Smart Factory & Inventory Suite",
+      "client": "PT IndoTekstil Makmur Tbk",
+      "category": "Enterprise ERP",
+      "year": "2024",
+      "summary": "Sistem ERP manufaktur end-to-end yang menghubungkan IoT sensor mesin pabrik, manajemen gudang WMS, procurement, hingga laporan akuntansi otomatis.",
+      "challenge": "Selisih stok bahan baku hingga 8% setiap kuartal dan lambatnya pelaporan harga pokok produksi (HPP) dari 4 pabrik utama.",
+      "solution": "Implementasi Custom ERP berbasis web responsif yang dapat diakses via tablet di lantai produksi (shop floor) dengan pemindaian QR/RFID real-time.",
+      "impactMetrics": [
+        {
+          "label": "Akurasi Stok Gudang",
+          "value": "99.92%"
+        },
+        {
+          "label": "Efisiensi Produksi",
+          "value": "+34% Output"
+        },
+        {
+          "label": "Penutupan Buku Bulanan",
+          "value": "2 Hari (dari 14)"
+        }
+      ],
+      "techStack": [
+        "Next.js",
+        "PostgreSQL",
+        "Prisma",
+        "Docker",
+        "MQTT IoT",
+        "Tailwind CSS"
+      ],
+      "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=80",
+      "liveUrl": "https://nexvora.co.id/case-study/voraerp",
+      "featured": false
+    },
+    {
+      "id": "port-5",
+      "title": "SatuPajak Portal — E-Governance & Smart Revenue Analytics",
+      "client": "Pemerintah Provinsi & Bapenda Mitra",
+      "category": "Cloud & GovTech",
+      "year": "2025",
+      "summary": "Portal pelayanan pajak daerah terpadu dan dashboard eksekutif analitik pendapatan asli daerah (PAD) dengan integrasi QRIS & Virtual Account.",
+      "challenge": "Sistem sebelumnya sering mengalami down saat periode jatuh tempo pembayaran pajak tahunan dan antarmuka sulit digunakan di perangkat HP warga.",
+      "solution": "Redesain UX mobile-first yang ramah seluruh kalangan usia serta migrasi ke infrastruktur Cloud Auto-Scaling dengan proteksi WAF tingkat tinggi.",
+      "impactMetrics": [
+        {
+          "label": "Kenaikan Transaksi Online",
+          "value": "+215% YoY"
+        },
+        {
+          "label": "Kapasitas Trafik Serentak",
+          "value": "100K User/menit"
+        },
+        {
+          "label": "Skor Aksesibilitas",
+          "value": "99 / 100"
+        }
+      ],
+      "techStack": [
+        "Next.js",
+        "TypeScript",
+        "Kubernetes",
+        "Cloudflare WAF",
+        "ElasticSearch"
+      ],
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80",
+      "liveUrl": "https://nexvora.co.id/case-study/satupajak",
+      "featured": false
+    },
+    {
+      "id": "port-6",
+      "title": "LexaCopilot — Enterprise Legal & Compliance AI Assistant",
+      "client": "Firma Hukum & Divisi Legal Korporat",
+      "category": "AI & Data",
+      "year": "2025",
+      "summary": "Asisten AI privat berbasis RAG untuk meninjau kontrak bisnis, mendeteksi klausul berisiko, dan mencari regulasi hukum Indonesia dalam hitungan detik.",
+      "challenge": "Tim legal menghabiskan ratusan jam setiap bulan untuk memeriksa draf kontrak vendor secara manual dan mencari referensi peraturan terbaru.",
+      "solution": "Membangun platform AI dokumen dengan enkripsi penuh yang mampu membandingkan draf kontrak terhadap standar kepatuhan perusahaan secara instan.",
+      "impactMetrics": [
+        {
+          "label": "Kecepatan Review Kontrak",
+          "value": "85% Lebih Cepat"
+        },
+        {
+          "label": "Akurasi Sitasi Pasal",
+          "value": "99.4%"
+        },
+        {
+          "label": "Keamanan Data",
+          "value": "Zero Data Retention"
+        }
+      ],
+      "techStack": [
+        "Next.js",
+        "Python",
+        "LangChain",
+        "PGVector",
+        "Enterprise LLM",
+        "SOC2 Security"
+      ],
+      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=80",
+      "liveUrl": "https://nexvora.co.id/case-study/lexacopilot",
+      "featured": false
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "test-1",
+      "name": "Hendra Wijaya",
+      "role": "Chief Information Officer (CIO)",
+      "company": "PT Nusantara Finansial Terpadu",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+      "quote": "Nexvora bukan sekadar vendor pembuat kode, melainkan mitra pemikir strategis. Arsitektur treasury yang mereka bangun berhasil melewati audit keamanan ketat dan memproses triliunan rupiah tanpa satu detik pun downtime.",
+      "rating": 5,
+      "projectType": "FinTech Core System"
+    },
+    {
+      "id": "test-2",
+      "name": "Stephanie Tanuwijaya",
+      "role": "VP of Digital Product",
+      "company": "Jaringan RS Medika Utama",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+      "quote": "Kualitas UI/UX yang dirancang tim Nexvora luar biasa. Pasien lansia hingga generasi muda bisa menggunakan aplikasi kami dengan sangat mudah di HP maupun tablet. Tingkat adopsi digital kami melonjak 3x lipat.",
+      "rating": 5,
+      "projectType": "Mobile SuperApp & HIS"
+    },
+    {
+      "id": "test-3",
+      "name": "Budi Santoso, MBA",
+      "role": "Direktur Operasional",
+      "company": "KargoNusa Logistics Group",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+      "quote": "Investasi terbaik kami tahun ini. Sistem AI Fleet Control dari Nexvora balik modal (ROI) hanya dalam waktu 4 bulan berkat penghematan bahan bakar dan efisiensi penjadwalan armada yang presisi.",
+      "rating": 5,
+      "projectType": "AI Supply Chain Platform"
+    }
+  ],
+  "articles": [
+    {
+      "id": "art-1",
+      "slug": "strategi-implementasi-enterprise-ai-rag-2026",
+      "title": "Strategi Implementasi Enterprise AI (RAG) Tanpa Risiko Kebocoran Data Korporat",
+      "excerpt": "Pelajari bagaimana perusahaan modern mengintegrasikan Large Language Models (LLM) dengan database internal secara aman menggunakan arsitektur Private RAG.",
+      "content": "Adopsi Generative AI di tingkat korporasi meningkat pesat, namun kekhawatiran utama para pimpinan teknologi (CTO/CIO) adalah privasi data dan akurasi jawaban (halusinasi). Dengan arsitektur Retrieval-Augmented Generation (RAG) berbasis vektor terisolasi dan kebijakan Zero-Data-Retention, perusahaan kini dapat memanfaatkan kecerdasan LLM untuk menganalisis ribuan dokumen SOP, laporan keuangan, dan kontrak hukum secara instan tanpa pernah mengirimkan data sensitif untuk pelatihan model publik.",
+      "category": "Artificial Intelligence",
+      "author": "Dr. Nadia Kusumawardhani",
+      "authorRole": "Chief Technology Officer",
+      "publishedAt": "8 Oktober 2026",
+      "readTime": "6 Menit Baca",
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "art-2",
+      "slug": "mengapa-nextjs-arsitektur-pilihan-utama-enterprise",
+      "title": "Mengapa Fullstack Next.js & Edge Computing Menjadi Standar Web Modern",
+      "excerpt": "Kombinasi Server Components, API Routes serverless, dan distribusi global memberikan kecepatan muat di bawah 1 detik di semua perangkat.",
+      "content": "Pengguna modern mengharapkan aplikasi web yang terasa secepat aplikasi native di smartphone maupun desktop. Dengan Next.js App Router, rendering dilakukan secara cerdas di sisi server (SSR/ISR) dan didistribusikan melalui jaringan Edge global. Hasilnya adalah skor SEO sempurna, penghematan beban server, serta keamanan backend API yang terintegrasi dalam satu repositori modern.",
+      "category": "Software Architecture",
+      "author": "Rendy Wirawan, CISSP",
+      "authorRole": "VP of Engineering",
+      "publishedAt": "2 Oktober 2026",
+      "readTime": "5 Menit Baca",
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "art-3",
+      "slug": "panduan-modernisasi-erp-legacy-ke-cloud",
+      "title": "Panduan Modernisasi Sistem ERP Legacy ke Cloud-Native Tanpa Menghentikan Operasional",
+      "excerpt": "Pendekatan Strangler Fig Pattern memungkinkan perusahaan memigrasikan sistem lama secara bertahap dengan risiko nol.",
+      "content": "Banyak perusahaan enggan memperbarui sistem ERP lama mereka karena takut akan gangguan operasional saat proses migrasi. Dengan metode Strangler Fig Pattern, tim kami membangun modul-modul modern secara bertahap di sekitar sistem lama menggunakan API Gateway, sehingga bisnis tetap berjalan 100% normal sembari menikmati peningkatan performa dan antarmuka mobile-friendly.",
+      "category": "Digital Transformation",
+      "author": "Arkananta Pratama, M.Kom",
+      "authorRole": "Chief Executive Officer",
+      "publishedAt": "25 September 2026",
+      "readTime": "7 Menit Baca",
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "pricing": [
+    {
+      "id": "plan-1",
+      "name": "Growth & Digital Presence",
+      "subtitle": "Cocok untuk Perusahaan Berkembang & Startup MVP",
+      "projectPrice": "Rp 25 Juta",
+      "retainerPrice": "Rp 15 Juta / bln",
+      "description": "Solusi cepat dan berkelas untuk meluncurkan Company Profile Pro, Web App kustom, atau MVP produk digital siap pakai.",
+      "highlighted": false,
+      "features": [
+        "Custom UI/UX Pro (Responsive HP, Tablet & Desktop)",
+        "Fullstack Next.js + Admin CMS Dashboard",
+        "Integrasi API Form, Booking & WhatsApp Otomatis",
+        "Optimasi Kecepatan (Core Web Vitals 95+) & Technical SEO",
+        "Deployment Cloud (Vercel / AWS) + SSL Security",
+        "Garansi Bug & Maintenance Gratis 3 Bulan"
+      ],
+      "ctaText": "Pilih Paket Growth"
+    },
+    {
+      "id": "plan-2",
+      "name": "Enterprise Digital Suite",
+      "subtitle": "Paling Populer untuk Korporasi & Skala Menengah-Besar",
+      "projectPrice": "Rp 65 Juta",
+      "retainerPrice": "Rp 38 Juta / bln",
+      "description": "Pengembangan sistem bisnis terintegrasi (Custom ERP/CRM, SaaS, Mobile App, atau AI Automation) dengan arsitektur high-availability.",
+      "badge": "PALING DIREKOMENDASIKAN",
+      "highlighted": true,
+      "features": [
+        "Semua fitur paket Growth + Arsitektur Micro-Modular",
+        "Pengembangan Web App + Mobile Responsive / PWA / Native",
+        "Integrasi AI Chatbot (RAG) atau Payment Gateway & ERP",
+        "Role-Based Access Control (RBAC) & Executive Analytics",
+        "Automated Testing, CI/CD Pipeline & Security Hardening",
+        "Garansi SLA 99.9% & Priority Support 6 Bulan"
+      ],
+      "ctaText": "Konsultasikan Paket Enterprise"
+    },
+    {
+      "id": "plan-3",
+      "name": "Custom Ecosystem & Squad",
+      "subtitle": "Untuk Transformasi Skala Besar, Perbankan & BUMN",
+      "projectPrice": "Custom Tailored",
+      "retainerPrice": "Mulai Rp 60 Juta / bln",
+      "description": "Tim engineering berdedikasi penuh (Dedicated Squad) dan arsitektur khusus dengan kepatuhan keamanan ISO 27001 & on-premise/private cloud.",
+      "highlighted": false,
+      "features": [
+        "Dedicated Squad (Senior Engineers, UI/UX, QA, Scrum Master)",
+        "Deployment On-Premise, Private Cloud, atau Multi-Region",
+        "Audit Penetration Testing (VAPT) & Kepatuhan Regulasi",
+        "Integrasi Core System Legacy & Data Warehouse Skala Besar",
+        "24/7 Dedicated Account Manager & Support Engineer",
+        "100% Hak Kepemilikan Source Code & IP Eksklusif"
+      ],
+      "ctaText": "Hubungi Principal Architect"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-1",
+      "question": "Apakah source code dan hak kekayaan intelektual (IP) menjadi milik perusahaan kami sepenuhnya?",
+      "answer": "Ya, 100%. Setelah proyek selesai dan dilunasi, seluruh source code, desain Figma, dokumentasi arsitektur, dan kredensial database diserahkan sepenuhnya menjadi hak milik eksklusif perusahaan Anda tanpa biaya lisensi tersembunyi.",
+      "category": "Legal & Kepemilikan"
+    },
+    {
+      "id": "faq-2",
+      "question": "Bagaimana jaminan tampilan website/aplikasi agar responsif di semua HP, Tablet, dan Desktop?",
+      "answer": "Setiap proyek kami melewati pengujian Multi-Device QA menggunakan standar Mobile-First & Fluid Responsive Grid. Kami menguji langsung pada iOS (iPhone/iPad), Android berbagai ukuran layar, tablet, laptop, hingga monitor ultrawide 4K sebelum rilis.",
+      "category": "Teknis & Kualitas"
+    },
+    {
+      "id": "faq-3",
+      "question": "Berapa lama waktu pengembangan proyek dan bagaimana sistem pembayarannya?",
+      "answer": "Durasi bergantung pada kompleksitas: Company Profile & Web Portal berkisar 2-4 minggu, sedangkan Custom ERP/Mobile App/AI berkisar 6-12 minggu. Sistem pembayaran fleksibel secara bertahap berdasarkan milestone (misal: Termin 1 DP 30%, Termin 2 UAT 40%, Termin 3 Go-Live 30%).",
+      "category": "Biaya & Timeline"
+    },
+    {
+      "id": "faq-4",
+      "question": "Apakah website/sistem ini bisa langsung di-deploy ke Vercel atau Cloud milik kami sendiri?",
+      "answer": "Tentu saja! Arsitektur Next.js Fullstack yang kami bangun sudah 100% siap dideploy ke Vercel hanya dengan sekali klik (Git Push), maupun menggunakan Docker ke AWS, Google Cloud, Alibaba Cloud, atau server internal perusahaan Anda.",
+      "category": "Infrastruktur"
+    },
+    {
+      "id": "faq-5",
+      "question": "Apakah tersedia layanan maintenance dan garansi setelah proyek selesai (Post Go-Live)?",
+      "answer": "Ya. Kami memberikan masa garansi gratis (3 hingga 6 bulan) yang mencakup perbaikan bug, pemantauan performa server, dan pendampingan tim Anda. Setelah masa garansi, Anda juga dapat memperpanjang kontrak Managed Service sesuai kebutuhan.",
+      "category": "Dukungan Teknis"
+    }
+  ],
+  "inquiries": [
+    {
+      "id": "inq-1791713662491",
+      "name": "SYAUQI ABDURAFFI",
+      "email": "raffirawgat@gmail.com",
+      "phone": "01290190190",
+      "company": "nkskaskam",
+      "service": "AI Engineering, LLM & Smart Automation",
+      "budget": "Rp 64.000.000",
+      "timeline": "Standar (4-8 Minggu)",
+      "message": "[Kalkulator Estimasi] Skala: Business Scale-Up | Add-ons: Multi-Role RBAC, SSO & Log Audit Keamanan | Catatan Tambahan: samksmakmska",
+      "estimatedCost": "Rp 64.000.000",
+      "status": "new",
+      "createdAt": "2026-10-11T10:14:22.491Z"
+    },
+    {
+      "id": "inq-101",
+      "name": "Dimas Prasetyo",
+      "email": "dimas.prasetyo@mandiriloka.co.id",
+      "phone": "+62 811 2345 6789",
+      "company": "PT Mandiri Loka Sejahtera",
+      "service": "Custom Web, SaaS & Enterprise ERP",
+      "budget": "Rp 50 Juta - Rp 100 Juta",
+      "timeline": "1 - 3 Bulan",
+      "message": "Kami ingin memodernisasi portal B2B distributor dan mengintegrasikannya dengan stok gudang secara real-time.",
+      "estimatedCost": "Rp 65.000.000",
+      "status": "in_progress",
+      "createdAt": "2026-10-10T09:30:00.000Z"
+    },
+    {
+      "id": "inq-102",
+      "name": "Amanda Putri",
+      "email": "amanda@finova.id",
+      "phone": "+62 812 8899 0011",
+      "company": "Finova Digital Capital",
+      "service": "AI Engineering, LLM & Smart Automation",
+      "budget": "> Rp 100 Juta",
+      "timeline": "Segera (Urgent)",
+      "message": "Butuh pembuatan sistem AI Knowledge Base internal untuk menganalisis ribuan dokumen kepatuhan & SOP perusahaan.",
+      "estimatedCost": "Rp 85.000.000",
+      "status": "new",
+      "createdAt": "2026-10-11T04:15:00.000Z"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "bk-201",
+      "referenceCode": "NXV-8842",
+      "name": "Reza Rahadian",
+      "email": "reza@sinergienergi.co.id",
+      "phone": "+62 813 7766 5544",
+      "company": "PT Sinergi Energi Nusantara",
+      "topic": "Arsitektur ERP & Dashboard Eksekutif",
+      "date": "2026-10-15",
+      "timeSlot": "10:00 - 11:00 WIB",
+      "meetingType": "google_meet",
+      "notes": "Ingin berdiskusi dengan Principal Architect mengenai migrasi database legacy.",
+      "status": "confirmed",
+      "createdAt": "2026-10-10T14:20:00.000Z"
+    }
+  ],
+  "subscribers": [
+    {
+      "id": "sub-1",
+      "email": "cto@korporasinusantara.co.id",
+      "subscribedAt": "2026-10-01T10:00:00.000Z"
+    },
+    {
+      "id": "sub-2",
+      "email": "product.lead@startuptech.id",
+      "subscribedAt": "2026-10-05T15:30:00.000Z"
+    }
+  ]
+}

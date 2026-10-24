@@ -1,61 +1,61 @@
-# NEXVORA Technologies — Fullstack Enterprise Company Profile (Next.js + Vercel Ready)
+# SyauqiDev — Jasa Pembuatan Website Profesional & Full-Stack Web Studio
 
-Website **Company Profile Profesional (Frontend + Backend API + Admin CMS)** berbasis **Next.js App Router, TypeScript, dan Tailwind CSS**, dirancang dengan antarmuka **Pro UI/UX** yang 100% responsif di semua perangkat (Smartphone, Tablet, Laptop, dan Monitor 4K) serta siap di-deploy ke **Vercel**.
-
----
-
-## ✨ Fitur Utama (Fullstack Frontend & Backend)
-
-1. **3 Mode Desain Visual Adaptif (Multi-Theme UI/UX)**:
-   - **Royal Dark (Mode 1)**: Tema gelap modern SaaS dengan aksen Royal Blue & Indigo.
-   - **Executive Gold/Emerald (Mode 3)**: Tema gelap mewah dengan aksen Emerald & Champagne Gold.
-   - **Clean Corporate Light (Mode Terang)**: Tema terang korporat yang bersih dan kontras tinggi.
-2. **Responsif Penuh di Semua Perangkat**:
-   - **HP / Smartphone**: Drawer navigasi interaktif, filter horizontal bebas scroll, serta *Sticky Bottom Quick-Action Bar* (WhatsApp & Booking Konsultasi).
-   - **Tablet & iPad**: Tata letak 2 kolom adaptif dan kartu portofolio proporsional.
-   - **Desktop & Layar Lebar**: Bento grid modern, widget telemetri interaktif, dan panel kalkulator sticky.
-3. **Interactive Project Cost & Quotation Simulator (`#estimator`)**:
-   - Pengunjung dapat menghitung estimasi biaya proyek secara real-time berdasarkan jenis layanan, skala sistem, modul tambahan, dan target durasi, lalu mengirimkannya langsung ke Backend API.
-4. **Sistem Booking Konsultasi Online (`#booking`)**:
-   - Pemilihan topik diskusi, tanggal, jam konsultasi, serta platform pertemuan (Google Meet / Zoom / Tatap Muka) yang menghasilkan **Kode Referensi Booking (`NXV-XXXX`)** otomatis.
-5. **Admin CMS & Executive Dashboard (`/admin`)**:
-   - Kelola pesan masuk & permintaan proposal (RFP), jadwal booking konsultasi, tambah/hapus portofolio, tambah/hapus layanan, dan ubah profil perusahaan secara langsung.
-   - **Login Demo Admin**:
-     - Email: `admin@nexvora.co.id`
-     - Password: `admin123`
-6. **Hybrid Serverless Storage (`src/lib/db.ts`)**:
-   - Menyimpan data ke `data/db.json` saat dijalankan di komputer lokal, dan secara otomatis menggunakan `/tmp` + *in-memory cache* saat berjalan di **Vercel Serverless** (sehingga fitur CRUD tetap berjalan lancar tanpa error *read-only filesystem*).
+Website **Company Profile & Portofolio IT Resmi SyauqiDev** — studio jasa pembuatan website profesional & solusi IT modern yang didirikan oleh **Syauqi Abduraffi, S.Kom.** (Owner & Lead Full-Stack Developer). Dibangun menggunakan arsitektur modern **Next.js 14 App Router, TypeScript, Tailwind CSS, dan AppDashboard Admin CMS** yang 100% responsif di semua perangkat (Smartphone, Tablet, Laptop, hingga Layar 4K).
 
 ---
 
-## 🚀 Cara Menjalankan di Lokal
+## 🌟 Identitas Usaha & Pemilik
 
-1. Pastikan menggunakan **Node.js v18 / v20+** (atau klik dua kali file `start-dev.bat` di Windows).
-2. Jalankan perintah berikut di terminal:
+- **Nama Usaha**: **SyauqiDev**
+- **Owner & Founder**: **Syauqi Abduraffi, S.Kom.**
+- **Spesialisasi**: Full-Stack Web Developer (Frontend UI/UX, Backend Admin CMS, RESTful API & Database SQL)
+- **Katalog Layanan**: Company Profile Bisnis, Toko Online / E-Commerce, Landing Page UMKM, Portal Instansi & Web App Custom
+- **Kontak & Konsultasi**: [WhatsApp / Telepon: +62 812-8899-7766](https://wa.me/6281288997766) • Email: `syauqi.informatika@devmail.id`
+- **Official Website**: [https://company-profile-roan-theta.vercel.app](https://company-profile-roan-theta.vercel.app)
+
+---
+
+## ✨ Fitur Unggulan Website
+
+1. **Antarmuka Premium & 100% Mobile Responsive**:
+   - **Mobile (Smartphone)**: Navbar ramping dengan logo, tombol *Pesan Website*, dan menu drawer hamburger `[☰]` tanpa terpotong (*zero clipping*), dilengkapi *quick-action* WA.
+   - **Desktop & Layar Lebar**: Glassmorphic single-line navbar, slider hero dinamis, telemetri live developer terminal, dan indikator status *Open Order*.
+2. **Katalog Paket Web & Simulasi Estimasi Proyek (`#simpus-live`)**:
+   - Calon klien dapat memilih paket website (Company Profile, E-Commerce, Landing Page, SaaS Dashboard), menghitung kalkulasi estimasi harga proyek secara interaktif, dan langsung memesan via modal WhatsApp/Email.
+3. **AppDashboard Admin CMS Terpadu (`/admin`)**:
+   - Login terproteksi multi-role (Admin & User).
+   - Live database viewer & editor untuk 5 tabel RBAC (`syauqidev_db`): `user`, `user_role`, `user_menu`, `user_access_menu`, dan `user_sub_menu`.
+   - Manajemen Pesan Masuk (Inquiries), Booking Konsultasi, Portofolio Karya, Layanan Jasa, hingga pengaturan Branding (Logo & Favicon).
+4. **Database Hybrid (`data/company_db.json`)**:
+   - Penyimpanan lokal JSON yang tersinkronisasi otomatis dengan serverless `/tmp` saat di-deploy ke Vercel, menjamin fitur CRUD berjalan lancar tanpa error *read-only filesystem*.
+5. **SEO & Google Search Console Ready**:
+   - Dilengkapi `sitemap.ts`, `robots.ts`, OpenGraph metadata, JSON-LD schema, serta token verifikasi Google Search Console.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 14 (App Router), React 18, TypeScript, Tailwind CSS, Lucide React Icons
+- **Backend**: Next.js Serverless Route Handlers, Node.js API
+- **Database**: Hybrid JSON Engine / MySQL Schema Ready (`syauqidev_db`)
+- **Deployment**: Vercel Serverless Edge Network
+
+---
+
+## 🚀 Menjalankan di Komputer Lokal
+
+1. Pastikan Anda telah menginstal **Node.js v18 atau v20+**.
+2. Jalankan perintah instalasi dan server development:
    ```bash
    npm install
    npm run dev
    ```
-3. Buka browser di:
-   - **Halaman Utama**: `http://localhost:3000`
-   - **Halaman Admin CMS**: `http://localhost:3000/admin`
+3. Buka browser:
+   - **Landing Page**: [http://localhost:3000](http://localhost:3000)
+   - **Admin Dashboard**: [http://localhost:3000/admin](http://localhost:3000/admin)
 
 ---
 
-## ☁️ Cara Deploy ke Vercel
+## 📄 Lisensi & Hak Cipta
 
-Proyek ini sudah dilengkapi dengan konfigurasi `vercel.json` dan siap di-deploy dalam hitungan detik:
-
-### Opsi 1: Via GitHub / GitLab (Direkomendasikan)
-1. Push folder proyek ini ke repositori GitHub Anda.
-2. Buka [vercel.com/new](https://vercel.com/new) dan pilih repositori tersebut.
-3. Klik **Deploy** (Framework Preset akan otomatis terdeteksi sebagai **Next.js**).
-
-### Opsi 2: Via Vercel CLI
-```bash
-npx vercel
-```
-Untuk produksi:
-```bash
-npx vercel --prod
-```
+Hak Cipta © 2026 **SyauqiDev** by **Syauqi Abduraffi, S.Kom.** Seluruh hak cipta dilindungi undang-undang.

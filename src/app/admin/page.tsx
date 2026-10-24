@@ -848,6 +848,32 @@ export default function AppDashboardPage() {
     };
   }, []);
 
+  // Update dynamic browser tab title based on current active view
+  useEffect(() => {
+    const titleMap: Record<ActiveView, string> = {
+      'command-center': 'Dashboard Overview | SyauqiDev AppDashboard',
+      messages: 'Kotak Masuk Pesan Klien | SyauqiDev AppDashboard',
+      orders: 'Daftar Order & Invoice | SyauqiDev AppDashboard',
+      'cms-skills': 'Kelola Skills IT | SyauqiDev AppDashboard',
+      'cms-portfolio': 'Kelola Portofolio Website | SyauqiDev AppDashboard',
+      'cms-services': 'Kelola Layanan Jasa Web | SyauqiDev AppDashboard',
+      'cms-pricing': 'Kelola Paket Harga Website | SyauqiDev AppDashboard',
+      'cms-simpus': 'Katalog Template Website | SyauqiDev AppDashboard',
+      'cms-about': 'Kelola Profil & About | SyauqiDev AppDashboard',
+      'cms-team': 'Kelola Tim Spesialisasi | SyauqiDev AppDashboard',
+      'cms-settings': 'Pengaturan Brand, Logo & Favicon | SyauqiDev AppDashboard',
+      'database-viewer': 'Database Schema Viewer | SyauqiDev AppDashboard',
+      'db-user': 'Manajemen User & Akun | SyauqiDev AppDashboard',
+      'db-user-role': 'User Roles RBAC | SyauqiDev AppDashboard',
+      'db-user-menu': 'User Menus | SyauqiDev AppDashboard',
+      'db-user-access': 'Access Rights | SyauqiDev AppDashboard',
+      'db-user-submenu': 'Submenu Management | SyauqiDev AppDashboard'
+    };
+    if (typeof document !== 'undefined') {
+      document.title = titleMap[activeView] || 'SyauqiDev AppDashboard — Admin Panel';
+    }
+  }, [activeView]);
+
   const toggleSubmenu = (key: string) => {
     setOpenMenus((prev) => ({ ...prev, [key]: !prev[key] }));
   };

@@ -26,13 +26,137 @@ const jetbrainsMono = JetBrains_Mono({
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 5
+  maximumScale: 5,
+  themeColor: '#0a0d14'
 };
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://company-profile.vercel.app');
+
 export const metadata: Metadata = {
-  title: 'SyauqiDev. — Personal Company Profile Teknik Informatika & AppDashboard',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: 'SyauqiDev — Jasa Pembuatan Website Profesional & Backend Developer',
+    template: '%s | SyauqiDev'
+  },
   description:
-    'Inovasi Web Era Modern, Sistem Informasi Perpustakaan Digital (SIMPUS), & Rekayasa Perangkat Lunak Pro terintegrasi Database company_db.'
+    'Jasa pembuatan website profesional, company profile bisnis, toko online e-commerce, landing page UMKM, dan arsitektur backend modern oleh Syauqi Abduraffi (Teknik Informatika). Cepat, responsif, dan siap pakai.',
+  keywords: [
+    'Jasa Pembuatan Website',
+    'Jasa Pembuatan Website Murah',
+    'Jasa Bikin Web Profesional',
+    'Web Developer Indonesia',
+    'Fullstack Developer Jakarta',
+    'Jasa Company Profile',
+    'Jasa Toko Online E-Commerce',
+    'Next.js Developer',
+    'React Developer Indonesia',
+    'SyauqiDev',
+    'Syauqi Abduraffi',
+    'Syauqi Web Developer',
+    'Jasa Backend API',
+    'Aplikasi Web Custom'
+  ],
+  authors: [{ name: 'Syauqi Abduraffi', url: 'https://github.com/Police746' }],
+  creator: 'Syauqi Abduraffi',
+  publisher: 'SyauqiDev',
+  applicationName: 'SyauqiDev Portfolio',
+  generator: 'Next.js 14',
+  alternates: {
+    canonical: '/'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'id_ID',
+    url: siteUrl,
+    title: 'SyauqiDev — Jasa Pembuatan Website Profesional & Backend Developer',
+    description:
+      'Layanan pembuatan website modern & sistem backend handal. Company profile, e-commerce, dan sistem custom dengan performa tinggi & desain UI/UX eksklusif.',
+    siteName: 'SyauqiDev',
+    images: [
+      {
+        url: '/uploads/ecommerce-store-lavensa.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'SyauqiDev Portfolio & Website Services'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SyauqiDev — Jasa Pembuatan Website Profesional & Backend Developer',
+    description:
+      'Layanan pembuatan website modern & sistem backend handal. Company profile, e-commerce, dan sistem custom dengan performa tinggi.',
+    images: ['/uploads/ecommerce-store-lavensa.jpg'],
+    creator: '@syauqidev'
+  },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png'
+  }
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'SyauqiDev — Jasa Pembuatan Website & Backend Developer',
+  url: siteUrl,
+  logo: `${siteUrl}/uploads/ecommerce-store-lavensa.jpg`,
+  image: `${siteUrl}/uploads/ecommerce-store-lavensa.jpg`,
+  description:
+    'Layanan jasa pembuatan website profesional, sistem e-commerce, company profile perusahaan, dan arsitektur backend database modern oleh Syauqi Abduraffi.',
+  founder: {
+    '@type': 'Person',
+    name: 'Syauqi Abduraffi',
+    jobTitle: 'Full-Stack Web Developer',
+    knowsAbout: ['Next.js', 'React', 'Node.js', 'TypeScript', 'TailwindCSS', 'MySQL', 'PostgreSQL']
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Jakarta',
+    addressCountry: 'ID'
+  },
+  priceRange: 'Rp 1.000.000 - Rp 10.000.000',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Layanan Pembuatan Website',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Jasa Website Company Profile & Bisnis'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Jasa Website E-Commerce & Toko Online'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Jasa Custom Web App & Backend API'
+        }
+      }
+    ]
+  }
 };
 
 export default function RootLayout({
@@ -46,6 +170,12 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${jakarta.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="font-sans antialiased min-h-screen selection:bg-[#ea7c00] selection:text-white">
         {children}
       </body>

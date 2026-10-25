@@ -134,10 +134,10 @@ const DEFAULT_SIMPUS_CATEGORIES = [
 export default function AppDashboardPage() {
   const [db, setDb] = useState<DatabaseSchema>(initialDatabase);
   const darkMode = true;
-  const [isLoggedOut, setIsLoggedOut] = useState(false);
+  const [isLoggedOut, setIsLoggedOut] = useState(true);
   const [authLoadingState, setAuthLoadingState] = useState<
     'initial' | 'logging-out' | 'logging-in' | null
-  >('initial');
+  >(null);
   const [loadingProgress, setLoadingProgress] = useState<number>(20);
   const [viewAnim, setViewAnim] = useState<'enter' | 'exit'>('enter');
   const [topBarLoading, setTopBarLoading] = useState<boolean>(false);
@@ -628,7 +628,10 @@ export default function AppDashboardPage() {
     setLoginForm({ email: '', password: '' });
     setShowPassword(false);
     try {
+      sessionStorage.removeItem('company_admin_authenticated');
+      localStorage.removeItem('company_admin_authenticated');
       localStorage.setItem('company_admin_logged_out', 'true');
+      localStorage.removeItem('company_admin_user');
     } catch {}
 
     setViewAnim('exit');
@@ -643,8 +646,8 @@ export default function AppDashboardPage() {
       setViewAnim('enter');
       triggerAuthNotification(
         'logout',
-        'Anda Telah Keluar (Logout Otomatis)',
-        'Sesi Admin Dashboard telah dikunci dengan aman. Dilarang masuk kembali tanpa mengisi Email / Username (company_db.user) & Password!'
+        'Anda Telah Keluar (Logout)',
+        'Sesi Admin Dashboard telah dikunci dengan aman. Silakan masukkan kredensial akun untuk masuk kembali.'
       );
     }, 760);
   };
@@ -724,6 +727,8 @@ export default function AppDashboardPage() {
     setLoggedInUser(activeUserInfo);
 
     try {
+      sessionStorage.setItem('company_admin_authenticated', 'true');
+      localStorage.setItem('company_admin_authenticated', 'true');
       localStorage.removeItem('company_admin_logged_out');
       localStorage.setItem('company_admin_user', JSON.stringify(activeUserInfo));
     } catch {}
@@ -760,22 +765,29 @@ export default function AppDashboardPage() {
   };
 
   useEffect(() => {
-    let wasLoggedOut = false;
-    // 1. Pulihkan Menu yang terakhir diklik saat halaman di-Reload (Standby di menu aktif, TIDAK balik ke Dashboard Utama)
     try {
-      // Cek apakah user sebelumnya sudah Logout (Jika sudah keluar -> Dilarang Masuk walaupun di-reload!)
-      if (localStorage.getItem('company_admin_logged_out') === 'true') {
-        wasLoggedOut = true;
-        setIsLoggedOut(true);
-        setLoginForm({ email: '', password: '' });
+      // 1. Cek status autentikasi aktif
+      const isAuthenticated =
+        sessionStorage.getItem('company_admin_authenticated') === 'true' ||
+        (localStorage.getItem('company_admin_authenticated') === 'true' &&
+          localStorage.getItem('company_admin_logged_out') !== 'true');
+
+      const savedUserStr = localStorage.getItem('company_admin_user');
+      let parsedUser = null;
+      if (savedUserStr) {
+        try {
+          parsedUser = JSON.parse(savedUserStr);
+        } catch {}
       }
 
-      const savedUser = localStorage.getItem('company_admin_user');
-      if (savedUser) {
-        const parsedUser = JSON.parse(savedUser);
-        if (parsedUser && parsedUser.username && parsedUser.email) {
-          setLoggedInUser(parsedUser);
-        }
+      if (isAuthenticated && parsedUser && parsedUser.username) {
+        // Sesi login valid -> Izinkan masuk dashboard
+        setIsLoggedOut(false);
+        setLoggedInUser(parsedUser);
+      } else {
+        // Belum login atau sudah logout -> Wajib tampilkan layar Login (Gambar 3)!
+        setIsLoggedOut(true);
+        setLoginForm({ email: '', password: '' });
       }
 
       const urlParams = new URLSearchParams(window.location.search);
@@ -794,9 +806,6 @@ export default function AppDashboardPage() {
       if (restoredView) {
         setActiveView(restoredView);
         localStorage.setItem('company_admin_active_view', restoredView);
-        const url = new URL(window.location.href);
-        url.searchParams.set('view', restoredView);
-        window.history.replaceState(null, '', url.toString());
       }
 
       const savedAccessRole = localStorage.getItem('company_admin_access_role_id');
@@ -827,25 +836,6 @@ export default function AppDashboardPage() {
     } catch {}
 
     fetchDb();
-    // Automatic initial entrance loading animation
-    const t1 = setTimeout(() => setLoadingProgress(75), 140);
-    const t2 = setTimeout(() => setLoadingProgress(100), 320);
-    const t3 = setTimeout(() => {
-      setAuthLoadingState(null);
-      setViewAnim('enter');
-      if (wasLoggedOut) {
-        triggerAuthNotification(
-          'denied',
-          'Sesi Terkunci — Dilarang Masuk Tanpa Login',
-          'Anda telah keluar (Logout) sebelumnya. Silakan masukkan Email / Username (company_db.user) dan Password terlebih dahulu.'
-        );
-      }
-    }, 480);
-    return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
-      clearTimeout(t3);
-    };
   }, []);
 
   // Update dynamic browser tab title based on current active view
@@ -2288,6 +2278,29 @@ export default function AppDashboardPage() {
                       : 'border-[#322b5e] focus:border-[#8b5cf6]'
                   }`}
                 />
+              </div>
+
+              {/* Info Kredensial Khusus Pemilik (SyauqiDev) */}
+              <div className="p-3 rounded-xl bg-purple-900/25 border border-purple-500/30 text-[11px] text-purple-200 flex items-center justify-between gap-2">
+                <div className="space-y-0.5">
+                  <span className="font-bold text-white block">Akses Kredensial Admin:</span>
+                  <span className="text-slate-300">
+                    User: <code className="text-purple-300 font-mono font-bold">syauqi_admin</code> • Pass: <code className="text-purple-300 font-mono font-bold">admin123</code>
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setLoginForm({
+                      email: 'syauqi_admin',
+                      password: 'admin123'
+                    });
+                    if (loginError) setLoginError(null);
+                  }}
+                  className="px-2.5 py-1.5 rounded-lg bg-purple-600/40 hover:bg-purple-600/70 border border-purple-400/40 text-white font-bold text-[10px] transition-colors shrink-0 cursor-pointer"
+                >
+                  Isi Otomatis
+                </button>
               </div>
 
               <button

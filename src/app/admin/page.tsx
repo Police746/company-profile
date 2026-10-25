@@ -54,7 +54,10 @@ import {
   Eye,
   EyeOff,
   Upload,
-  ImagePlus
+  ImagePlus,
+  MapPin,
+  Clock,
+  Phone
 } from 'lucide-react';
 import { DatabaseSchema } from '@/types/company';
 import { initialDatabase } from '@/lib/seedData';
@@ -73,6 +76,7 @@ type ActiveView =
   | 'cms-about'
   | 'cms-team'
   | 'cms-settings'
+  | 'cms-contact'
   | 'database-viewer'
   | 'db-user'
   | 'db-user-role'
@@ -92,6 +96,7 @@ const VALID_ACTIVE_VIEWS: ActiveView[] = [
   'cms-about',
   'cms-team',
   'cms-settings',
+  'cms-contact',
   'database-viewer',
   'db-user',
   'db-user-role',
@@ -306,6 +311,17 @@ export default function AppDashboardPage() {
     email: '',
     subject: '',
     message: ''
+  });
+
+  // State untuk Manajemen Kontak & Alamat Website (CRUD: Tambah, Edit, Hapus)
+  const [editingContactId, setEditingContactId] = useState<string | null>(null);
+  const [contactModalOpen, setContactModalOpen] = useState<boolean>(false);
+  const [contactForm, setContactForm] = useState({
+    title: '',
+    value: '',
+    icon: 'phone',
+    link: '',
+    is_active: 1
   });
 
   const [companyForm, setCompanyForm] = useState(initialDatabase.company);
@@ -852,6 +868,7 @@ export default function AppDashboardPage() {
       'cms-about': 'Kelola Profil & About | SyauqiDev AppDashboard',
       'cms-team': 'Kelola Tim Spesialisasi | SyauqiDev AppDashboard',
       'cms-settings': 'Pengaturan Brand, Logo & Favicon | SyauqiDev AppDashboard',
+      'cms-contact': 'Kelola Kontak & Alamat Website | SyauqiDev AppDashboard',
       'database-viewer': 'Database Schema Viewer | SyauqiDev AppDashboard',
       'db-user': 'Manajemen User & Akun | SyauqiDev AppDashboard',
       'db-user-role': 'User Roles RBAC | SyauqiDev AppDashboard',
@@ -972,6 +989,57 @@ export default function AppDashboardPage() {
     if (json.success) {
       setDb({ ...db, messages: json.data });
       notify('Pesan kontak berhasil dihapus dari Database.');
+    }
+  };
+
+  // Handlers untuk Manajemen Kontak & Alamat Website (CRUD)
+  const handleSaveContact = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const isEditing = editingContactId !== null;
+    const res = await fetch('/api/company', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        section: 'contactInfo',
+        action: isEditing ? 'update' : 'create',
+        id: editingContactId ?? undefined,
+        payload: contactForm
+      })
+    });
+    const json = await res.json();
+    if (json.success) {
+      setDb(json.data);
+      setContactModalOpen(false);
+      setEditingContactId(null);
+      setContactForm({
+        title: '',
+        value: '',
+        icon: 'phone',
+        link: '',
+        is_active: 1
+      });
+      notify(
+        isEditing
+          ? 'Informasi Kontak berhasil diperbarui di Database!'
+          : 'Informasi Kontak baru berhasil ditambahkan ke Website!'
+      );
+    }
+  };
+
+  const handleDeleteContact = async (id: string) => {
+    const res = await fetch('/api/company', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        section: 'contactInfo',
+        action: 'delete',
+        id
+      })
+    });
+    const json = await res.json();
+    if (json.success) {
+      setDb(json.data);
+      notify('Informasi Kontak berhasil dihapus dari Database.');
     }
   };
 
@@ -2899,6 +2967,22 @@ export default function AppDashboardPage() {
                       <span>Biodata &amp; Hero Website</span>
                       <span className="text-[9px] px-1.5 py-0.5 rounded bg-pink-500/20 text-pink-300 font-bold">
                         FOTO
+                      </span>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      onClick={() => navigateView('cms-contact')}
+                      className={`w-full flex items-center justify-between py-2 px-3 rounded-lg transition-all cursor-pointer ${
+                        activeView === 'cms-contact'
+                          ? 'bg-[#8b5cf6]/20 text-[#c4b5fd] font-bold border border-[#8b5cf6]/30'
+                          : hoverItem
+                      }`}
+                    >
+                      <span>Kontak &amp; Alamat (CRUD)</span>
+                      <span className="text-[9px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold">
+                        {(db.contactInfo || []).length}
                       </span>
                     </button>
                   </li>
@@ -5922,6 +6006,274 @@ export default function AppDashboardPage() {
                         </div>
                       ))}
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* ==================== VIEW 7C: MANAJEMEN KONTAK & ALAMAT WEBSITE (CRUD: ADD, EDIT, DELETE) ==================== */}
+          {activeView === 'cms-contact' && (
+            <div className="space-y-6">
+              {/* Top Banner Kontak & Alamat */}
+              <div
+                className="relative overflow-hidden rounded-2xl border border-[#2a2456] bg-gradient-to-r from-[#0c0a20] via-[#13102e] to-[#1a143e] p-6 sm:p-8 shadow-2xl text-white"
+                style={{
+                  backgroundImage:
+                    'radial-gradient(circle at 85% 30%, rgba(234, 124, 0, 0.22), transparent 45%), linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px)',
+                  backgroundSize: '100% 100%, 28px 28px, 28px 28px'
+                }}
+              >
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                  <div>
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ea7c00]/20 border border-[#ea7c00]/40 text-amber-300 text-xs font-bold mb-2">
+                      <Contact className="w-3.5 h-3.5" />
+                      <span>Manajemen Informasi Kontak &amp; Lokasi • SyauqiDev</span>
+                    </div>
+                    <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                      Kelola Kontak &amp; Alamat Website (CRUD: Tambah, Edit, Hapus)
+                    </h2>
+                    <p className="text-xs sm:text-sm text-[#a599e9] mt-1 leading-relaxed">
+                      Atur seluruh kartu informasi kontak (Lokasi, Email, WhatsApp / Telepon, Jam Aktif, dll) yang tampil pada bagian <strong>Kontak &amp; Diskusi Proyek</strong> di halaman depan.
+                    </p>
+                  </div>
+
+                  <div className="flex flex-wrap items-center gap-2.5">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setEditingContactId(null);
+                        setContactForm({
+                          title: '',
+                          value: '',
+                          icon: 'phone',
+                          link: '',
+                          is_active: 1
+                        });
+                        setContactModalOpen(true);
+                      }}
+                      className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#ea7c00] to-amber-500 hover:from-[#d46f00] hover:to-[#ea7c00] text-white text-xs font-bold shadow-lg shadow-orange-600/30 transition-all cursor-pointer"
+                    >
+                      <PlusCircle className="w-4 h-4" />
+                      <span>+ Tambah Kontak Baru</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => navigateView('command-center')}
+                      className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#252142] hover:bg-[#322c56] text-white text-xs font-bold border border-[#383163] transition-all cursor-pointer"
+                    >
+                      <span>⬅</span>
+                      <span>Dashboard</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Grid Kartu Kontak (List of Contact Cards with Edit & Delete) */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                {(db.contactInfo && db.contactInfo.length > 0
+                  ? db.contactInfo
+                  : [
+                      {
+                        id: 'contact-1',
+                        title: 'Lokasi',
+                        value: db.company.location || 'Jakarta & sekitarnya, Indonesia',
+                        icon: 'map-pin',
+                        link: 'https://maps.google.com/?q=Jakarta',
+                        is_active: 1
+                      },
+                      {
+                        id: 'contact-2',
+                        title: 'Email',
+                        value: db.company.email || 'syauqi.informatika@devmail.id',
+                        icon: 'mail',
+                        link: `mailto:${db.company.email}`,
+                        is_active: 1
+                      },
+                      {
+                        id: 'contact-3',
+                        title: 'WhatsApp / Telepon',
+                        value: db.company.phone || '+62 812-8899-7766',
+                        icon: 'phone',
+                        link: `https://wa.me/${(db.company.phone || '').replace(/[^0-9]/g, '')}`,
+                        is_active: 1
+                      },
+                      {
+                        id: 'contact-4',
+                        title: 'Jam Aktif',
+                        value: db.company.openHours || 'Senin - Sabtu: 08:00 - 21:00 WIB',
+                        icon: 'clock',
+                        link: '',
+                        is_active: 1
+                      }
+                    ]
+                ).map((c) => (
+                  <div
+                    key={c.id}
+                    className="p-5 rounded-2xl border border-[#2d2654] bg-[#120f2a] text-white flex flex-col justify-between space-y-4 shadow-xl hover:border-[#ea7c00]/50 transition-all"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="w-10 h-10 rounded-xl bg-[#ea7c00]/20 text-[#ea7c00] flex items-center justify-center font-bold">
+                          {c.icon === 'map-pin' ? (
+                            <MapPin className="w-5 h-5" />
+                          ) : c.icon === 'mail' ? (
+                            <Mail className="w-5 h-5" />
+                          ) : c.icon === 'clock' ? (
+                            <Clock className="w-5 h-5" />
+                          ) : (
+                            <Phone className="w-5 h-5" />
+                          )}
+                        </div>
+                        <span
+                          className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
+                            c.is_active !== 0
+                              ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
+                              : 'bg-red-500/20 text-red-300 border border-red-500/30'
+                          }`}
+                        >
+                          {c.is_active !== 0 ? 'Aktif di Web' : 'Disembunyikan'}
+                        </span>
+                      </div>
+                      <h4 className="font-extrabold text-sm text-white">{c.title}</h4>
+                      <p className="text-xs text-slate-300 mt-1 leading-relaxed line-clamp-3">
+                        {c.value}
+                      </p>
+                      {c.link && (
+                        <div className="mt-2 text-[11px] text-amber-400 font-mono truncate">
+                          🔗 {c.link}
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="pt-3 border-t border-[#26204c] flex items-center justify-between gap-2">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setEditingContactId(c.id);
+                          setContactForm({
+                            title: c.title,
+                            value: c.value,
+                            icon: c.icon || 'phone',
+                            link: c.link || '',
+                            is_active: c.is_active ?? 1
+                          });
+                          setContactModalOpen(true);
+                        }}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500 text-amber-300 hover:text-black text-xs font-bold transition-all cursor-pointer"
+                      >
+                        <span>✏️</span>
+                        <span>Edit</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => handleDeleteContact(c.id)}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-red-500/20 hover:bg-red-600 text-red-300 hover:text-white text-xs font-bold transition-all cursor-pointer"
+                      >
+                        <Trash2 className="w-3.5 h-3.5" />
+                        <span>Hapus</span>
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Panel Pengaturan Google Maps & Alamat Kantor Footer */}
+              <div className="rounded-2xl border border-[#2a2456] bg-[#110f24] p-6 sm:p-8 text-white space-y-5 shadow-2xl">
+                <div className="border-b border-[#241f44] pb-4 flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                      <MapPin className="w-5 h-5 text-[#ea7c00]" />
+                      <span>Pengaturan Google Maps &amp; Lokasi Kantor</span>
+                    </h3>
+                    <p className="text-xs text-slate-400 mt-1">
+                      Ubah URL embed peta Google Maps yang tampil di sebelah kiri formulir Kontak.
+                    </p>
+                  </div>
+                  <span className="text-xs px-2.5 py-1 rounded-full bg-blue-500/15 text-blue-300 border border-blue-500/30 font-bold">
+                    Iframe Google Maps
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                  <div className="lg:col-span-7 space-y-4">
+                    <div>
+                      <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                        Google Maps Embed URL (Iframe Src)
+                      </label>
+                      <textarea
+                        rows={3}
+                        value={companyForm.mapEmbedUrl}
+                        onChange={(e) =>
+                          setCompanyForm({ ...companyForm, mapEmbedUrl: e.target.value })
+                        }
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#322b5e] bg-[#1a1636] text-white text-xs font-mono focus:outline-none focus:border-[#8b5cf6]"
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                          Teks Alamat Singkat (Card Lokasi)
+                        </label>
+                        <input
+                          type="text"
+                          value={companyForm.location}
+                          onChange={(e) =>
+                            setCompanyForm({ ...companyForm, location: e.target.value })
+                          }
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-[#322b5e] bg-[#1a1636] text-white text-xs focus:outline-none focus:border-[#8b5cf6]"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                          Jam Kerja / Pelayanan
+                        </label>
+                        <input
+                          type="text"
+                          value={companyForm.openHours}
+                          onChange={(e) =>
+                            setCompanyForm({ ...companyForm, openHours: e.target.value })
+                          }
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-[#322b5e] bg-[#1a1636] text-white text-xs focus:outline-none focus:border-[#8b5cf6]"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                        Alamat Lengkap Footer
+                      </label>
+                      <input
+                        type="text"
+                        value={companyForm.footerAddress}
+                        onChange={(e) =>
+                          setCompanyForm({ ...companyForm, footerAddress: e.target.value })
+                        }
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#322b5e] bg-[#1a1636] text-white text-xs focus:outline-none focus:border-[#8b5cf6]"
+                      />
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={handleSaveSettings}
+                      className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-[#2563eb] to-[#7c3aed] text-white font-bold text-xs shadow-lg shadow-blue-600/30 hover:brightness-110 transition-all cursor-pointer"
+                    >
+                      💾 Simpan Pengaturan Peta &amp; Alamat
+                    </button>
+                  </div>
+
+                  {/* Live Preview Peta */}
+                  <div className="lg:col-span-5 rounded-2xl overflow-hidden border border-[#322b5e] bg-[#0c0a1a] h-64 sm:h-72">
+                    <iframe
+                      src={companyForm.mapEmbedUrl}
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      title="Preview Peta Kontak"
+                    />
                   </div>
                 </div>
               </div>
@@ -9120,6 +9472,126 @@ CREATE TABLE user_sub_menu (
                   className="px-5 py-2 rounded-xl bg-[#eab308] hover:bg-[#ca8a04] text-slate-950 text-xs font-extrabold cursor-pointer"
                 >
                   💾 Simpan Pesan
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* Modal: Tambah & Edit Kartu Informasi Kontak (contactInfo) */}
+      {contactModalOpen && (
+        <div className="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4 animate-modal-backdrop-in">
+          <div className="rounded-2xl border border-[#2d2654] bg-[#13102a] text-white animate-modal-card-in max-w-lg w-full p-6 sm:p-7 space-y-4 shadow-2xl">
+            <div className="flex items-center justify-between pb-3 border-b border-[#26204a]">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#ea7c00]">
+                  {editingContactId ? '✏️ Mode Edit Kontak' : '➕ Mode Tambah Kontak Baru'}
+                </span>
+                <h3 className="text-lg font-bold text-white mt-0.5">
+                  {editingContactId ? 'Ubah Informasi Kontak' : 'Tambah Kartu Kontak Baru'}
+                </h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setContactModalOpen(false)}
+                className="text-slate-400 hover:text-white cursor-pointer p-1"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <form onSubmit={handleSaveContact} className="space-y-4">
+              <div>
+                <label className="block text-xs font-bold text-slate-300 mb-1">
+                  Judul Kartu Kontak <span className="text-red-400">*</span>
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Contoh: Lokasi, Email, WhatsApp, Telegram, Jam Pelayanan..."
+                  value={contactForm.title}
+                  onChange={(e) => setContactForm({ ...contactForm, title: e.target.value })}
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#322b5e] bg-[#1a1636] text-white text-sm focus:outline-none focus:border-[#ea7c00]"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-300 mb-1">
+                  Isi / Nilai Kontak <span className="text-red-400">*</span>
+                </label>
+                <textarea
+                  rows={2}
+                  required
+                  placeholder="Contoh: +62 812-8899-7766 atau Jakarta & sekitarnya, Indonesia..."
+                  value={contactForm.value}
+                  onChange={(e) => setContactForm({ ...contactForm, value: e.target.value })}
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#322b5e] bg-[#1a1636] text-white text-sm focus:outline-none focus:border-[#ea7c00]"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold text-slate-300 mb-1">
+                    Ikon Kontak
+                  </label>
+                  <select
+                    value={contactForm.icon}
+                    onChange={(e) => setContactForm({ ...contactForm, icon: e.target.value })}
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#322b5e] bg-[#1a1636] text-white text-sm focus:outline-none focus:border-[#ea7c00]"
+                  >
+                    <option value="phone">📞 Telepon / WhatsApp (phone)</option>
+                    <option value="mail">✉️ Email (mail)</option>
+                    <option value="map-pin">📍 Lokasi / Alamat (map-pin)</option>
+                    <option value="clock">⏰ Jam Aktif / Operasional (clock)</option>
+                    <option value="globe">🌐 Website / Portofolio (globe)</option>
+                    <option value="message-square">💬 Chat / Diskusi (message-square)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-slate-300 mb-1">
+                    Status Tampil di Website
+                  </label>
+                  <select
+                    value={contactForm.is_active}
+                    onChange={(e) =>
+                      setContactForm({ ...contactForm, is_active: Number(e.target.value) })
+                    }
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#322b5e] bg-[#1a1636] text-white text-sm focus:outline-none focus:border-[#ea7c00]"
+                  >
+                    <option value={1}>✅ Tampil di Website (Aktif)</option>
+                    <option value={0}>❌ Sembunyikan (Nonaktif)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-300 mb-1">
+                  Link Tautan URL (Opsional)
+                </label>
+                <input
+                  type="text"
+                  placeholder="Contoh: https://wa.me/6281288997766 atau mailto:admin@email.com..."
+                  value={contactForm.link}
+                  onChange={(e) => setContactForm({ ...contactForm, link: e.target.value })}
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#322b5e] bg-[#1a1636] text-white text-xs font-mono focus:outline-none focus:border-[#ea7c00]"
+                />
+              </div>
+
+              <div className="flex justify-end gap-2.5 pt-3 border-t border-[#26204c]">
+                <button
+                  type="button"
+                  onClick={() => setContactModalOpen(false)}
+                  className="px-4 py-2.5 rounded-xl bg-slate-700 hover:bg-slate-600 text-white text-xs font-bold cursor-pointer transition-colors"
+                >
+                  Batal
+                </button>
+                <button
+                  type="submit"
+                  className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#ea7c00] to-amber-500 hover:from-[#d46f00] hover:to-[#ea7c00] text-white text-xs font-extrabold shadow-lg shadow-orange-600/30 cursor-pointer transition-all"
+                >
+                  💾 {editingContactId ? 'Simpan Perubahan Kontak' : 'Tambah Kontak Baru'}
                 </button>
               </div>
             </form>

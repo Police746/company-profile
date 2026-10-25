@@ -69,6 +69,9 @@ export async function getDatabase(): Promise<DatabaseSchema> {
         if (!Array.isArray(parsed.features)) {
           parsed.features = JSON.parse(JSON.stringify(initialDatabase.features));
         }
+        if (!Array.isArray(parsed.contactInfo)) {
+          parsed.contactInfo = JSON.parse(JSON.stringify(initialDatabase.contactInfo));
+        }
         if (!Array.isArray(parsed.heroSlides) || parsed.heroSlides.length === 0) {
           parsed.heroSlides = JSON.parse(JSON.stringify(initialDatabase.heroSlides));
         }

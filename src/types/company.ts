@@ -59,6 +59,15 @@ export interface ServiceItem {
   icon: string;
 }
 
+export interface ContactInfoItem {
+  id: string;
+  title: string;
+  value: string;
+  icon: 'map-pin' | 'mail' | 'phone' | 'clock' | 'message-square' | 'globe' | 'instagram' | string;
+  link?: string;
+  is_active?: number;
+}
+
 export interface FeatureItem {
   id: string;
   title: string;
@@ -236,6 +245,7 @@ export interface DatabaseSchema {
   faqs: FaqItem[];
   team: TeamMember[];
   blogPosts: BlogPost[];
+  contactInfo?: ContactInfoItem[];
   messages: ContactMessage[];
   orders: DashboardOrder[];
   activities: ActivityLogItem[];

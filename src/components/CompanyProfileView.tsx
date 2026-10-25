@@ -2579,16 +2579,27 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
         {/* ==================== 10. CONTACT SECTION ==================== */}
         <section id="contact" className="py-20 sm:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="pb-12">
-              <span className="text-xs font-extrabold uppercase tracking-wider text-[#ea7c00]">
-                Hubungi Developer
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f172a] mt-1 font-display">
-                Kontak &amp; Diskusi Proyek Sistem Informasi
-              </h2>
-              <p className="text-slate-600 text-sm sm:text-base mt-1">
-                Kirimkan pesan Anda—otomatis tersimpan ke Database &amp; tampil di AppDashboard Admin
-              </p>
+            <div className="pb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
+              <div>
+                <span className="text-xs font-extrabold uppercase tracking-wider text-[#ea7c00]">
+                  Hubungi Developer
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f172a] mt-1 font-display">
+                  Kontak &amp; Diskusi Proyek Sistem Informasi
+                </h2>
+                <p className="text-slate-600 text-sm sm:text-base mt-1">
+                  Kirimkan pesan Anda—otomatis tersimpan ke Database &amp; tampil di AppDashboard Admin
+                </p>
+              </div>
+              <Link
+                href="/admin?view=cms-contact"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-orange-50 text-[#ea7c00] hover:bg-orange-100 transition-colors border border-orange-200 shadow-sm shrink-0 self-start md:self-auto"
+                title="Kelola informasi kontak di admin (Add, Edit, Delete)"
+              >
+                <Settings className="w-4 h-4" />
+                <span>Kelola Kontak (Add/Edit/Delete)</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
@@ -2606,54 +2617,62 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
               </div>
 
               <div className="lg:col-span-7 space-y-6">
+                {/* Dynamic Contact Cards (Add / Edit / Delete in Admin) */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="bg-[#f8fafc] p-5 rounded-2xl border border-slate-200/80 flex items-start gap-4">
-                    <div className="w-11 h-11 rounded-xl bg-[#ea7c00]/15 text-[#ea7c00] flex items-center justify-center shrink-0">
-                      <MapPin className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-extrabold text-[#0f172a] text-sm">Lokasi</h4>
-                      <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
-                        {data.company.location}
-                      </p>
-                    </div>
-                  </div>
+                  {((data.contactInfo && data.contactInfo.length > 0)
+                    ? data.contactInfo.filter((item) => item.is_active !== 0)
+                    : [
+                        { id: '1', title: 'Lokasi', value: data.company.location, icon: 'map-pin' },
+                        { id: '2', title: 'Email', value: data.company.email, icon: 'mail', link: `mailto:${data.company.email}` },
+                        { id: '3', title: 'WhatsApp / Telepon', value: data.company.phone, icon: 'phone', link: `https://wa.me/${data.company.phone.replace(/[^0-9]/g, '')}` },
+                        { id: '4', title: 'Jam Aktif', value: data.company.openHours, icon: 'clock' },
+                      ]
+                  ).map((contact) => {
+                    const iconElement =
+                      contact.icon === 'mail' ? (
+                        <Mail className="w-5 h-5" />
+                      ) : contact.icon === 'phone' ? (
+                        <Phone className="w-5 h-5" />
+                      ) : contact.icon === 'clock' ? (
+                        <Clock className="w-5 h-5" />
+                      ) : contact.icon === 'globe' ? (
+                        <Globe className="w-5 h-5" />
+                      ) : (
+                        <MapPin className="w-5 h-5" />
+                      );
 
-                  <div className="bg-[#f8fafc] p-5 rounded-2xl border border-slate-200/80 flex items-start gap-4">
-                    <div className="w-11 h-11 rounded-xl bg-[#ea7c00]/15 text-[#ea7c00] flex items-center justify-center shrink-0">
-                      <Mail className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-extrabold text-[#0f172a] text-sm">Email</h4>
-                      <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
-                        {data.company.email}
-                      </p>
-                    </div>
-                  </div>
+                    const card = (
+                      <div className="bg-[#f8fafc] hover:bg-white p-5 rounded-2xl border border-slate-200/80 hover:border-orange-300 transition-all shadow-sm hover:shadow-md flex items-start gap-4 group h-full">
+                        <div className="w-11 h-11 rounded-xl bg-[#ea7c00]/15 text-[#ea7c00] group-hover:bg-[#ea7c00] group-hover:text-white transition-colors flex items-center justify-center shrink-0">
+                          {iconElement}
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <h4 className="font-extrabold text-[#0f172a] text-sm group-hover:text-[#ea7c00] transition-colors">
+                            {contact.title}
+                          </h4>
+                          <p className="text-xs sm:text-sm text-slate-600 mt-0.5 break-words whitespace-pre-line">
+                            {contact.value}
+                          </p>
+                        </div>
+                      </div>
+                    );
 
-                  <div className="bg-[#f8fafc] p-5 rounded-2xl border border-slate-200/80 flex items-start gap-4">
-                    <div className="w-11 h-11 rounded-xl bg-[#ea7c00]/15 text-[#ea7c00] flex items-center justify-center shrink-0">
-                      <Phone className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-extrabold text-[#0f172a] text-sm">WhatsApp / Telepon</h4>
-                      <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
-                        {data.company.phone}
-                      </p>
-                    </div>
-                  </div>
+                    if (contact.link) {
+                      return (
+                        <a
+                          key={contact.id}
+                          href={contact.link}
+                          target={contact.link.startsWith('http') ? '_blank' : undefined}
+                          rel={contact.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                          className="block"
+                        >
+                          {card}
+                        </a>
+                      );
+                    }
 
-                  <div className="bg-[#f8fafc] p-5 rounded-2xl border border-slate-200/80 flex items-start gap-4">
-                    <div className="w-11 h-11 rounded-xl bg-[#ea7c00]/15 text-[#ea7c00] flex items-center justify-center shrink-0">
-                      <Clock className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-extrabold text-[#0f172a] text-sm">Jam Aktif</h4>
-                      <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
-                        {data.company.openHours}
-                      </p>
-                    </div>
-                  </div>
+                    return <div key={contact.id}>{card}</div>;
+                  })}
                 </div>
 
                 {/* Get in Touch Form */}

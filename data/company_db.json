@@ -1015,5 +1015,39 @@
     "ordersGrowth": "Full-Stack, API & Database",
     "customersCount": "99.8% Puas",
     "customersGrowth": "Klien Perusahaan, Instansi & UMKM"
-  }
+  },
+  "contactInfo": [
+    {
+      "id": "contact-1",
+      "title": "Lokasi",
+      "value": "Jakarta & sekitarnya, Indonesia (Tersedia Remote Seluruh Indonesia / On-Site)",
+      "icon": "map-pin",
+      "link": "https://maps.google.com/?q=Jakarta",
+      "is_active": 1
+    },
+    {
+      "id": "contact-2",
+      "title": "Email",
+      "value": "syauqi.informatika@devmail.id",
+      "icon": "mail",
+      "link": "mailto:syauqi.informatika@devmail.id",
+      "is_active": 1
+    },
+    {
+      "id": "contact-3",
+      "title": "WhatsApp / Telepon",
+      "value": "+62 812-8899-7766",
+      "icon": "phone",
+      "link": "https://wa.me/6281288997766",
+      "is_active": 1
+    },
+    {
+      "id": "contact-4",
+      "title": "Jam Aktif",
+      "value": "Senin - Sabtu: 08:00 - 21:00 WIB",
+      "icon": "clock",
+      "link": "",
+      "is_active": 1
+    }
+  ]
 }

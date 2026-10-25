@@ -411,8 +411,53 @@ export async function PUT(req: NextRequest) {
       } else if (action === 'delete' && id) {
         db.orders = db.orders.filter((o) => o.id !== id);
       }
+    } else if (section === 'contactInfo') {
+      if (!Array.isArray(db.contactInfo)) db.contactInfo = [];
+      if (action === 'create') {
+        db.contactInfo.push({
+          id: `contact-${Date.now()}`,
+          title: payload.title || 'Kontak Baru',
+          value: payload.value || '',
+          icon: payload.icon || 'phone',
+          link: payload.link || '',
+          is_active: payload.is_active !== undefined ? Number(payload.is_active) : 1
+        });
+        db.activities.unshift({
+          id: `act-${Date.now()}`,
+          type: 'success',
+          text: 'Informasi Kontak baru ditambahkan:',
+          highlight: payload.title,
+          time: 'Baru saja'
+        });
+      } else if (action === 'update' && id) {
+        db.contactInfo = db.contactInfo.map((ci) =>
+          ci.id === id
+            ? {
+                ...ci,
+                title: payload.title ?? ci.title,
+                value: payload.value ?? ci.value,
+                icon: payload.icon ?? ci.icon,
+                link: payload.link ?? ci.link,
+                is_active: payload.is_active !== undefined ? Number(payload.is_active) : ci.is_active
+              }
+            : ci
+        );
+      } else if (action === 'delete' && id) {
+        db.contactInfo = db.contactInfo.filter((ci) => ci.id !== id);
+      }
     } else if (section === 'messages') {
-      if (action === 'update' && id) {
+      if (action === 'create') {
+        if (!Array.isArray(db.messages)) db.messages = [];
+        db.messages.unshift({
+          id: `msg-${Date.now()}`,
+          name: payload.name || 'Klien Baru',
+          email: payload.email || '',
+          subject: payload.subject || 'Konsultasi Jasa Web',
+          message: payload.message || '',
+          status: 'unread',
+          createdAt: new Date().toISOString()
+        });
+      } else if (action === 'update' && id) {
         db.messages = db.messages.map((m) =>
           m.id === id
             ? {

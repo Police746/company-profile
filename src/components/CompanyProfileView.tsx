@@ -2579,27 +2579,16 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
         {/* ==================== 10. CONTACT SECTION ==================== */}
         <section id="contact" className="py-20 sm:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="pb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
-              <div>
-                <span className="text-xs font-extrabold uppercase tracking-wider text-[#ea7c00]">
-                  Hubungi Developer
-                </span>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f172a] mt-1 font-display">
-                  Kontak &amp; Diskusi Proyek Sistem Informasi
-                </h2>
-                <p className="text-slate-600 text-sm sm:text-base mt-1">
-                  Kirimkan pesan Anda—otomatis tersimpan ke Database &amp; tampil di AppDashboard Admin
-                </p>
-              </div>
-              <Link
-                href="/admin?view=cms-contact"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-orange-50 text-[#ea7c00] hover:bg-orange-100 transition-colors border border-orange-200 shadow-sm shrink-0 self-start md:self-auto"
-                title="Kelola informasi kontak di admin (Add, Edit, Delete)"
-              >
-                <Settings className="w-4 h-4" />
-                <span>Kelola Kontak (Add/Edit/Delete)</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
+            <div className="pb-12">
+              <span className="text-xs font-extrabold uppercase tracking-wider text-[#ea7c00]">
+                Hubungi Developer
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f172a] mt-1 font-display">
+                Kontak &amp; Diskusi Proyek Sistem Informasi
+              </h2>
+              <p className="text-slate-600 text-sm sm:text-base mt-1">
+                Kirimkan pesan Anda—otomatis tersimpan ke Database &amp; tampil di AppDashboard Admin
+              </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">

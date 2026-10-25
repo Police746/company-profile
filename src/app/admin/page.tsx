@@ -139,6 +139,7 @@ const DEFAULT_SIMPUS_CATEGORIES = [
 export default function AppDashboardPage() {
   const [db, setDb] = useState<DatabaseSchema>(initialDatabase);
   const darkMode = true;
+  const [authChecked, setAuthChecked] = useState(false);
   const [isLoggedOut, setIsLoggedOut] = useState(true);
   const [authLoadingState, setAuthLoadingState] = useState<
     'initial' | 'logging-out' | 'logging-in' | null
@@ -783,10 +784,12 @@ export default function AppDashboardPage() {
   useEffect(() => {
     try {
       // 1. Cek status autentikasi aktif
-      const isAuthenticated =
+      const isExplicitlyLoggedOut =
+        localStorage.getItem('company_admin_logged_out') === 'true';
+
+      const hasAuthToken =
         sessionStorage.getItem('company_admin_authenticated') === 'true' ||
-        (localStorage.getItem('company_admin_authenticated') === 'true' &&
-          localStorage.getItem('company_admin_logged_out') !== 'true');
+        localStorage.getItem('company_admin_authenticated') === 'true';
 
       const savedUserStr = localStorage.getItem('company_admin_user');
       let parsedUser = null;
@@ -796,33 +799,45 @@ export default function AppDashboardPage() {
         } catch {}
       }
 
-      if (isAuthenticated && parsedUser && parsedUser.username) {
-        // Sesi login valid -> Izinkan masuk dashboard
+      const isValidSession =
+        !isExplicitlyLoggedOut &&
+        (hasAuthToken || (parsedUser && parsedUser.username));
+
+      if (isValidSession && parsedUser && parsedUser.username) {
+        // Sesi login valid -> Izinkan masuk dashboard & pertahankan sesi saat reload
         setIsLoggedOut(false);
         setLoggedInUser(parsedUser);
+        try {
+          sessionStorage.setItem('company_admin_authenticated', 'true');
+          localStorage.setItem('company_admin_authenticated', 'true');
+          localStorage.removeItem('company_admin_logged_out');
+        } catch {}
       } else {
         // Belum login atau sudah logout -> Wajib tampilkan layar Login (Gambar 3)!
         setIsLoggedOut(true);
         setLoginForm({ email: '', password: '' });
       }
 
+      // 2. Normalisasi & pulihkan active view dari URL atau LocalStorage
       const urlParams = new URLSearchParams(window.location.search);
-      const viewFromUrl = urlParams.get('view') as ActiveView | null;
+      const rawView = urlParams.get('view');
+      const normalizedView = rawView
+        ? (rawView.trim().toLowerCase().replace(/\s+/g, '-') as ActiveView)
+        : null;
+
       const viewFromStorage = localStorage.getItem(
         'company_admin_active_view'
       ) as ActiveView | null;
 
       const restoredView =
-        viewFromUrl && VALID_ACTIVE_VIEWS.includes(viewFromUrl)
-          ? viewFromUrl
+        normalizedView && VALID_ACTIVE_VIEWS.includes(normalizedView)
+          ? normalizedView
           : viewFromStorage && VALID_ACTIVE_VIEWS.includes(viewFromStorage)
           ? viewFromStorage
-          : null;
+          : 'command-center';
 
-      if (restoredView) {
-        setActiveView(restoredView);
-        localStorage.setItem('company_admin_active_view', restoredView);
-      }
+      setActiveView(restoredView);
+      localStorage.setItem('company_admin_active_view', restoredView);
 
       const savedAccessRole = localStorage.getItem('company_admin_access_role_id');
       if (savedAccessRole) {
@@ -851,6 +866,7 @@ export default function AppDashboardPage() {
       }
     } catch {}
 
+    setAuthChecked(true);
     fetchDb();
   }, []);
 
@@ -2150,6 +2166,24 @@ export default function AppDashboardPage() {
             </div>
           </div>
         </div>
+      </div>
+    );
+  }
+
+  // Cegah flash layar login & hydration mismatch saat halaman di-reload oleh user yang sudah login
+  if (!authChecked) {
+    return (
+      <div className="min-h-screen bg-[#0b091b] text-white flex flex-col items-center justify-center p-6 font-sans relative overflow-hidden">
+        <div className="relative w-14 h-14 mx-auto flex items-center justify-center">
+          <div className="w-14 h-14 rounded-full border-4 border-t-transparent animate-spin border-[#8b5cf6]" />
+          <div
+            className="absolute w-9 h-9 rounded-full border-4 border-b-transparent animate-spin border-[#2563eb]"
+            style={{ animationDirection: 'reverse' }}
+          />
+        </div>
+        <span className="mt-4 text-xs font-mono text-purple-300 tracking-wider">
+          Memuat Sesi Admin...
+        </span>
       </div>
     );
   }

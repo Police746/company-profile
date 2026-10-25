@@ -602,14 +602,15 @@ export const initialDatabase: DatabaseSchema = {
       suitableFor:
         'Company Profile Perusahaan, Personal Branding, Portofolio Kreatif, UMKM, & Landing Page Iklan / Event Bisnis.',
       note:
-        'Estimasi pengerjaan 3–7 hari kerja. Sudah termasuk gratis setup deploy ke hosting/domain, revisi fleksibel, dan integrasi WhatsApp.',
+        'Estimasi pengerjaan 3–7 hari kerja. Sudah termasuk gratis setup deploy ke hosting/domain, maksimal 3x revisi gratis, dan integrasi WhatsApp.',
       features: [
         'Desain UI/UX Modern & 100% Responsif (HP, Tablet, PC)',
         'Halaman Beranda, Tentang, Layanan, Portofolio & Kontak',
         'Tombol Call-to-Action (CTA) & Integrasi Chat WhatsApp',
         'SEO On-Page Dasar & Optimasi Kecepatan Performa Web',
         'Gratis Setup Domain & Cloud Hosting (Vercel/cPanel)',
-        'Source Code Lengkap & Garansi Pengerjaan Selesai'
+        'Maksimal 3x Revisi Gratis (Teks, Foto & Layout)',
+        'Garansi Bebas Bug & Error 30 Hari Penuh'
       ],
       featured: false,
       icon: 'star'
@@ -624,7 +625,7 @@ export const initialDatabase: DatabaseSchema = {
       suitableFor:
         'Perusahaan Berkembang, Toko Online / E-Commerce, Portal Berita, Yayasan, Sekolah, & Bisnis yang butuh update data rutin.',
       note:
-        'Biaya domain, hosting/server mandiri, & API berbayar pihak ketiga disediakan terpisah. Fitur tambahan di luar scope awal dapat disesuaikan.',
+        'Termasuk kuota maksimal 3x revisi gratis & garansi bug 30 hari. Penambahan menu baru atau revisi ekstra ke-4 dst dilayani via add-on transparan.',
       features: [
         'Semua fitur Paket Frontend + Sistem Backend Terpadu',
         'Dashboard Admin Dark Mode Eksklusif (AppDashboard)',
@@ -632,7 +633,8 @@ export const initialDatabase: DatabaseSchema = {
         'Sistem Login Multi-Role & Manajemen Hak Akses (RBAC)',
         'Kelola Data Dinamis: Konten Web, Paket, Pesanan & Banner',
         'Keamanan Form, Sanitasi Input Data & REST API Siap Pakai',
-        'Bimbingan & Video/Panduan Pengoperasian Dashboard'
+        'Maksimal 3x Revisi Gratis & Panduan Operasional CMS',
+        'Garansi Bebas Bug & Error 30 Hari Penuh'
       ],
       featured: true,
       badge: 'Paling Populer',
@@ -648,7 +650,7 @@ export const initialDatabase: DatabaseSchema = {
       suitableFor:
         'Sistem Informasi Kampus/Sekolah (SIAKAD/SIMPUS), ERP/CRM Bisnis, Startup, Manajemen Gudang/Inventori, & Custom Web App.',
       note:
-        'Sudah termasuk penyusunan arsitektur sistem, skema ERD Database, flow diagram, garansi perbaikan bug 30 hari, serta pendampingan teknis.',
+        'Termasuk skema ERD Database, maksimal 3x revisi gratis, garansi bug 30 hari, serta pendampingan teknis prioritas.',
       features: [
         'Arsitektur Full-Stack Modern (Next.js / Laravel / Node.js)',
         'Desain Database Relasional Kompleks & Optimasi Query',
@@ -656,6 +658,7 @@ export const initialDatabase: DatabaseSchema = {
         'Modul Validasi Data Ketat, Transaksi & Laporan Cetak PDF',
         'Grafik Statistik & Visualisasi Analitik Interaktif',
         'Integrasi REST API, Webhook & Payment Gateway (Sesuai Scope)',
+        'Maksimal 3x Revisi Gratis (Struktur, Modul & Alur Bisnis)',
         'Dokumentasi Teknis ERD, API Docs & Garansi Bug 30 Hari'
       ],
       featured: false,
@@ -714,6 +717,16 @@ export const initialDatabase: DatabaseSchema = {
         'Ya, seluruh halaman dirancang dengan pendekatan Mobile-First Responsive sehingga tampil rapi, cepat, dan proporsional di semua ukuran layar.'
     },
     {
+      id: 'faq-p4',
+      category: 'pricing',
+      number: 4,
+      question: 'Berapa kali batas maksimal revisi gratis dan bagaimana jika ingin menambah menu/halaman baru?',
+      answer:
+        'Setiap pemesanan website sudah termasuk kuota Maksimal 3x Revisi Gratis (penyesuaian teks, penggantian foto/gambar, warna, dan perapihan tata letak) serta Garansi Bebas Bug 30 Hari.',
+      answer2:
+        'Jika ingin menambah menu atau halaman baru di luar paket, biayanya sangat terjangkau & transparan: Rp 150.000/halaman statis atau Rp 350.000/modul menu dinamis (+CRUD Admin & Database). Untuk revisi minor ekstra ke-4 dan seterusnya hanya dikenakan Rp 75.000/putaran.'
+    },
+    {
       id: 'faq-s1',
       category: 'support',
       number: 1,
@@ -727,7 +740,7 @@ export const initialDatabase: DatabaseSchema = {
       number: 2,
       question: 'Apakah ada garansi maintenance dan revisi setelah website selesai?',
       answer:
-        'Ya! Tersedia garansi revisi sesuai paket yang dipilih serta dukungan teknis (maintenance) dan panduan pengelolaan halaman Backend Admin.'
+        'Ya! Setiap pemesanan mencakup Maksimal 3x Revisi Gratis serta Garansi Perbaikan Bug & Error 100% GRATIS selama 30 hari penuh setelah serah terima, ditambah panduan pengoperasian Dashboard Admin CMS.'
     },
     {
       id: 'faq-s3',

@@ -322,7 +322,7 @@ export default function AppDashboardPage() {
     suitableFor: '',
     note: '',
     features:
-      'Desain Frontend Modern & Responsif (HP, Tablet, PC)\nBackend Dashboard Admin & Database SQL\nGratis Setup Deploy ke Cloud Vercel / Hosting\nRevisi Fleksibel & Source Code Lengkap',
+      'Desain UI/UX Modern & 100% Responsif (HP, Tablet, PC)\nDashboard Admin & Database SQL Terintegrasi\nGratis Setup Deploy ke Cloud Vercel / Hosting\nMaksimal 3x Revisi Gratis (Teks, Foto & Layout)\nGaransi Bebas Bug & Error 30 Hari Penuh',
     featured: false,
     badge: '',
     icon: 'star' as 'star' | 'stars' | 'star-fill'

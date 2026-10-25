@@ -47,7 +47,9 @@ import {
   Check,
   Zap,
   MonitorSmartphone,
-  Shield
+  Shield,
+  RotateCcw,
+  FileText
 } from 'lucide-react';
 import { DatabaseSchema, PortfolioItem, PricingPlan, SimpusBookItem } from '@/types/company';
 
@@ -2292,6 +2294,153 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
                 </div>
               ))}
             </div>
+
+            {/* Bento Box: Kebijakan Revisi & Biaya Tambahan Menu (Scope Add-On) */}
+            <div className="mt-14 pt-12 border-t border-slate-200">
+              <div className="bg-gradient-to-br from-[#0d0b1c] via-[#15122b] to-[#0d0b1c] rounded-3xl p-6 sm:p-10 text-white relative overflow-hidden border border-white/10 shadow-2xl">
+                {/* Decorative background glows */}
+                <div className="absolute top-0 right-0 w-80 h-80 bg-[#ea7c00]/15 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+
+                <div className="relative z-10">
+                  <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-white/10">
+                    <div className="max-w-2xl">
+                      <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ea7c00]/20 text-[#ea7c00] text-xs font-extrabold uppercase tracking-wider mb-3">
+                        <ShieldCheck className="w-4 h-4" />
+                        <span>Transparansi Biaya &amp; Standar Mutu SyauqiDev</span>
+                      </div>
+                      <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-white tracking-tight">
+                        Kebijakan Revisi &amp; Biaya Penambahan Menu / Halaman
+                      </h3>
+                      <p className="text-slate-300 text-sm sm:text-base mt-2 leading-relaxed">
+                        Kami menjamin kepuasan hasil dengan jatah revisi gratis yang terstruktur dan biaya penambahan menu (add-on) yang transparan tanpa biaya siluman.
+                      </p>
+                    </div>
+
+                    <a
+                      href="https://wa.me/6281288997766?text=Halo%20SyauqiDev,%20saya%20ingin%20konsultasi%20mengenai%20paket%20website%20dan%20penambahan%20menu%20khusus"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-[#ea7c00] to-amber-500 text-white font-extrabold text-xs sm:text-sm shadow-lg shadow-[#ea7c00]/30 hover:brightness-110 transition-all shrink-0 cursor-pointer"
+                    >
+                      <Sparkles className="w-4 h-4" />
+                      <span>Konsultasi Custom Add-On via WhatsApp</span>
+                    </a>
+                  </div>
+
+                  {/* 4 Cards Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-8">
+                    {/* Card 1: 3x Revisi Gratis */}
+                    <div className="bg-white/5 hover:bg-white/[0.08] backdrop-blur-sm rounded-2xl p-5 border border-white/10 flex flex-col justify-between transition-all">
+                      <div>
+                        <div className="flex items-center justify-between gap-2 mb-4">
+                          <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                            <RotateCcw className="w-5 h-5" />
+                          </div>
+                          <span className="text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/20">
+                            100% Gratis
+                          </span>
+                        </div>
+                        <h4 className="text-lg font-bold text-white mb-2">Maksimal 3x Revisi Gratis</h4>
+                        <p className="text-xs text-slate-300 leading-relaxed">
+                          Penyesuaian teks konten, pergantian foto/gambar portofolio, perapihan warna tema brand, dan koreksi tata letak halaman.
+                        </p>
+                      </div>
+                      <div className="mt-4 pt-3.5 border-t border-white/10">
+                        <span className="text-[11px] font-semibold text-emerald-300 flex items-center gap-1.5">
+                          <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
+                          <span>Tahap 1, 2 &amp; Final Approval</span>
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Card 2: Tambah Menu / Halaman Statis */}
+                    <div className="bg-white/5 hover:bg-white/[0.08] backdrop-blur-sm rounded-2xl p-5 border border-white/10 flex flex-col justify-between transition-all">
+                      <div>
+                        <div className="flex items-center justify-between gap-2 mb-4">
+                          <div className="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center">
+                            <FileText className="w-5 h-5" />
+                          </div>
+                          <span className="text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full bg-blue-500/15 text-blue-300 border border-blue-500/20">
+                            Add-On Scope
+                          </span>
+                        </div>
+                        <div className="mb-2">
+                          <span className="text-xs text-slate-400 font-semibold block">Tambah Halaman Statis</span>
+                          <span className="text-xl font-black text-white">Rp 150.000</span>
+                          <span className="text-xs text-slate-400 ml-1">/halaman</span>
+                        </div>
+                        <p className="text-xs text-slate-300 leading-relaxed">
+                          Contoh: Halaman Galeri Foto, Halaman FAQ Khusus, Kebijakan Privasi, Halaman Promo Baru, atau Profil Manajemen.
+                        </p>
+                      </div>
+                      <div className="mt-4 pt-3.5 border-t border-white/10">
+                        <span className="text-[11px] font-semibold text-blue-300 flex items-center gap-1.5">
+                          <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
+                          <span>Desain Responsif + SEO On-Page</span>
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Card 3: Tambah Menu Dinamis + Database CRUD */}
+                    <div className="bg-white/5 hover:bg-white/[0.08] backdrop-blur-sm rounded-2xl p-5 border border-white/10 flex flex-col justify-between transition-all">
+                      <div>
+                        <div className="flex items-center justify-between gap-2 mb-4">
+                          <div className="w-10 h-10 rounded-xl bg-[#ea7c00]/20 text-[#ea7c00] flex items-center justify-center">
+                            <Database className="w-5 h-5" />
+                          </div>
+                          <span className="text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#ea7c00]/15 text-[#ea7c00] border border-[#ea7c00]/20">
+                            Modul Full-Stack
+                          </span>
+                        </div>
+                        <div className="mb-2">
+                          <span className="text-xs text-slate-400 font-semibold block">Menu Dinamis + CRUD Admin</span>
+                          <span className="text-xl font-black text-white">Rp 350.000</span>
+                          <span className="text-xs text-slate-400 ml-1">/modul menu</span>
+                        </div>
+                        <p className="text-xs text-slate-300 leading-relaxed">
+                          Tabel database baru, REST API backend, dan antarmuka input/edit/hapus (CRUD) mandiri pada Dashboard Admin CMS.
+                        </p>
+                      </div>
+                      <div className="mt-4 pt-3.5 border-t border-white/10">
+                        <span className="text-[11px] font-semibold text-[#ea7c00] flex items-center gap-1.5">
+                          <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
+                          <span>Tersinkron ke Database &amp; Admin</span>
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Card 4: Garansi Bug 30 Hari & Revisi Ekstra */}
+                    <div className="bg-white/5 hover:bg-white/[0.08] backdrop-blur-sm rounded-2xl p-5 border border-white/10 flex flex-col justify-between transition-all">
+                      <div>
+                        <div className="flex items-center justify-between gap-2 mb-4">
+                          <div className="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center">
+                            <Shield className="w-5 h-5" />
+                          </div>
+                          <span className="text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full bg-purple-500/15 text-purple-300 border border-purple-500/20">
+                            Garansi 30 Hari
+                          </span>
+                        </div>
+                        <div className="mb-2">
+                          <span className="text-xs text-slate-400 font-semibold block">Revisi Ekstra (Ke-4 dst)</span>
+                          <span className="text-xl font-black text-white">Rp 75.000</span>
+                          <span className="text-xs text-slate-400 ml-1">/putaran</span>
+                        </div>
+                        <p className="text-xs text-slate-300 leading-relaxed">
+                          Garansi perbaikan bug &amp; error teknis 100% GRATIS selama 30 hari. Perubahan estetika tambahan di luar 3x gratis tetap sangat terjangkau.
+                        </p>
+                      </div>
+                      <div className="mt-4 pt-3.5 border-t border-white/10">
+                        <span className="text-[11px] font-semibold text-purple-300 flex items-center gap-1.5">
+                          <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
+                          <span>Bebas Khawatir Paska Serah Terima</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -2842,6 +2991,15 @@ export default function CompanyProfileView({ initialData }: CompanyProfileViewPr
               </div>
             ) : (
               <form onSubmit={handleOrderSubmit} className="space-y-3.5">
+                <div className="p-3.5 rounded-2xl bg-amber-50 border border-amber-200 text-amber-950 text-xs">
+                  <p className="font-bold flex items-center gap-1.5 text-[#ea7c00]">
+                    <ShieldCheck className="w-4 h-4 shrink-0" />
+                    <span>Jaminan Layanan:</span>
+                  </p>
+                  <p className="mt-1 text-[11.5px] leading-relaxed text-slate-600">
+                    Paket ini sudah mencakup kuota <strong>Maksimal 3x Revisi Gratis</strong> dan <strong>Garansi Bebas Bug 30 Hari</strong>.
+                  </p>
+                </div>
                 <input
                   type="text"
                   required
